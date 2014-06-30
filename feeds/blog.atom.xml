@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/artificial-intelligence.atom.xml" rel="self"></link><id>/</id><updated>2011-11-17T00:00:00+01:00</updated><entry><title>A simple "Rock Scissors Paper" AI</title><link href="/a-simple-rock-scissors-paper-ai.html" rel="alternate"></link><updated>2011-11-17T00:00:00+01:00</updated><author><name>Kai Sun</name></author><id>tag:,2011-11-17:a-simple-rock-scissors-paper-ai.html</id><summary type="html">&lt;p&gt;The idea comes from the following page:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2011-11-17T00:00:00+01:00</updated><entry><title>A simple "Rock Scissors Paper" AI</title><link href="/a-simple-rock-scissors-paper-ai.html" rel="alternate"></link><updated>2011-11-17T00:00:00+01:00</updated><author><name>Kai Sun</name></author><id>tag:,2011-11-17:a-simple-rock-scissors-paper-ai.html</id><summary type="html">&lt;p&gt;The idea comes from the following page:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.nytimes.com/interactive/science/rock-paper-scissors.html"&gt;http://www.nytimes.com/interactive/science/rock-paper-scissors.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Just for fun.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
@@ -91,4 +91,4 @@
         &lt;span class="p"&gt;}&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="rock scissors paper"></category><category term="game"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="AI"></category><category term="rock scissors paper"></category><category term="game"></category></entry></feed>
