@@ -28,7 +28,7 @@
 			<ul class="nav">
 						<li><a href="/pages/about-me.html">About me</a></li>
 						<li><a href="/pages/yixin.html">Yixin</a></li>
-					<li ><a href="/category/blog.html">Blog</a></li>
+					<li class="active"><a href="/category/blog.html">Blog</a></li>
 			</ul>
 			<p class="pull-right"><a href="/archives.html">[archives]</a> <a href="/tags.html">[tags]</a></p>
 		</div>
@@ -55,12 +55,19 @@
 		</div>
 	  </div>
 	  <div class="content">
-<div class="page-header"><h1>AI EXP <small>[tags]</small></h1></div><ul>
-	<li><a href="/tag/ai.html">AI</a></li>
-	<li><a href="/tag/pelican.html">pelican</a></li>
-	<li><a href="/tag/game.html">game</a></li>
-	<li><a href="/tag/rock-scissors-paper.html">rock scissors paper</a></li>
-</ul>
+	<div class='article'>
+		<div class="page-header"><h1>Moving my blog from GAE to Github Pages</h1></div>
+		<div class="well small">Permalink: <a class="more" href="/moving-my-blog-to-github.html">2014-07-01</a>
+by <a class="url fn" href="/author/kai-sun.html">Kai Sun </a>
+ in <a href="/category/blog.html">Blog</a>
+tags: <a href="/tag/pelican.html">pelican</a> </div>
+		<div><p>Due to the resource limitation of GAE for free users as well as maintainance of the blog system Micolog being stopped for a long time, I decide to move my blog from GAE to Github Pages.</p>
+<p>Since Github only accepts static site with HTML, images CSS, JS, etc., a static site generator is needed for me to make the work of site publishing easy. Fortunately, there are many tools to do this work such as Octopress and Pelican. I choose Pelican because I am more familiar with Python, though the whole process of generating the static site needs little knowledge about Python (I believe for users of Octopress, they also do not need to be familiar with Ruby :) ). As pelican supports writing posts in markdown, in the future, I will no longer struggle with formatted text.</p>
+<p>Things went well during the migration, except that there was a little problem about date format of the theme bootstrap. The problem was easily solved with the help of <a href="https://github.com/getpelican/pelican/issues/816">https://github.com/getpelican/pelican/issues/816</a>.</p></div>
+		<!--<div>
+			<h2>Comments</h2>
+		<div>-->
+	</div>	
 		<footer>
 		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
 		  <p>&copy; Kai Sun</p>
