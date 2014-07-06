@@ -28,7 +28,7 @@
 			<ul class="nav">
 						<li><a href="/pages/about-me.html">About me</a></li>
 						<li><a href="/pages/yixin.html">Yixin</a></li>
-					<li ><a href="/category/blog.html">Blog</a></li>
+					<li class="active"><a href="/category/blog.html">Blog</a></li>
 			</ul>
 			<p class="pull-right"><a href="/archives.html">[archives]</a> <a href="/tags.html">[tags]</a></p>
 		</div>
@@ -55,21 +55,59 @@
 		</div>
 	  </div>
 	  <div class="content">
-<div class="page-header"><h1>AI EXP <small>[tags]</small></h1></div><ul>
-	<li><a href="/tag/pelican.html">pelican</a></li>
-	<li><a href="/tag/resource.html">resource</a></li>
-	<li><a href="/tag/system.html">system</a></li>
-	<li><a href="/tag/ai.html">AI</a></li>
-	<li><a href="/tag/renju.html">renju</a></li>
-	<li><a href="/tag/yixin.html">yixin</a></li>
-	<li><a href="/tag/piskvork.html">piskvork</a></li>
-	<li><a href="/tag/gmotor.html">gmotor</a></li>
-	<li><a href="/tag/game.html">game</a></li>
-	<li><a href="/tag/rock-scissors-paper.html">rock scissors paper</a></li>
-	<li><a href="/tag/gomoku.html">gomoku</a></li>
-	<li><a href="/tag/translation.html">translation</a></li>
-	<li><a href="/tag/bug.html">bug</a></li>
-</ul>
+	<div class='article'>
+		<div class="page-header"><h1>Improvement of Yixin</h1></div>
+		<div class="well small">Permalink: <a class="more" href="/improvement-of-yixin.html">2013-09-14</a>
+by <a class="url fn" href="/author/kai-sun.html">Kai Sun </a>
+ in <a href="/category/blog.html">Blog</a>
+tags: <a href="/tag/yixin.html">yixin</a> </div>
+		<div><ol>
+<li>
+<p>I spent some time trying optimizing Yixin's search and evaluation. The result is good.</p>
+</li>
+<li>
+<p>I received two bug reports and both of them are about Yixin's rule and they all influence Yixin's strength. These bugs have been fixed now.</p>
+</li>
+</ol>
+<p>update(2013.9.29):</p>
+<p>The test result of Yixin 0.2.24</p>
+<p>300s/1000s</p>
+<p>37 balanced openings</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Yixin loses</th>
+<th>Yixin wins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tito10</td>
+<td>15</td>
+<td>59</td>
+</tr>
+<tr>
+<td>Swine11</td>
+<td>14</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Renjusolver(H6)</td>
+<td>16</td>
+<td>58</td>
+</tr>
+<tr>
+<td>Hewer12</td>
+<td>9</td>
+<td>65</td>
+</tr>
+</tbody>
+</table></div>
+		<!--<div>
+			<h2>Comments</h2>
+		<div>-->
+	</div>	
 		<footer>
 		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
 		  <p>&copy; Kai Sun</p>
