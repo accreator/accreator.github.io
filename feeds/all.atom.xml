@@ -4,7 +4,7 @@
 &lt;h1&gt;Reading Materials for AI Design&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="/files/searching_for_solutions_in_games_and_ai.pdf"&gt;Searching for Solutions in Games and Artificial Intelligence&lt;/a&gt; by Louis Victor Allis. (Recommend)&lt;/p&gt;
+&lt;p&gt;&lt;a href="/files/searching_for_solutions_in_games_and_ai.pdf"&gt;Searching for Solutions in Games and Artificial Intelligence&lt;/a&gt; by Louis Victor Allis. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://chessprogramming.wikispaces.com/"&gt;Chess Programming Wiki&lt;/a&gt; is a website which provides good reference for every aspect of chess programming. Although it mainly talks about chess, some basic techniques and ideas of chess AI design are similiar to those of gomoku/renju.&lt;/p&gt;
@@ -31,7 +31,7 @@
 &lt;h1&gt;Competitive Open-source AIs&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://sourceforge.net/projects/piskvork/"&gt;Pela (with piskvork)&lt;/a&gt; by Petr Lastovicka, Czech Republic. (Recommend)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://sourceforge.net/projects/piskvork/"&gt;Pela (with piskvork)&lt;/a&gt; by Petr Lastovicka, Czech Republic. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="/files/niren_source.zip"&gt;Niren (XL)&lt;/a&gt; by Chengtao Chen, China.&lt;/p&gt;
@@ -40,13 +40,13 @@
 &lt;h1&gt;Open-source GUIs&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://sourceforge.net/projects/piskvork/"&gt;Piskvork&lt;/a&gt; by Petr Lastovicka, Czech Republic. (Recommend)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://sourceforge.net/projects/piskvork/"&gt;Piskvork&lt;/a&gt; by Petr Lastovicka, Czech Republic. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.renju.se/renlib/"&gt;Renlib&lt;/a&gt; by Frank Arkbo, Sweden. (Recommend)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.renju.se/renlib/"&gt;Renlib&lt;/a&gt; by Frank Arkbo, Sweden. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://github.com/accreator/Yixin-Board"&gt;Yixin Board&lt;/a&gt; by Kai Sun, China. (Recommend)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/accreator/Yixin-Board"&gt;Yixin Board&lt;/a&gt; by Kai Sun, China. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Protocols for Computer Gomoku/Renju&lt;/h1&gt;
