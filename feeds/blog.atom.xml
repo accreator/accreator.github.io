@@ -51,7 +51,7 @@
 &lt;/ul&gt;
 &lt;h2&gt;Protocols for Computer Gomoku/Renju&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Gomocup Protocol (&lt;a href="http://petr.lastovicka.sweb.cz/protocl1en.htm"&gt;via files&lt;/a&gt; or &lt;a href="http://petr.lastovicka.sweb.cz/protocl2en.htm"&gt;via stdin/stdout&lt;/a&gt;) by Petr Lastovicka, Czech Republic. The protocol is used in &lt;a href="http://gomocup.org/"&gt;Gomocup&lt;/a&gt;, and tens of AI support it.&lt;/li&gt;
+&lt;li&gt;Gomocup Protocol (&lt;a href="http://petr.lastovicka.sweb.cz/protocl1en.htm"&gt;via files&lt;/a&gt; or &lt;a href="http://petr.lastovicka.sweb.cz/protocl2en.htm"&gt;via stdin/stdout&lt;/a&gt;) by Petr Lastovicka, Czech Republic. The protocol is used in &lt;a href="http://gomocup.org/"&gt;Gomocup&lt;/a&gt;, and tens of AIs support it.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;AI Competition and Online Platform&lt;/h2&gt;
 &lt;ul&gt;
