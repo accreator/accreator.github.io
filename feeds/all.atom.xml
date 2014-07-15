@@ -55,10 +55,10 @@
 &lt;p&gt;&lt;strong&gt;Gomocup Protocol&lt;/strong&gt; (&lt;a href="http://petr.lastovicka.sweb.cz/protocl1en.htm"&gt;via files&lt;/a&gt; or &lt;a href="http://petr.lastovicka.sweb.cz/protocl2en.htm"&gt;via stdin/stdout&lt;/a&gt;) by Petr Lastovicka, Czech Republic. The protocol is used in &lt;a href="http://gomocup.org/"&gt;Gomocup&lt;/a&gt;, and tens of AIs support it.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://github.com/accreator/Yixin-protocol"&gt;&lt;strong&gt;Yixin Protocol&lt;/strong&gt;&lt;/a&gt; by Kai Sun, China. The protocol is derived from Gomocup protocol. Compared with Gomocup protocol, Yixin protocol introduces more commands enabling Yixin have some new features such as renju rule support.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/accreator/Yixin-protocol"&gt;&lt;strong&gt;Yixin Protocol&lt;/strong&gt;&lt;/a&gt; by Kai Sun, China. The protocol is derived from Gomocup protocol. Compared with Gomocup protocol, Yixin protocol introduces more commands enabling &lt;a href="/pages/yixin.html"&gt;Yixin&lt;/a&gt; have some new features such as renju rule support.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;(In Chinese) &lt;a href="/files/botzone_protocol.zip"&gt;&lt;strong&gt;Botzone Protocol&lt;/strong&gt;&lt;/a&gt; by AI LAB, Peking University. Botzone is an online platform for AI competitions. It used to support many games including gomoku. However, since it was updated in 2014, it seems that the platform have lost all its old data so that gomoku as well as many other games is no longer supported.&lt;/p&gt;
+&lt;p&gt;(In Chinese) &lt;a href="/files/botzone_protocol.zip"&gt;&lt;strong&gt;Botzone Protocol&lt;/strong&gt;&lt;/a&gt; by AI LAB, Peking University. &lt;a href="http://botzone.org/"&gt;Botzone&lt;/a&gt; is an online platform for AI competitions. It used to support many games including gomoku. However, since it was updated in 2014, it seems that the platform have lost all its old data so that gomoku as well as many other games is no longer supported.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;AI Competition and Online Platform&lt;/h2&gt;
@@ -94,7 +94,7 @@
 &lt;p&gt;&lt;strong&gt;Hgarden&lt;/strong&gt; by Bingqing Han, China. It took part in the first AI vs. Human tournament, playing against one of the best Czech gomoku players in 2006. Hgarden ranked the 6th in the 15th Gomocup (2014). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Meijin&lt;/strong&gt; by Oleg Stepanov, Russia. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Meijin&lt;/strong&gt; by Oleg Stepanov, Russia. It played against human players in &lt;a href="http://www.renju.net/media/news/news00a.htm"&gt;Moscow Open Tournament&lt;/a&gt;, 2000, making it become the first program playing with human players in public competitions.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Pacifist&lt;/strong&gt; by Shuai Han, China. Winner of gomoku AI competition on &lt;a href="http://botzone.org/"&gt;Botzone&lt;/a&gt; hosted by AI LAB, Peking University in Decemeber 2010. It is not published, so there is no download available.&lt;/p&gt;
@@ -130,7 +130,7 @@
 &lt;p&gt;&lt;strong&gt;Vertex&lt;/strong&gt; by Artyom Shaposhnikov and Alexander Nosovsky, Russia. It is the winner of the 1st Renju Computer World Championship, 1991.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Victoria&lt;/strong&gt; by V. Allis and L Schoenmaker, Netherlands. It is the first program which is bound to win if it moves first for both freestyle and standard gomoku without modern opening rules. It is the winner of gomoku in the 4th Computer Olympiad. It is not published, so there is no download available.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Victoria&lt;/strong&gt; by V. Allis and L Schoenmaker, Netherlands. It is the first program which is bound to win if it moves first for both freestyle and standard gomoku without modern opening rules. It is the winner of gomoku in the 4th Computer Olympiad. Victoria is not published, so there is no download available.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="/pages/yixin.html"&gt;&lt;strong&gt;Yixin&lt;/strong&gt;&lt;/a&gt; by Kai Sun, China. It is a free software for both gomoku and renju. It is the winner of the 13th, 14th, and the 15th Gomocup (2012, 2013, 2014).&lt;/p&gt;
@@ -139,11 +139,15 @@
 &lt;h2&gt;Other Useful Software&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Gomoku Terminator&lt;/strong&gt; It is a free software which is bound to win if it moves first for freestyle gomoku without modern opening rules.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RenArtist&lt;/strong&gt; by Yusuke Okuno, Japan. It gives a good solution about making databases and publish them directly on the web.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Renartist&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gomoku Terminator&lt;/strong&gt; by Shanshan Liu, China. It is a free software which is bound to win if it moves first for freestyle gomoku without modern opening rules.&lt;/p&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Rules&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Prepared Balanced Opening&lt;/strong&gt; is the most popular opening rule in computer gomoku. It is used by both Hungarian Computer Go-Moku Open Tournament and Gomocup.&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="gomoku"></category><category term="renju"></category><category term="resource"></category></entry><entry><title>Moving my blog from GAE to Github Pages</title><link href="/moving-my-blog-to-github.html" rel="alternate"></link><updated>2014-07-01T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-01:moving-my-blog-to-github.html</id><summary type="html">&lt;p&gt;Due to the resource limitation of GAE for free users as well as maintainance of the blog system Micolog being stopped for a long time, I decide to move my blog from GAE to Github Pages.&lt;/p&gt;
 &lt;p&gt;Since Github only accepts static site with HTML, images CSS, JS, etc., a static site generator is needed for me to make the work of site publishing easy. Fortunately, there are many tools to do this work such as Octopress and Pelican. I choose Pelican because I am more familiar with Python, though the whole process of generating the static site needs little knowledge about Python (I believe for users of Octopress, they also do not need to be familiar with Ruby :) ). As pelican supports writing posts in markdown, in the future, I will no longer struggle with formatted text.&lt;/p&gt;
 &lt;p&gt;Things went well during the migration, except that there was a little problem about date format of the theme bootstrap. The problem was easily solved with the help of &lt;a href="https://github.com/getpelican/pelican/issues/816"&gt;https://github.com/getpelican/pelican/issues/816&lt;/a&gt;.&lt;/p&gt;</summary><category term="pelican"></category></entry><entry><title>Paper translation: "All about Eve: Execute-Verify Replication for Multi-Core Servers"</title><link href="/paper-translation-all-about-eve.html" rel="alternate"></link><updated>2013-12-10T00:00:00+01:00</updated><author><name>Kai Sun</name></author><id>tag:,2013-12-10:paper-translation-all-about-eve.html</id><summary type="html">&lt;p&gt;Translating a paper is one of the homework of our computer system class. I was given the paper "All about Eve: Execute-Verify Replication for Multi-Core Servers", which takes several days for me to translate. Now I make it public and wish it can help some people's study.&lt;/p&gt;
