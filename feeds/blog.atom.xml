@@ -73,16 +73,16 @@
 &lt;p&gt;&lt;a href="http://www.grappa.univ-lille3.fr/icga/game.php?id=30"&gt;&lt;strong&gt;Computer Olympiad&lt;/strong&gt;&lt;/a&gt; (1989 - 1992)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Renju Computer World Championship&lt;/strong&gt; (1991, 1998, 2000, 2004)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Renju Computer World Championship&lt;/strong&gt; (&lt;a href="http://www.5stone.net/wc/worldcup_en.html"&gt;1991&lt;/a&gt;, &lt;a href="http://www.5stone.net/wc/worldcup_en.html"&gt;1998&lt;/a&gt;, &lt;a href="http://www.5stone.net/wc/worldcup_en.html"&gt;2000&lt;/a&gt;, 2004(&lt;a href="http://nosovsky.narod.ru/forth.html"&gt;link1&lt;/a&gt;,&lt;a href="http://renju.se/rif/news04.htm#36"&gt;link2&lt;/a&gt;))&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Hungarian Computer Go-Moku Open Tournament&lt;/strong&gt; (2005)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hungarian Computer Go-Moku Open Tournament&lt;/strong&gt; (2005 (&lt;a href="http://gomokuworld.com/articles/hungarian_computer_gomoku_tournament_2005"&gt;1st&lt;/a&gt;, &lt;a href="http://www.sze.hu/~gtakacs/tournament/index.html"&gt;2nd&lt;/a&gt;))&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://botzone.org/"&gt;&lt;strong&gt;Botzone&lt;/strong&gt;&lt;/a&gt; (2010 - 2013)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;AI vs. Human tournament&lt;/strong&gt; (2006, 2011)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AI vs. Human tournament&lt;/strong&gt; (&lt;a href="http://gomocup.org/results/"&gt;2006&lt;/a&gt;, 2011(&lt;a href="http://gomocup.org/results/"&gt;en&lt;/a&gt;,&lt;a href="http://www.piskvorky.cz/clanky/zajimavosti-ze-sveta-piskvorek-a-renju/ai-vs-clovek-2011-2/"&gt;cz&lt;/a&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Famous, Competitive, and Interesting AI List&lt;/h2&gt;
@@ -94,7 +94,7 @@
 &lt;p&gt;&lt;strong&gt;Blackstone&lt;/strong&gt; by Victor Barykin, Russia. It is a commercial software for renju. It is the winner in tournament of the 2nd and the 3rd Renju Computer World Championship (1998, 2000), and the winner in solving problems of the 2nd Renju Computer World Championship (1998).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Fiver&lt;/strong&gt; by Meng Liu, China. A famous classic gomoku engine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fiver&lt;/strong&gt; by Meng Liu, China. A famous classic gomoku engine. It can be downloaded at &lt;a href="http://nosalex.narod.ru/f.zip"&gt;Nosovsky Japanese Games Home Page&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Goro&lt;/strong&gt; by Victor Barykin, Russia. It is a commercial software for gomoku, the winner of the 6th, the 7th, the 10th, and the 11th Gomocup (2005, 2006, 2009, 2010). It took part in both the first and the second AI vs. Human tournament, playing against one of the best Czech gomoku players in 2006 and 2011. Goro ranked the 7th in the 15th Gomocup (2014). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
