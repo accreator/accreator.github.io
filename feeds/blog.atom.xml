@@ -162,9 +162,11 @@
 &lt;/ul&gt;
 &lt;h2&gt;Rules and Variations&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Prepared Balanced Opening&lt;/strong&gt; is the most popular opening rule in computer gomoku. It is used by both Hungarian Computer Go-Moku Open Tournament and Gomocup.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prepared Balanced Opening&lt;/strong&gt; is the most popular opening rule in computer gomoku. It is used by both Hungarian Computer Go-Moku Open Tournament and Gomocup.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/openings_gomocup14.png" /&gt;&lt;/p&gt;
+&lt;p&gt;(3 prepared balanced openings used in the 15th Gomocup (provided by Alexander Bogatirev, manager of Team Russia online, member of Gomoku Committee RIF, 2014))&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Pente"&gt;&lt;strong&gt;Pente&lt;/strong&gt;&lt;/a&gt; is a strategy board game for two or more players similar to gomoku/renju.&lt;/p&gt;
 &lt;/li&gt;
