@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-07-07T00:00:00+02:00</updated><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2014-07-19)&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-07-07T00:00:00+02:00</updated><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2014-07-20)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
@@ -64,10 +64,10 @@
 &lt;h2&gt;AI Competition and Online Platform&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://gomocup.org/"&gt;&lt;strong&gt;Gomocup&lt;/strong&gt;&lt;/a&gt; (2000 - 2014) (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://gomocup.org/"&gt;&lt;strong&gt;Gomocup&lt;/strong&gt;&lt;/a&gt; (2000 - Now) (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://w-ai.org/"&gt;&lt;strong&gt;WAI&lt;/strong&gt;&lt;/a&gt; (2012 - 2014)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://w-ai.org/"&gt;&lt;strong&gt;WAI&lt;/strong&gt;&lt;/a&gt; (2012 - Now)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.grappa.univ-lille3.fr/icga/game.php?id=30"&gt;&lt;strong&gt;Computer Olympiad&lt;/strong&gt;&lt;/a&gt; (1989 - 1992)&lt;/p&gt;
@@ -213,7 +213,7 @@
 &lt;p&gt;(In Chinese) &lt;a href="http://www.iwzq.com/"&gt;&lt;strong&gt;Iwzq.com&lt;/strong&gt;&lt;/a&gt; (&lt;a href="http://www.iwzq.com/index.asp"&gt;Forum&lt;/a&gt;]&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;(In Chinese) &lt;a href="http://www.rifchina.com/"&gt;&lt;strong&gt;RIF China&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(In Estonian) &lt;a href="http://renju.ee/"&gt;&lt;strong&gt;Renju.ee&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary><category term="gomoku"></category><category term="renju"></category><category term="resource"></category></entry><entry><title>Moving my blog from GAE to Github Pages</title><link href="/moving-my-blog-to-github.html" rel="alternate"></link><updated>2014-07-01T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-01:moving-my-blog-to-github.html</id><summary type="html">&lt;p&gt;Due to the resource limitation of GAE for free users as well as maintainance of the blog system Micolog being stopped for a long time, I decide to move my blog from GAE to Github Pages.&lt;/p&gt;
 &lt;p&gt;Since Github only accepts static site with HTML, images CSS, JS, etc., a static site generator is needed for me to make the work of site publishing easy. Fortunately, there are many tools to do this work such as Octopress and Pelican. I choose Pelican because I am more familiar with Python, though the whole process of generating the static site needs little knowledge about Python (I believe for users of Octopress, they also do not need to be familiar with Ruby :) ). As pelican supports writing posts in markdown, in the future, I will no longer struggle with formatted text.&lt;/p&gt;
