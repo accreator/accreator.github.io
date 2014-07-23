@@ -5,63 +5,63 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2014-07-23T05:27:19-00:00</lastmod>
+<lastmod>2014-07-23T21:21:04-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2014-07-23T05:27:19-00:00</lastmod>
+<lastmod>2014-07-23T21:21:04-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2014-07-23T05:27:19-00:00</lastmod>
+<lastmod>2014-07-23T21:21:04-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2014-07-23T05:27:19-00:00</lastmod>
+<lastmod>2014-07-23T21:21:04-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2014-07-23T05:27:19-00:00</lastmod>
+<lastmod>2014-07-23T21:21:04-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin.html</loc>
-<lastmod>2014-07-23T05:27:19-00:00</lastmod>
+<lastmod>2014-07-23T21:21:04-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-cn.html</loc>
-<lastmod>2014-07-23T05:27:19-00:00</lastmod>
+<lastmod>2014-07-23T21:21:04-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs.html</loc>
-<lastmod>2014-07-23T05:27:19-00:00</lastmod>
+<lastmod>2014-07-23T21:21:04-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs-cn.html</loc>
-<lastmod>2014-07-23T05:27:19-00:00</lastmod>
+<lastmod>2014-07-23T21:21:04-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -88,8 +88,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/论文翻译-关于Eve的一切.html</loc>
+<lastmod>2013-12-10T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/improvement-of-yixin.html</loc>
 <lastmod>2013-09-14T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/一篇中文日志.html</loc>
+<lastmod>2013-03-25T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -111,6 +125,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/category/blog.html</loc>
 <lastmod>2014-07-07T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/category/zhong-wen-bo-ke.html</loc>
+<lastmod>2013-12-10T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -144,6 +165,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/fan-yi.html</loc>
+<lastmod>2013-12-10T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/renju.html</loc>
 <lastmod>2014-07-07T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
@@ -153,6 +181,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/tag/yixin.html</loc>
 <lastmod>2013-09-14T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/yi-xin.html</loc>
+<lastmod>2013-03-25T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -207,8 +242,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/xi-tong.html</loc>
+<lastmod>2013-12-10T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/author/kai-sun.html</loc>
 <lastmod>2014-07-07T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/author/sun-kai.html</loc>
+<lastmod>2013-12-10T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
