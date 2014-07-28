@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-07-07T00:00:00+02:00</updated><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2014-07-20)&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-07-07T00:00:00+02:00</updated><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2014-07-28)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
@@ -36,6 +36,15 @@
 &lt;li&gt;
 &lt;p&gt;&lt;a href="/files/niren_source.zip"&gt;&lt;strong&gt;Niren (XL)&lt;/strong&gt;&lt;/a&gt; by Chengtao Chen, China.&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="/files/gm2_source.zip"&gt;&lt;strong&gt;GM2&lt;/strong&gt; (with part of its documents in Chinese)&lt;/a&gt; by Feng Liu, China.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://aean.net/kalscope/"&gt;&lt;strong&gt;KalScope&lt;/strong&gt;&lt;/a&gt; by Aean, China.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.softos.org/?p=156"&gt;&lt;strong&gt;Qingyue Renju&lt;/strong&gt;&lt;/a&gt; by Cong Zhang, China.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Open-source GUIs&lt;/h2&gt;
 &lt;ul&gt;
@@ -55,7 +64,7 @@
 &lt;p&gt;&lt;strong&gt;Gomocup Protocol&lt;/strong&gt; (&lt;a href="http://petr.lastovicka.sweb.cz/protocl1en.htm"&gt;via files&lt;/a&gt; or &lt;a href="http://petr.lastovicka.sweb.cz/protocl2en.htm"&gt;via stdin/stdout&lt;/a&gt;) by Petr Lastovicka, Czech Republic. The protocol is used in &lt;a href="http://gomocup.org/"&gt;Gomocup&lt;/a&gt;, and tens of AIs support it.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://github.com/accreator/Yixin-protocol"&gt;&lt;strong&gt;Yixin Protocol&lt;/strong&gt;&lt;/a&gt; by Kai Sun, China. The protocol is derived from Gomocup protocol. Compared with Gomocup protocol, Yixin protocol introduces more commands enabling &lt;a href="/pages/yixin.html"&gt;Yixin&lt;/a&gt; have some new features such as renju rule support.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/accreator/Yixin-protocol"&gt;&lt;strong&gt;Yixin Protocol&lt;/strong&gt;&lt;/a&gt; by Kai Sun, China. The protocol is derived from Gomocup protocol. Compared with Gomocup protocol, Yixin protocol introduces more commands enabling &lt;a href="/pages/yixin.html"&gt;Yixin&lt;/a&gt; to have some new features such as renju rule support.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;(In Chinese) &lt;a href="/files/botzone_protocol.zip"&gt;&lt;strong&gt;Botzone Protocol&lt;/strong&gt;&lt;/a&gt; by AI LAB, Peking University. &lt;a href="http://botzone.org/"&gt;Botzone&lt;/a&gt; is an online platform for AI competitions. It used to support many games including gomoku. However, since it was updated in 2014, it seems that the platform have lost all its old data so that gomoku as well as many other games is no longer supported.&lt;/p&gt;
