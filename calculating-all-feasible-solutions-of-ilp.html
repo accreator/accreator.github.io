@@ -141,24 +141,20 @@ tags: <a href="/tag/scip.html">SCIP</a> <a href="/tag/pulp.html">PuLP</a> <a hre
 <ol>
 <li>
 <p>Read model file using <code>read</code> command.</p>
-<p>:::sh
-SCIP&gt; read problem.lp</p>
+<p>SCIP&gt; read problem.lp</p>
 </li>
 <li>
 <p>Set the parameters which are required for collecting all feasible solutions.</p>
-<p>:::sh
-SCIP&gt; set emphasis counter
+<p>SCIP&gt; set emphasis counter
 SCIP&gt; set constraints countsols collect TRUE</p>
 </li>
 <li>
 <p>Calculating all feasible solutions using <code>count</code> command.</p>
-<p>:::sh
-SCIP&gt; count</p>
+<p>SCIP&gt; count</p>
 </li>
 <li>
 <p>Write all feasible solutions to a file.</p>
-<p>:::sh
-SCIP&gt; write allsolutions chicken_sol.txt</p>
+<p>SCIP&gt; write allsolutions chicken_sol.txt</p>
 </li>
 </ol>
 <p>Finally, file "chicken_sol" contains all feasible solutions of the sample problem:</p>

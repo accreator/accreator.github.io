@@ -68,24 +68,20 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Read model file using &lt;code&gt;read&lt;/code&gt; command.&lt;/p&gt;
-&lt;p&gt;:::sh
-SCIP&amp;gt; read problem.lp&lt;/p&gt;
+&lt;p&gt;SCIP&amp;gt; read problem.lp&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Set the parameters which are required for collecting all feasible solutions.&lt;/p&gt;
-&lt;p&gt;:::sh
-SCIP&amp;gt; set emphasis counter
+&lt;p&gt;SCIP&amp;gt; set emphasis counter
 SCIP&amp;gt; set constraints countsols collect TRUE&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Calculating all feasible solutions using &lt;code&gt;count&lt;/code&gt; command.&lt;/p&gt;
-&lt;p&gt;:::sh
-SCIP&amp;gt; count&lt;/p&gt;
+&lt;p&gt;SCIP&amp;gt; count&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Write all feasible solutions to a file.&lt;/p&gt;
-&lt;p&gt;:::sh
-SCIP&amp;gt; write allsolutions chicken_sol.txt&lt;/p&gt;
+&lt;p&gt;SCIP&amp;gt; write allsolutions chicken_sol.txt&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Finally, file "chicken_sol" contains all feasible solutions of the sample problem:&lt;/p&gt;
