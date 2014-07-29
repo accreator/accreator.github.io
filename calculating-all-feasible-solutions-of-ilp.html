@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>AI EXP</title>
+	<meta name="description" content="">
+	<meta name="author" content="Kai Sun">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="/theme/local.css" rel="stylesheet">
+	<link href="/theme/pygments.css" rel="stylesheet">
+
+    <!-- Feeds -->
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="AI EXP Atom Feed" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52589612-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="/">AI EXP</a>
+			<ul class="nav">
+					<li><a href="/">About me</a></li>
+					<li><a href="/pages/yixin.html">Yixin</a></li>
+					<li class="active"><a href="/category/blog.html">Blog</a></li>
+					<li ><a href="/category/zhong-wen-bo-ke.html">中文博客</a></li>
+			</ul>
+			<p class="pull-right"><a href="/archives.html">[archives]</a> <a href="/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://speechlab.sjtu.edu.cn/">SJTU Speech Lab</a></li>
+				<li><a href="http://gomocup.org/">Gomocup</a></li>
+				<li><a href="http://speechlab.sjtu.edu.cn/~kyu/">Kai Yu</a></li>
+				<li><a href="http://misakamm.com/blog/">Misakamm</a></li>
+				<li><a href="mailto:sunkaicn@gmail.com">Contact me</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+				<li><a href="http://github.com/accreator">GitHub</a></li>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+	<div class='article'>
+		<div class="page-header"><h1>Calculating All Feasible Solutions of Integer Linear Programming with PuLP and SCIP</h1></div>
+		<div class="well small">Permalink: <a class="more" href="/calculating-all-feasible-solutions-of-ilp.html">2014-07-29</a>
+by <a class="url fn" href="/author/kai-sun.html">Kai Sun </a>
+ in <a href="/category/blog.html">Blog</a>
+tags: <a href="/tag/scip.html">SCIP</a> <a href="/tag/pulp.html">PuLP</a> <a href="/tag/ilp.html">ILP</a> <a href="/tag/lp.html">LP</a> </div>
+		<div><h3>Abstract</h3>
+<p>In this article, PuLP and SCIP are combined together to solve a general problem: given an integer linear programming problem, calculate all feasible solutions efficiently if the number of feasible solutions is not infinite.</p>
+<h2>1. Introduction</h2>
+<p>Integer linear programming (ILP) is a method to achieve the best outcome in a mathematical model whose requirements are represented by linear relationships and unknown variables are required to be integers. Integer linear programming can be applied to various fields of study and has proved useful in diverse types of problems. In contrast to linear programming, which can be solved efficiently in the worst case, integer linear programming problems are in many practical situations NP-hard. Therefore, solving integer linear programming is not easy. Moreover, despite the fact that there are many professional solvers which can solve integer linear programming efficiently in most cases, most of them can only give one optimal solution even if many solutions exist. However, more than one solution, or even all solutions are needed in some applications.</p>
+<p>In this article, PuLP and SCIP (Solving Constraint Integer Programs) are combined together to solve that general problem, that is, given an integer linear programming problem, calculate all feasible solutions efficiently if the number of feasible solutions is not infinite. Specifically, first, PuLP is used to generate the integer programming model file; then the model file is passed to SCIP and all feasible solutions of the model are calculated with SCIP.</p>
+<p>PuLP is an LP modeler written in python. PuLP can generate MPS or LP files and call GLPK, COIN CLP/CBC, CPLEX, and GUROBI to solve linear problems. SCIP is currently one of the fastest non-commercial solvers for mixed integer programming (MIP) and mixed integer nonlinear programming (MINLP). It is also a framework for constraint integer programming (CIP) and branch-cut-and-price. It allows for total control of the solution process and the access of detailed information down to the guts of the solver.</p>
+<p><img alt="Alt text" src="/images/scip_fig1.png" /></p>
+<p>The remainder of the article is organized as follows. In section 2, a sample problem is described which is used to illustrate the steps in the other sections. Section 3 shows how to generate the model file. Section 4 shows how to calculating all feasible solutions of a given model file.</p>
+<h2>2. Sample Problem</h2>
+<h4>Problem description:</h4>
+<p>Kai Sun would like to buy 100 chickens with 100 LTC. A rooster, a hen and a chick costs 3 LTC, 2LTC and 0.5LTC respectively. How many roosters, hens and chicks should Kai buy? If there are many solutions, output all of them. </p>
+<p>Convert the problem to ILP: </p>
+<h4>Variables:</h4>
+<div class="highlight"><pre><span class="n">Integer</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">d</span>
+</pre></div>
+
+
+<h4>Constraints:</h4>
+<div class="highlight"><pre><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span> <span class="o">=</span> <span class="mi">100</span> 
+<span class="mi">3</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="n">y</span><span class="o">+</span><span class="mf">0.5</span><span class="n">z</span> <span class="o">=</span> <span class="mi">100</span> 
+<span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">d</span>
+</pre></div>
+
+
+<h4>Objective function:</h4>
+<div class="highlight"><pre><span class="n">Minimize</span> <span class="n">d</span>
+</pre></div>
+
+
+<p>Here we use a dummy variable <code>d</code> because for this problem, there are no objective function need to be optimized.</p>
+<h2>3. Model File Generation</h2>
+<p>With PuLP, it is easy to express the ILP and generate ".lp" file, which can be further read by SCIP. </p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">pulp</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">prob</span> <span class="o">=</span> <span class="n">LpProblem</span><span class="p">(</span><span class="s">&quot;chicken&quot;</span><span class="p">,</span> <span class="n">LpMinimize</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">LpVariable</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">LpInteger</span><span class="p">)</span> <span class="c"># 0 is the lower bound;</span>
+                                  <span class="c"># &quot;None&quot; means no upper bound;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">LpVariable</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">LpInteger</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">LpVariable</span><span class="p">(</span><span class="s">&quot;z&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">LpInteger</span><span class="p">)</span>
+
+<span class="n">prob</span> <span class="o">+=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span> <span class="o">==</span> <span class="mi">100</span><span class="p">,</span> <span class="s">&quot;constraint 1&quot;</span>
+<span class="n">prob</span> <span class="o">+=</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="n">z</span><span class="o">*</span><span class="mf">0.5</span> <span class="o">==</span> <span class="mi">100</span><span class="p">,</span> <span class="s">&quot;constraint 2&quot;</span>
+
+<span class="n">prob</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s">&quot;problem.lp&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In this example, model file "problem.lp" is generated, and the contents of "problem.lp" are shown below:</p>
+<div class="highlight"><pre><span class="err">\</span><span class="o">*</span> <span class="n">chicken</span> <span class="o">*</span>\
+<span class="n">Minimize</span>
+<span class="nl">OBJ:</span> <span class="n">__dummy</span>
+<span class="n">Subject</span> <span class="n">To</span>
+<span class="nl">constraint_1:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nl">constraint_2:</span> <span class="mi">3</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">y</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">Bounds</span>
+<span class="n">__dummy</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">x</span>
+<span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">y</span>
+<span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">z</span>
+<span class="n">Generals</span>
+<span class="n">x</span>
+<span class="n">y</span>
+<span class="n">z</span>
+<span class="n">End</span>
+</pre></div>
+
+
+<h2>4. Calculating All Feasible Solutions</h2>
+<p>With SCIP, all feasible solutions of "problem.lp" can be calculated easily in the following steps:</p>
+<ol>
+<li>
+<p>Read model file using <code>read</code> command.</p>
+<p>:::bash
+SCIP&gt; read problem.lp</p>
+</li>
+<li>
+<p>Set the parameters which are required for collecting all feasible solutions.</p>
+<p>:::bash
+SCIP&gt; set emphasis counter
+SCIP&gt; set constraints countsols collect TRUE</p>
+</li>
+<li>
+<p>Calculating all feasible solutions using <code>count</code> command.</p>
+<p>:::bash
+SCIP&gt; count</p>
+</li>
+<li>
+<p>Write all feasible solutions to a file.</p>
+<p>:::bash
+SCIP&gt; write allsolutions chicken_sol.txt</p>
+</li>
+</ol>
+<p>Finally, file "chicken_sol" contains all feasible solutions of the sample problem:</p>
+<div class="highlight"><pre><span class="cp">#, z, y, x, objval</span>
+<span class="mi">1</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span>
+<span class="mi">2</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span>
+<span class="mi">3</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span>
+<span class="mi">4</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span>
+<span class="mi">5</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">0</span>
+<span class="mi">6</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">0</span>
+<span class="mi">7</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">0</span>
+</pre></div>
+
+
+<h2>References</h2>
+<ol>
+<li>Tobias Achterberg. SCIP: Solving constraint integer programs. Mathematical Programming Computation, 1(1):1{41, 2009. <a href="http://mpc.zib.de/index.php/MPC/article/view/4">http://mpc.zib.de/index.php/MPC/article/view/4</a></li>
+<li><a href="https://pypi.python.org/pypi/PuLP">https://pypi.python.org/pypi/PuLP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linear_programming">http://en.wikipedia.org/wiki/Linear_programming</a> </li>
+<li><a href="http://www.gnu.org/software/glpk/glpk.html">http://www.gnu.org/software/glpk/glpk.html</a></li>
+<li><a href="http://www.coin-or.org/">http://www.coin-or.org/</a></li>
+<li><a href="http://www.cplex.com/">http://www.cplex.com/</a></li>
+<li><a href="http://www.gurobi.com/">http://www.gurobi.com/</a></li>
+</ol></div>
+		<!--<div>
+			<h2>Comments</h2>
+		<div>-->
+	</div>	
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+		  <p>&copy; Kai Sun</p>
+		</footer>
+	  </div>
+
+	</div>
+</body>
+</html>

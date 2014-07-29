@@ -5,63 +5,70 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2014-07-28T10:34:18-00:00</lastmod>
+<lastmod>2014-07-29T23:48:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2014-07-28T10:34:18-00:00</lastmod>
+<lastmod>2014-07-29T23:48:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2014-07-28T10:34:18-00:00</lastmod>
+<lastmod>2014-07-29T23:48:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2014-07-28T10:34:18-00:00</lastmod>
+<lastmod>2014-07-29T23:48:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2014-07-28T10:34:18-00:00</lastmod>
+<lastmod>2014-07-29T23:48:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin.html</loc>
-<lastmod>2014-07-28T10:34:18-00:00</lastmod>
+<lastmod>2014-07-29T23:48:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-cn.html</loc>
-<lastmod>2014-07-28T10:34:18-00:00</lastmod>
+<lastmod>2014-07-29T23:48:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs.html</loc>
-<lastmod>2014-07-28T10:34:18-00:00</lastmod>
+<lastmod>2014-07-29T23:48:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs-cn.html</loc>
-<lastmod>2014-07-28T10:34:18-00:00</lastmod>
+<lastmod>2014-07-29T23:48:29-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/calculating-all-feasible-solutions-of-ilp.html</loc>
+<lastmod>2014-07-29T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -124,7 +131,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/blog.html</loc>
-<lastmod>2014-07-07T00:00:00-00:00</lastmod>
+<lastmod>2014-07-29T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -137,8 +144,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/pelican.html</loc>
-<lastmod>2014-07-01T00:00:00-00:00</lastmod>
+<loc>/tag/system.html</loc>
+<lastmod>2013-12-10T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/scip.html</loc>
+<lastmod>2014-07-29T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -151,8 +165,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/system.html</loc>
-<lastmod>2013-12-10T00:00:00-00:00</lastmod>
+<loc>/tag/lp.html</loc>
+<lastmod>2014-07-29T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/pulp.html</loc>
+<lastmod>2014-07-29T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -221,6 +242,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/ilp.html</loc>
+<lastmod>2014-07-29T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/gomoku.html</loc>
 <lastmod>2014-07-07T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
@@ -230,6 +258,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/tag/translation.html</loc>
 <lastmod>2013-12-10T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/pelican.html</loc>
+<lastmod>2014-07-01T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -250,7 +285,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/kai-sun.html</loc>
-<lastmod>2014-07-07T00:00:00-00:00</lastmod>
+<lastmod>2014-07-29T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>

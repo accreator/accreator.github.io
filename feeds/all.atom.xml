@@ -1,5 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-07-07T00:00:00+02:00</updated><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2014-07-28)&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-07-29T00:00:00+02:00</updated><entry><title>Calculating All Feasible Solutions of Integer Linear Programming with PuLP and SCIP</title><link href="/calculating-all-feasible-solutions-of-ilp.html" rel="alternate"></link><updated>2014-07-29T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-29:calculating-all-feasible-solutions-of-ilp.html</id><summary type="html">&lt;h3&gt;Abstract&lt;/h3&gt;
+&lt;p&gt;In this article, PuLP and SCIP are combined together to solve a general problem: given an integer linear programming problem, calculate all feasible solutions efficiently if the number of feasible solutions is not infinite.&lt;/p&gt;
+&lt;h2&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;Integer linear programming (ILP) is a method to achieve the best outcome in a mathematical model whose requirements are represented by linear relationships and unknown variables are required to be integers. Integer linear programming can be applied to various fields of study and has proved useful in diverse types of problems. In contrast to linear programming, which can be solved efficiently in the worst case, integer linear programming problems are in many practical situations NP-hard. Therefore, solving integer linear programming is not easy. Moreover, despite the fact that there are many professional solvers which can solve integer linear programming efficiently in most cases, most of them can only give one optimal solution even if many solutions exist. However, more than one solution, or even all solutions are needed in some applications.&lt;/p&gt;
+&lt;p&gt;In this article, PuLP and SCIP (Solving Constraint Integer Programs) are combined together to solve that general problem, that is, given an integer linear programming problem, calculate all feasible solutions efficiently if the number of feasible solutions is not infinite. Specifically, first, PuLP is used to generate the integer programming model file; then the model file is passed to SCIP and all feasible solutions of the model are calculated with SCIP.&lt;/p&gt;
+&lt;p&gt;PuLP is an LP modeler written in python. PuLP can generate MPS or LP files and call GLPK, COIN CLP/CBC, CPLEX, and GUROBI to solve linear problems. SCIP is currently one of the fastest non-commercial solvers for mixed integer programming (MIP) and mixed integer nonlinear programming (MINLP). It is also a framework for constraint integer programming (CIP) and branch-cut-and-price. It allows for total control of the solution process and the access of detailed information down to the guts of the solver.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/scip_fig1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The remainder of the article is organized as follows. In section 2, a sample problem is described which is used to illustrate the steps in the other sections. Section 3 shows how to generate the model file. Section 4 shows how to calculating all feasible solutions of a given model file.&lt;/p&gt;
+&lt;h2&gt;2. Sample Problem&lt;/h2&gt;
+&lt;h4&gt;Problem description:&lt;/h4&gt;
+&lt;p&gt;Kai Sun would like to buy 100 chickens with 100 LTC. A rooster, a hen and a chick costs 3 LTC, 2LTC and 0.5LTC respectively. How many roosters, hens and chicks should Kai buy? If there are many solutions, output all of them. &lt;/p&gt;
+&lt;p&gt;Convert the problem to ILP: &lt;/p&gt;
+&lt;h4&gt;Variables:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Integer&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Constraints:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt; 
+&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt; 
+&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Objective function:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Minimize&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here we use a dummy variable &lt;code&gt;d&lt;/code&gt; because for this problem, there are no objective function need to be optimized.&lt;/p&gt;
+&lt;h2&gt;3. Model File Generation&lt;/h2&gt;
+&lt;p&gt;With PuLP, it is easy to express the ILP and generate ".lp" file, which can be further read by SCIP. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pulp&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="n"&gt;prob&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpProblem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;chicken&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpMinimize&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpVariable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpInteger&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 0 is the lower bound;&lt;/span&gt;
+                                  &lt;span class="c"&gt;# &amp;quot;None&amp;quot; means no upper bound;&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpVariable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpInteger&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpVariable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;z&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpInteger&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;prob&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;constraint 1&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;prob&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;constraint 2&amp;quot;&lt;/span&gt;
+
+&lt;span class="n"&gt;prob&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;writeLP&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;problem.lp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In this example, model file "problem.lp" is generated, and the contents of "problem.lp" are shown below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;chicken&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;\
+&lt;span class="n"&gt;Minimize&lt;/span&gt;
+&lt;span class="nl"&gt;OBJ:&lt;/span&gt; &lt;span class="n"&gt;__dummy&lt;/span&gt;
+&lt;span class="n"&gt;Subject&lt;/span&gt; &lt;span class="n"&gt;To&lt;/span&gt;
+&lt;span class="nl"&gt;constraint_1:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="nl"&gt;constraint_2:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="n"&gt;Bounds&lt;/span&gt;
+&lt;span class="n"&gt;__dummy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;
+&lt;span class="n"&gt;Generals&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="n"&gt;z&lt;/span&gt;
+&lt;span class="n"&gt;End&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;4. Calculating All Feasible Solutions&lt;/h2&gt;
+&lt;p&gt;With SCIP, all feasible solutions of "problem.lp" can be calculated easily in the following steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Read model file using &lt;code&gt;read&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;:::bash
+SCIP&amp;gt; read problem.lp&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set the parameters which are required for collecting all feasible solutions.&lt;/p&gt;
+&lt;p&gt;:::bash
+SCIP&amp;gt; set emphasis counter
+SCIP&amp;gt; set constraints countsols collect TRUE&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Calculating all feasible solutions using &lt;code&gt;count&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;:::bash
+SCIP&amp;gt; count&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Write all feasible solutions to a file.&lt;/p&gt;
+&lt;p&gt;:::bash
+SCIP&amp;gt; write allsolutions chicken_sol.txt&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Finally, file "chicken_sol" contains all feasible solutions of the sample problem:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#, z, y, x, objval&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;68&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;70&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;72&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;74&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;76&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;78&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Tobias Achterberg. SCIP: Solving constraint integer programs. Mathematical Programming Computation, 1(1):1{41, 2009. &lt;a href="http://mpc.zib.de/index.php/MPC/article/view/4"&gt;http://mpc.zib.de/index.php/MPC/article/view/4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pypi.python.org/pypi/PuLP"&gt;https://pypi.python.org/pypi/PuLP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Linear_programming"&gt;http://en.wikipedia.org/wiki/Linear_programming&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.gnu.org/software/glpk/glpk.html"&gt;http://www.gnu.org/software/glpk/glpk.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.coin-or.org/"&gt;http://www.coin-or.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.cplex.com/"&gt;http://www.cplex.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.gurobi.com/"&gt;http://www.gurobi.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2014-07-28)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
