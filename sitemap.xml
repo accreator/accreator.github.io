@@ -5,69 +5,69 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2014-08-01T09:13:00-00:00</lastmod>
+<lastmod>2014-08-01T09:19:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2014-08-01T09:13:00-00:00</lastmod>
+<lastmod>2014-08-01T09:19:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2014-08-01T09:13:00-00:00</lastmod>
+<lastmod>2014-08-01T09:19:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2014-08-01T09:13:00-00:00</lastmod>
+<lastmod>2014-08-01T09:19:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2014-08-01T09:13:00-00:00</lastmod>
+<lastmod>2014-08-01T09:19:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin.html</loc>
-<lastmod>2014-08-01T09:13:00-00:00</lastmod>
+<lastmod>2014-08-01T09:19:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-cn.html</loc>
-<lastmod>2014-08-01T09:13:00-00:00</lastmod>
+<lastmod>2014-08-01T09:19:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs.html</loc>
-<lastmod>2014-08-01T09:13:00-00:00</lastmod>
+<lastmod>2014-08-01T09:19:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs-cn.html</loc>
-<lastmod>2014-08-01T09:13:00-00:00</lastmod>
+<lastmod>2014-08-01T09:19:31-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/implementing-elegent-quines-in-c-with-preprocessing.html</loc>
+<loc>/implementing-elegant-quines-in-c-with-preprocessing.html</loc>
 <lastmod>2014-08-01T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
