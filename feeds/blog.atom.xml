@@ -7,7 +7,7 @@
 &lt;p&gt;In some languages, quines are quite easy to be implemented, since in some languages, an empty program is a quine. Such an empty program, submitted as "the world's smallest self reproducing program", once won the "worst abuse of the rules" prize in the International Obfuscated C Code Contest. Another possible way to achieve self-reproducing is to use file operations to read its source code and print, which seems a bit cheating. All these kinds of trival cases are omitted in this article.&lt;/p&gt;
 &lt;p&gt;This article shows an easy, general, and elegant way to implement quines in C with preprocessing which not only have short length, but can easily do general purpose computations as well. The techniques in this article are widely used in various code golf.&lt;/p&gt;
 &lt;p&gt;The remainder of the article is organized as follows. In section 2, the preprocessing techniques used in this article are described. Section 3 shows how to implement quines.&lt;/p&gt;
-&lt;h2&gt;The C Preprocessing&lt;/h2&gt;
+&lt;h2&gt;2. The C Preprocessing&lt;/h2&gt;
 &lt;p&gt;One of the major use of the preprocessor in C is to define macros, which is also used to implement quines in this article. A macro definition is usually of the following form:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define MACRO_NAME(arg1, arg2, ...) [code to expand to]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -31,7 +31,7 @@
 
 
 &lt;p&gt;It is easy to see how does the &lt;em&gt;magic operator&lt;/em&gt; work with an example, which will be given in the next section.&lt;/p&gt;
-&lt;h2&gt;Quine Implementation&lt;/h2&gt;
+&lt;h2&gt;3. Quine Implementation&lt;/h2&gt;
 &lt;p&gt;With the &lt;em&gt;magic operator&lt;/em&gt;, A simple quine can be implemented as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define Q(x)char*s=#x;x&lt;/span&gt;
 &lt;span class="n"&gt;Q&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;&lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#define Q(x)char*s=#x;x&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Q(%s)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);})&lt;/span&gt;
