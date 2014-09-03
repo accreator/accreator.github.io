@@ -141,20 +141,32 @@ tags: <a href="/tag/scip.html">SCIP</a> <a href="/tag/pulp.html">PuLP</a> <a hre
 <ol>
 <li>
 <p>Read model file using <code>read</code> command.</p>
-<p>SCIP&gt; read problem.lp</p>
+<div class="highlight"><pre><span class="n">SCIP</span><span class="o">&gt;</span> <span class="n">read</span> <span class="n">problem</span><span class="p">.</span><span class="n">lp</span>
+</pre></div>
+
+
 </li>
 <li>
 <p>Set the parameters which are required for collecting all feasible solutions.</p>
-<p>SCIP&gt; set emphasis counter
-SCIP&gt; set constraints countsols collect TRUE</p>
+<div class="highlight"><pre><span class="n">SCIP</span><span class="o">&gt;</span> <span class="n">set</span> <span class="n">emphasis</span> <span class="n">counter</span>
+<span class="n">SCIP</span><span class="o">&gt;</span> <span class="n">set</span> <span class="n">constraints</span> <span class="n">countsols</span> <span class="n">collect</span> <span class="n">TRUE</span>
+</pre></div>
+
+
 </li>
 <li>
 <p>Calculating all feasible solutions using <code>count</code> command.</p>
-<p>SCIP&gt; count</p>
+<div class="highlight"><pre><span class="n">SCIP</span><span class="o">&gt;</span> <span class="n">count</span>
+</pre></div>
+
+
 </li>
 <li>
 <p>Write all feasible solutions to a file.</p>
-<p>SCIP&gt; write allsolutions chicken_sol.txt</p>
+<div class="highlight"><pre><span class="n">SCIP</span><span class="o">&gt;</span> <span class="n">write</span> <span class="n">allsolutions</span> <span class="n">chicken_sol</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+
+
 </li>
 </ol>
 <p>Finally, file "chicken_sol" contains all feasible solutions of the sample problem:</p>
