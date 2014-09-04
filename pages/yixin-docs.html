@@ -101,7 +101,7 @@
 <p>(5) Baby blue: Moves that have been blocked.</p>
 </li>
 <li>
-<p><strong>Q</strong>: What <code>style</code> in settings is recommended?</p>
+<p><strong>Q</strong>: What <strong>style</strong> in settings is recommended?</p>
 <p><strong>A</strong>: <code>0</code> for fast game and <code>1</code> for deep analysis.</p>
 </li>
 <li>
@@ -111,6 +111,18 @@
 <li>
 <p><strong>Q</strong>: On different computers with different hardwares, does Yixin have different performance?</p>
 <p><strong>A</strong>: The strength of Yixin does not change in any levels other than custom level. Yixin will spend less time on computers with faster hardwares.</p>
+</li>
+<li>
+<p><strong>Q</strong>: What does <strong>number of threads</strong> mean? How to set it?</p>
+<p><strong>A</strong>: <strong>Number of threads</strong> defines the maximum number of threads used by Yixin for analysis. It should not be greater than the maximum number of threads your CPU supports.</p>
+</li>
+<li>
+<p><strong>Q</strong>: What is <strong>split depth</strong>?</p>
+<p><strong>A</strong>: When using multiple threads, the <strong>split depth</strong> parameter defines the minimum depth at which work will be split between threads. This parameter can impact the speed of the engine and can be fine-tuned to get the best performance out of your hardware. </p>
+</li>
+<li>
+<p><strong>Q</strong>: What is <strong>hash size</strong>? How to set it?</p>
+<p><strong>A</strong>: Hash table is a structure used by Yixin to store its analysis results. The so-called <strong>hash size</strong> defines the amount of hash table memory used by Yixin. For infinite analysis or long time control matches you should use as large hash as possible (but not exceeds the free memory of your computer). For shorter games, for example 2 to 10 minute games, it's better to use the default hash size.</p>
 </li>
 <li>
 <p><strong>Q</strong>: What is the name of Yixin in Chinese?</p>
