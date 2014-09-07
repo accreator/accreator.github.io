@@ -38,7 +38,7 @@
 			<ul class="nav">
 					<li><a href="/">About me</a></li>
 					<li><a href="/pages/yixin.html">Yixin</a></li>
-					<li ><a href="/category/blog.html">Blog</a></li>
+					<li class="active"><a href="/category/blog.html">Blog</a></li>
 					<li ><a href="/category/zhong-wen-bo-ke.html">中文博客</a></li>
 			</ul>
 			<p class="pull-right"><a href="/archives.html">[archives]</a> <a href="/tags.html">[tags]</a></p>
@@ -66,33 +66,50 @@
 		</div>
 	  </div>
 	  <div class="content">
-<div class="page-header"><h1>AI EXP <small>[tags]</small></h1></div><ul>
-	<li><a href="/tag/pelican.html">pelican</a></li>
-	<li><a href="/tag/ai.html">AI</a></li>
-	<li><a href="/tag/gomoku.html">gomoku</a></li>
-	<li><a href="/tag/renju.html">renju</a></li>
-	<li><a href="/tag/xi-tong.html">系统</a></li>
-	<li><a href="/tag/scip.html">SCIP</a></li>
-	<li><a href="/tag/system.html">system</a></li>
-	<li><a href="/tag/yi-xin.html">弈心</a></li>
-	<li><a href="/tag/quine.html">Quine</a></li>
-	<li><a href="/tag/gmotor.html">gmotor</a></li>
-	<li><a href="/tag/cc.html">C/C++</a></li>
-	<li><a href="/tag/lp.html">LP</a></li>
-	<li><a href="/tag/kang-nai-er.html">康奈尔</a></li>
-	<li><a href="/tag/multi-thread.html">multi-thread</a></li>
-	<li><a href="/tag/piskvork.html">piskvork</a></li>
-	<li><a href="/tag/yixin.html">yixin</a></li>
-	<li><a href="/tag/preprocessing.html">Preprocessing</a></li>
-	<li><a href="/tag/translation.html">translation</a></li>
-	<li><a href="/tag/bug.html">bug</a></li>
-	<li><a href="/tag/resource.html">resource</a></li>
-	<li><a href="/tag/fan-yi.html">翻译</a></li>
-	<li><a href="/tag/game.html">game</a></li>
-	<li><a href="/tag/rock-scissors-paper.html">rock scissors paper</a></li>
-	<li><a href="/tag/ilp.html">ILP</a></li>
-	<li><a href="/tag/pulp.html">PuLP</a></li>
-</ul>
+	<div class='article'>
+		<div class="page-header"><h1>Towards Deep Yixin</h1></div>
+		<div class="well small">Permalink: <a class="more" href="/towards-deep-yixin.html">2014-09-07</a>
+by <a class="url fn" href="/author/kai-sun.html">Kai Sun </a>
+ in <a href="/category/blog.html">Blog</a>
+tags: <a href="/tag/yixin.html">yixin</a> <a href="/tag/multi-thread.html">multi-thread</a> </div>
+		<div><p>Recently, I have been struggling with various of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.</p>
+<p>I tested the Deep Yixin (0.4.28) on a 4-core i7 with 21 balanced openings, and the result is as follows:</p>
+<p>300s/1000s</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Deep Yixin loses</th>
+<th>Deep Yixin wins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yixin14(0.4.3)</td>
+<td>16</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Tito14</td>
+<td>12</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Renjusolver(H6)</td>
+<td>9</td>
+<td>33</td>
+</tr>
+<tr>
+<td>Hewer14</td>
+<td>5</td>
+<td>37</td>
+</tr>
+</tbody>
+</table></div>
+		<!--<div>
+			<h2>Comments</h2>
+		<div>-->
+	</div>	
 		<footer>
 		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
 		  <p>&copy; Kai Sun</p>

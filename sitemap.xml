@@ -5,63 +5,70 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2014-09-06T15:19:32-00:00</lastmod>
+<lastmod>2014-09-07T23:30:09-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2014-09-06T15:19:32-00:00</lastmod>
+<lastmod>2014-09-07T23:30:09-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2014-09-06T15:19:32-00:00</lastmod>
+<lastmod>2014-09-07T23:30:09-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2014-09-06T15:19:32-00:00</lastmod>
+<lastmod>2014-09-07T23:30:09-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2014-09-06T15:19:32-00:00</lastmod>
+<lastmod>2014-09-07T23:30:09-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin.html</loc>
-<lastmod>2014-09-06T15:19:32-00:00</lastmod>
+<lastmod>2014-09-07T23:30:09-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-cn.html</loc>
-<lastmod>2014-09-06T15:19:32-00:00</lastmod>
+<lastmod>2014-09-07T23:30:09-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs.html</loc>
-<lastmod>2014-09-06T15:19:32-00:00</lastmod>
+<lastmod>2014-09-07T23:30:09-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs-cn.html</loc>
-<lastmod>2014-09-06T15:19:32-00:00</lastmod>
+<lastmod>2014-09-07T23:30:09-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/towards-deep-yixin.html</loc>
+<lastmod>2014-09-07T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -145,7 +152,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/blog.html</loc>
-<lastmod>2014-08-01T00:00:00-00:00</lastmod>
+<lastmod>2014-09-07T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -249,6 +256,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/multi-thread.html</loc>
+<lastmod>2014-09-07T00:00:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/piskvork.html</loc>
 <lastmod>2011-03-30T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
@@ -257,7 +271,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/yixin.html</loc>
-<lastmod>2013-09-14T00:00:00-00:00</lastmod>
+<lastmod>2014-09-07T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -327,7 +341,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/kai-sun.html</loc>
-<lastmod>2014-08-01T00:00:00-00:00</lastmod>
+<lastmod>2014-09-07T00:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
