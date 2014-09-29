@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-09-07T00:00:00+02:00</updated><entry><title>Towards Deep Yixin</title><link href="/towards-deep-yixin.html" rel="alternate"></link><updated>2014-09-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-09-07:towards-deep-yixin.html</id><summary type="html">&lt;p&gt;Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-09-28T00:00:00+02:00</updated><entry><title>真实世界的我</title><link href="/%E7%9C%9F%E5%AE%9E%E4%B8%96%E7%95%8C%E7%9A%84%E6%88%91.html" rel="alternate"></link><updated>2014-09-28T00:00:00+02:00</updated><author><name>孙锴</name></author><id>tag:,2014-09-28:真实世界的我.html</id><summary type="html">&lt;h3&gt;文章引子&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;年轻人应花更多的时间在前方的道路上，这里非“总结”类的回忆性文章，我是不愿意花时间写的&lt;/strong&gt;。可是在我没有达成物质独立前，总会遇到由此引发的难缠的问题。为了从莙政项目那里拿到一笔参加SLT2014的费用补贴，我被要求接受采访，同以往我能够爽快地拒绝不同，接受采访意味着可以拿到补贴，进而为实验室节省一笔不小的开支，这是很难拒绝的。怎奈和以往媒体给我留下的糟糕的印象一样，此次采访结束后，发给我的草稿中的我和我的导师都被进行了文学加工，变了样子。为了让采访文章的正式稿描绘出一个真实的我，在同莙政项目老师的沟通后，我同意写一篇文章介绍我的科研道路，而莙政项目同意根据此文，以及补充采访，修正此前采访稿的诸多不实之处。下文正是我交给莙政项目的文章。&lt;strong&gt;由于时间仓促，写到三、四节的时候已接近最后提交期限，所以内容略有混乱，亦缺乏部分细节和必要衔接，还望读者见谅&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3&gt;一．中国象棋与楚汉棋缘&lt;/h3&gt;
+&lt;p&gt;我从小喜欢下中国象棋。初中的时候，常和朋友们在课间，或者课上（体育课）下棋，在班级的棋力排行老二，常败于许同学（棋力排行老大）。出于提高棋力战胜许同学，和在家里消遣的目的，我从网上找到了一个叫“楚汉棋缘”的象棋软件学习。然而，楚汉棋缘给我的主要影响，并不是让我了解并学会了“铁门闩”等杀招，而是我发现，我那时自命不凡的棋力，在“初级电脑”难度下都是那么的不堪一击。那时翻看了软件的帮助，里面列了好多它的人工智能所采用的技术的英文术语，虽然不懂，但觉得作者好厉害，觉得人工智能好神奇。我萌生了“做一个象棋程序”的想法。那时候，我已经接触计算机编程多年，会用图龟画一些简单图形，会用VB拖控件，会一点Pascal，会一点C，看起来会不少东西，但都是皮毛，“做一个象棋程序”成为驱动我真正熟练掌握一门计算机语言的动力。而这个想法真正变成了现实的那一刻，真是太美妙了——尽管它只是一个能计算4层的、在今天看来很简单的小程序。&lt;/p&gt;
+&lt;h3&gt;二．从象棋到五子棋&lt;/h3&gt;
+&lt;p&gt;完成第一个象棋程序后，我又陆续学习了一些相对高级的技术，虽然现在回过头看，这些高级技术不仅依旧是皮毛，而且那时我对它们中的部分还有一些错误的理解和认识，可是即便如此，我借助这些技术重写的象棋程序，还是达到了令我满意的效果——它战胜了我和我的父亲。&lt;/p&gt;
+&lt;p&gt;就在我的人机博弈故事似乎要划上句号的时候，一位我很敬重的，平日交流（主要是请教）算法问题的网友跟我提到，能写好象棋，不一定能写好五子棋，后者比前者困难。我不相信，于是决定试一试。值得一提的是，那时恰好有几个有趣因素的共同影响，让我很大程度上低估了五子棋的人机对弈的难度：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;带人工智能的五子棋程序及代码比中国象棋多不少。许多编程刚入门的新手，都可以写出一个五子棋程序，而中国象棋是相对少见的。&lt;/li&gt;
+&lt;li&gt;参加NOIP（全国信息学奥林匹克联赛）的时候，有个外校的同学和我下了一局五子棋，套八卦赢了我，之后告诉我五子棋有必胜策略，让我误解为利用套用简单的八卦就可以必胜。&lt;/li&gt;
+&lt;li&gt;我曾读过一位网友写的五子棋人工智能的文章及代码，核心代码只有几百行，尽管软件实际做不到必胜，可作者表示只是有漏洞而已，这让我误认为对这几百行做一点修补，就可以实现必胜。&lt;/li&gt;
+&lt;li&gt;恰好一个宣称无禁手执黑必胜的软件“五子棋终结者1.0”刚刚发布，网上有不少的差评的声音。一方面有不少人找出了若干bug，导致软件无法做到必胜；另一方面许多的评论说做到传统的无禁手规则必胜是很容易的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;好了，回到主线，其实结果已经不难猜到了——我第一次尝试写的五子棋程序，走棋破绽百出。后来我逐渐了解到，那个时候，最强的有禁五子棋软件（黑石），棋力依旧远不及人类的最高水平；作为对比，06年的时候，中国象棋程序已经达到了人类的最高水平（浪潮天梭战平许银川）。现在我可以来解释一下，为什么五子棋人机对弈看起来比象棋简单，而实际比象棋困难了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;五子棋的着法生成比象棋简单很多，同时，可以通过简单的判定棋形（活三，眠四等），来实现一个简单的静态评估函数，有了着法生成、局面评估这两部分就能实现一个能走棋的五子棋程序了，所以看起来五子棋的人机对弈程序门槛是不高的。&lt;/li&gt;
+&lt;li&gt;传统的无禁手规则和有禁手规则下，由于黑棋先手的巨大优势，五子棋被计算机穷举证明了先手必胜。然而，现代专业五子棋都采用一系列基于交换的开局规则，如国际赛事里无禁手的swap-2规则，有禁手的RIF规则、山口规则，使得先手必胜不复存在。所以五子棋在专业规则下并没有被终结。&lt;/li&gt;
+&lt;li&gt;五子棋在专业规则下不仅仅没有被终结，而且自身的复杂度是高于中国象棋的。即使只考虑15x15的棋盘，五子棋的状态空间复杂度约为10的105次方，而中国象棋只有10的48次方。（可能较真的读者会提出博弈树复杂度的对比，然而考虑到本文的定位，这里不深入分析博弈树复杂度。但请这部分读者注意在对比博弈树复杂度前，请明确博弈树复杂度的定义，并弄清楚你所参考的数据源中，对五子棋部分的计算采用的是什么开局规则）&lt;/li&gt;
+&lt;li&gt;五子棋的分支因子比中国象棋高得多，这使得对程序而言，五子棋很难计算得很深。&lt;/li&gt;
+&lt;li&gt;五子棋的审局相比中国象棋要困难，五子棋中的棋形作为基本材料，是类似象棋的，然而五子棋里最为重要的空间及大局观是较为抽象的概念。在我看来，五子棋的审局形似象棋，而神似围棋。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;重新回到主线，对于五子棋人机对弈，其实除了五子棋对弈问题本身的难度外，还有一个难点是资料的缺乏。一次失败就放弃不是我的风格，经历过冥思苦想数月无进展的郁闷，经历过由偶然灵感获得巨大飞跃的狂喜，经历过读罢论文后的恍然大悟，也经历过与朋友交流过程中的豁然开朗，经历就这样一笔带过吧，结果是，从2012年Gomocup前的某次偶然的尝试中获得的巨大提升过后，五子棋人工智能程序&lt;a href="http://www.aiexp.info/pages/yixin.html"&gt;弈心&lt;/a&gt;成为了最好的五子棋人工智能程序之一。&lt;/p&gt;
+&lt;h3&gt;三．偶遇良师&lt;/h3&gt;
+&lt;p&gt;如果问我为什么要做研究工作，我会回答因为它有趣，然而如果你追问为什么它有趣，这问题就不是那么容易回答了。我觉得我把前面几段文字拍出来，或许可以作为一个答案，因为我觉得那些有类似经历的人或许会产生共鸣。这种研究工作的有趣之处，就同牛顿说的那样：“像是一个在海边玩耍的小孩，不时发现比寻常更为光滑的一块卵石或比寻常更为美丽的一片贝壳”，当你发现了你过去没有发现的东西、前人未发现的东西，当你成为世界上第一个做成某个未知事物的人的时候，这真的是一件很有意思的事情，不是吗？研究工作是真实世界里的游戏。研究工作，多数时候，过程中会遇到各种波折，游戏的世界里，同样会遇到各种困难，但让你觉得玩游戏“爽”的原因，是你可以通过努力，战胜这些困难，获得一些成就，从而获得一些成就感，研究工作是一样的道理。&lt;/p&gt;
+&lt;p&gt;而我对研究工作的兴趣，一定程度上契合了ACM班的“培养计划”——培养计算机科学家。班级在大二的下学期末会要求学生选择一个导师，进入实验室做科研工作。而在选导师前，每位导师有5分钟的时间来做自我介绍，以及实验室介绍，这个介绍会选在某一天集中进行。大约有20位导师，他们做完介绍后，我们随即进行导师志愿的填写。由于这种要求当场填写志愿的原因，其实在导师做自我介绍前，我们都提前（几天，几周，甚至几月）了解过大致有哪些导师可选，导师的方向课题等等，而我也有了自己的理想人选。可是人生是充满戏剧性的，在我的候选名单中的那位老师，因要离开我们学校（到南京大学了），所以不再招学生。而直到要填写志愿前的最后5分钟，我才知道这件事情。由于我的候选名单里只有这一位老师，这一突发事件让我有点不知所措。在我在仅有的几分钟里尽力回忆过去的100分钟里的宣讲后，我决定就选择俞凯老师了。尽管此前我对俞凯老师的信息一无所知，但我相信我的选择是明智的，原因可能比较出人意料：除了他做的语音工作我觉得很有趣这点外，主要的一点是他是唯一在宣讲的5分钟里给学生提出要求和期望的老师。嗯，就是他了。&lt;/p&gt;
+&lt;p&gt;“良师益友”四个字用于评价俞凯老师是十分贴切的，他是一位可以和学生并肩奋战到凌晨的老师，他是一位可以真诚且无私地为你付出的时间和心血的朋友。俞凯老师不仅在学术上给予贴心的指导，更在无时无刻地在生活中的一言一行里潜移默化地指导着学生做人与做事。每学期的Kick Off Meeting，俞凯老师都会用王蒙的《青春万岁》序诗来勉励我们：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;所有的日子，所有的日子都来吧，&lt;/span&gt;
+&lt;span class="err"&gt;让我编织你们，用青春的金线，&lt;/span&gt;
+&lt;span class="err"&gt;和幸福的璎珞，编织你们。&lt;/span&gt;
+
+&lt;span class="err"&gt;有那小船上的歌笑，月下校园的欢舞，&lt;/span&gt;
+&lt;span class="err"&gt;细雨蒙蒙里踏青，初雪的早晨行军，&lt;/span&gt;
+&lt;span class="err"&gt;还有热烈的争论，跃动的、温暖的心……&lt;/span&gt;
+
+&lt;span class="err"&gt;是转眼过去了的日子，也是充满遐想的日子，&lt;/span&gt;
+&lt;span class="err"&gt;纷纷的心愿迷离，像春天的雨，&lt;/span&gt;
+&lt;span class="err"&gt;我们有时间，有力量，有燃烧的信念，&lt;/span&gt;
+&lt;span class="err"&gt;我们渴望生活，渴望在天上飞。&lt;/span&gt;
+
+&lt;span class="err"&gt;是单纯的日子，也是多变的日子，&lt;/span&gt;
+&lt;span class="err"&gt;浩大的世界，样样叫我们好奇，&lt;/span&gt;
+&lt;span class="err"&gt;从来都兴高采烈，从来不淡漠，&lt;/span&gt;
+&lt;span class="err"&gt;眼泪，欢笑，深思，全是第一次。&lt;/span&gt;
+
+&lt;span class="err"&gt;所有的日子都去吧，都去吧，&lt;/span&gt;
+&lt;span class="err"&gt;在生活中我快乐地向前，&lt;/span&gt;
+&lt;span class="err"&gt;多沉重的担子，我不会发软，&lt;/span&gt;
+&lt;span class="err"&gt;多严峻的战斗，我不会丢脸；&lt;/span&gt;
+&lt;span class="err"&gt;有一天，擦完了枪，擦完了机器，擦完了汗，&lt;/span&gt;
+&lt;span class="err"&gt;我想念你们，招呼你们，&lt;/span&gt;
+&lt;span class="err"&gt;并且怀着骄傲，注视你们！&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;每次他朗读这首诗，他都会动情。他常常向学生分享他的故事，他的激情，他的态度，他的勤奋，感染着我，给予我源源不断的正能量。&lt;/p&gt;
+&lt;h3&gt;四．深度学习与对话管理&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/dialogue_system.png" /&gt;&lt;/p&gt;
+&lt;p&gt;深度学习（Deep Learning）是近年来很火的一个话题，受到了学术界和工业界的极大重视。这一话题下的深度神经网络（Deep Neural Networks）在语音识别中应用取得了30年来最大的性能提高。然而，在语音交互的若干核心领域，如对话管理、语音理解等方面还没有广泛使用深度神经网络。我跟随俞凯老师做的研究工作，题为“基于深度神经网络的语音交互技术研究”，实际开展中主要着眼于对话管理（Dialogue Management）中的对话状态跟踪（Dialogue State Tracking）。&lt;/p&gt;</summary><category term="我"></category></entry><entry><title>Towards Deep Yixin</title><link href="/towards-deep-yixin.html" rel="alternate"></link><updated>2014-09-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-09-07:towards-deep-yixin.html</id><summary type="html">&lt;p&gt;Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.&lt;/p&gt;
 &lt;p&gt;I tested the Deep Yixin (0.4.28) on a 4-core i7 with 21 balanced openings, and the result is as follows:&lt;/p&gt;
 &lt;p&gt;300s/1000s&lt;/p&gt;
 &lt;table&gt;
