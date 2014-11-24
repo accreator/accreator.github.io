@@ -8,40 +8,29 @@
 
 	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
 	<!--[if lt IE 9]>
-		<script src="/theme/html5.js"></script>
+		<script src="http://www.aiexp.info/theme/html5.js"></script>
 	<![endif]-->
 
 	<!-- Styles -->
-	<link href="/theme/bootstrap.min.css" rel="stylesheet">
-	<link href="/theme/local.css" rel="stylesheet">
-	<link href="/theme/pygments.css" rel="stylesheet">
+	<link href="http://www.aiexp.info/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="http://www.aiexp.info/theme/local.css" rel="stylesheet">
+	<link href="http://www.aiexp.info/theme/pygments.css" rel="stylesheet">
 
     <!-- Feeds -->
-    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="AI EXP Atom Feed" />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-52589612-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </head>
 <body>
 	<div class="topbar">
 	  <div class="topbar-inner">
 		<div class="container-fluid">
-		  <a class="brand" href="/">AI EXP</a>
+		  <a class="brand" href="http://www.aiexp.info/">AI EXP</a>
 			<ul class="nav">
 					<li><a href="/">About me</a></li>
 					<li><a href="/pages/yixin.html">Yixin</a></li>
-					<li class="active"><a href="/category/blog.html">Blog</a></li>
-					<li ><a href="/category/zhong-wen-bo-ke.html">中文博客</a></li>
+					<li class="active"><a href="http://www.aiexp.info/category/blog.html">Blog</a></li>
+					<li ><a href="http://www.aiexp.info/category/zhong-wen-bo-ke.html">中文博客</a></li>
 			</ul>
-			<p class="pull-right"><a href="/archives.html">[archives]</a> <a href="/tags.html">[tags]</a></p>
+			<p class="pull-right"><a href="http://www.aiexp.info/archives.html">[archives]</a> <a href="http://www.aiexp.info/tags.html">[tags]</a></p>
 		</div>
 	  </div>
 	</div>
@@ -70,10 +59,10 @@
 	  <div class="content">
 	<div class='article'>
 		<div class="page-header"><h1>Towards Deep Yixin</h1></div>
-		<div class="well small">Permalink: <a class="more" href="/towards-deep-yixin.html">2014-09-07</a>
-by <a class="url fn" href="/author/kai-sun.html">Kai Sun </a>
- in <a href="/category/blog.html">Blog</a>
-tags: <a href="/tag/yixin.html">yixin</a> <a href="/tag/multi-thread.html">multi-thread</a> </div>
+		<div class="well small">Permalink: <a class="more" href="http://www.aiexp.info/towards-deep-yixin.html">2014-09-07</a>
+by <a class="url fn" href="http://www.aiexp.info/author/kai-sun.html">Kai Sun </a>
+ in <a href="http://www.aiexp.info/category/blog.html">Blog</a>
+tags: <a href="http://www.aiexp.info/tag/yixin.html">yixin</a> <a href="http://www.aiexp.info/tag/multi-thread.html">multi-thread</a> </div>
 		<div><p>Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.</p>
 <p>I tested the Deep Yixin (0.4.28) on a 4-core i7 with 21 balanced openings, and the result is as follows:</p>
 <p>300s/1000s</p>
