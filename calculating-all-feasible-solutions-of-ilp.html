@@ -8,29 +8,40 @@
 
 	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
 	<!--[if lt IE 9]>
-		<script src="http://www.aiexp.info/theme/html5.js"></script>
+		<script src="/theme/html5.js"></script>
 	<![endif]-->
 
 	<!-- Styles -->
-	<link href="http://www.aiexp.info/theme/bootstrap.min.css" rel="stylesheet">
-	<link href="http://www.aiexp.info/theme/local.css" rel="stylesheet">
-	<link href="http://www.aiexp.info/theme/pygments.css" rel="stylesheet">
+	<link href="/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="/theme/local.css" rel="stylesheet">
+	<link href="/theme/pygments.css" rel="stylesheet">
 
     <!-- Feeds -->
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="AI EXP Atom Feed" />
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52589612-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
 	<div class="topbar">
 	  <div class="topbar-inner">
 		<div class="container-fluid">
-		  <a class="brand" href="http://www.aiexp.info/">AI EXP</a>
+		  <a class="brand" href="/">AI EXP</a>
 			<ul class="nav">
 					<li><a href="/">About me</a></li>
 					<li><a href="/pages/yixin.html">Yixin</a></li>
-					<li class="active"><a href="http://www.aiexp.info/category/blog.html">Blog</a></li>
-					<li ><a href="http://www.aiexp.info/category/zhong-wen-bo-ke.html">中文博客</a></li>
+					<li class="active"><a href="/category/blog.html">Blog</a></li>
+					<li ><a href="/category/zhong-wen-bo-ke.html">中文博客</a></li>
 			</ul>
-			<p class="pull-right"><a href="http://www.aiexp.info/archives.html">[archives]</a> <a href="http://www.aiexp.info/tags.html">[tags]</a></p>
+			<p class="pull-right"><a href="/archives.html">[archives]</a> <a href="/tags.html">[tags]</a></p>
 		</div>
 	  </div>
 	</div>
@@ -59,10 +70,10 @@
 	  <div class="content">
 	<div class='article'>
 		<div class="page-header"><h1>Calculating All Feasible Solutions of Integer Linear Programming with PuLP and SCIP</h1></div>
-		<div class="well small">Permalink: <a class="more" href="http://www.aiexp.info/calculating-all-feasible-solutions-of-ilp.html">2014-07-29</a>
-by <a class="url fn" href="http://www.aiexp.info/author/kai-sun.html">Kai Sun </a>
- in <a href="http://www.aiexp.info/category/blog.html">Blog</a>
-tags: <a href="http://www.aiexp.info/tag/scip.html">SCIP</a> <a href="http://www.aiexp.info/tag/pulp.html">PuLP</a> <a href="http://www.aiexp.info/tag/ilp.html">ILP</a> <a href="http://www.aiexp.info/tag/lp.html">LP</a> </div>
+		<div class="well small">Permalink: <a class="more" href="/calculating-all-feasible-solutions-of-ilp.html">2014-07-29</a>
+by <a class="url fn" href="/author/kai-sun.html">Kai Sun </a>
+ in <a href="/category/blog.html">Blog</a>
+tags: <a href="/tag/scip.html">SCIP</a> <a href="/tag/pulp.html">PuLP</a> <a href="/tag/ilp.html">ILP</a> <a href="/tag/lp.html">LP</a> </div>
 		<div><h2>1. Introduction</h2>
 <p>Integer linear programming (ILP) is a method to achieve the best outcome in a mathematical model whose requirements are represented by linear relationships and unknown variables are required to be integers. Integer linear programming can be applied to various fields of study and has proved useful in diverse types of problems. In contrast to linear programming, which can be solved efficiently in the worst case, integer linear programming problems are in many practical situations NP-hard. Therefore, solving integer linear programming is not easy. Moreover, despite the fact that there are many professional solvers which can solve integer linear programming efficiently in most cases, most of them can only give one optimal solution even if many solutions exist. However, more than one solution, or even all solutions are needed in some applications.</p>
 <p>In this article, PuLP and SCIP (Solving Constraint Integer Programs) are combined together to solve that general problem, that is, given an integer linear programming problem, calculate all feasible solutions efficiently if the number of feasible solutions is not infinite. Specifically, first, PuLP is used to generate the integer programming model file; then the model file is passed to SCIP and all feasible solutions of the model are calculated with SCIP.</p>

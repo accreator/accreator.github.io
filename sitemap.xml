@@ -4,364 +4,364 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://www.aiexp.info/index.html</loc>
-<lastmod>2014-11-25T02:03:16-00:00</lastmod>
+<loc>/index.html</loc>
+<lastmod>2014-11-25T02:39:39-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/archives.html</loc>
-<lastmod>2014-11-25T02:03:16-00:00</lastmod>
+<loc>/archives.html</loc>
+<lastmod>2014-11-25T02:39:39-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tags.html</loc>
-<lastmod>2014-11-25T02:03:16-00:00</lastmod>
+<loc>/tags.html</loc>
+<lastmod>2014-11-25T02:39:39-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/categories.html</loc>
-<lastmod>2014-11-25T02:03:16-00:00</lastmod>
+<loc>/categories.html</loc>
+<lastmod>2014-11-25T02:39:39-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/</loc>
-<lastmod>2014-11-25T02:03:16-00:00</lastmod>
+<loc>/</loc>
+<lastmod>2014-11-25T02:39:39-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/pages/yixin.html</loc>
-<lastmod>2014-11-25T02:03:16-00:00</lastmod>
+<loc>/pages/yixin.html</loc>
+<lastmod>2014-11-25T02:39:39-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/pages/yixin-cn.html</loc>
-<lastmod>2014-11-25T02:03:16-00:00</lastmod>
+<loc>/pages/yixin-cn.html</loc>
+<lastmod>2014-11-25T02:39:39-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/pages/yixin-docs.html</loc>
-<lastmod>2014-11-25T02:03:16-00:00</lastmod>
+<loc>/pages/yixin-docs.html</loc>
+<lastmod>2014-11-25T02:39:39-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/pages/yixin-docs-cn.html</loc>
-<lastmod>2014-11-25T02:03:16-00:00</lastmod>
+<loc>/pages/yixin-docs-cn.html</loc>
+<lastmod>2014-11-25T02:39:39-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/真实世界的我.html</loc>
+<loc>/真实世界的我.html</loc>
 <lastmod>2014-09-28T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/towards-deep-yixin.html</loc>
+<loc>/towards-deep-yixin.html</loc>
 <lastmod>2014-09-07T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/康奈尔印象.html</loc>
+<loc>/康奈尔印象.html</loc>
 <lastmod>2014-08-04T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/implementing-elegant-quines-in-c-with-preprocessing.html</loc>
+<loc>/implementing-elegant-quines-in-c-with-preprocessing.html</loc>
 <lastmod>2014-08-01T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/calculating-all-feasible-solutions-of-ilp.html</loc>
+<loc>/calculating-all-feasible-solutions-of-ilp.html</loc>
 <lastmod>2014-07-29T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/gomoku-renju-resources-an-overview.html</loc>
+<loc>/gomoku-renju-resources-an-overview.html</loc>
 <lastmod>2014-07-07T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/moving-my-blog-to-github.html</loc>
+<loc>/moving-my-blog-to-github.html</loc>
 <lastmod>2014-07-01T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/paper-translation-all-about-eve.html</loc>
+<loc>/paper-translation-all-about-eve.html</loc>
 <lastmod>2013-12-10T00:00:00+01:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/论文翻译-关于Eve的一切.html</loc>
+<loc>/论文翻译-关于Eve的一切.html</loc>
 <lastmod>2013-12-10T00:00:00+01:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/improvement-of-yixin.html</loc>
+<loc>/improvement-of-yixin.html</loc>
 <lastmod>2013-09-14T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/一篇中文日志.html</loc>
+<loc>/一篇中文日志.html</loc>
 <lastmod>2013-03-25T00:00:00+01:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/a-simple-rock-scissors-paper-ai.html</loc>
+<loc>/a-simple-rock-scissors-paper-ai.html</loc>
 <lastmod>2011-11-17T00:00:00+01:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/bug-and-bug.html</loc>
+<loc>/bug-and-bug.html</loc>
 <lastmod>2011-03-30T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/category/blog.html</loc>
+<loc>/category/blog.html</loc>
 <lastmod>2014-09-07T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/category/zhong-wen-bo-ke.html</loc>
+<loc>/category/zhong-wen-bo-ke.html</loc>
 <lastmod>2014-09-28T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/pelican.html</loc>
+<loc>/tag/pelican.html</loc>
 <lastmod>2014-07-01T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/ai.html</loc>
+<loc>/tag/ai.html</loc>
 <lastmod>2011-11-17T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/gomoku.html</loc>
+<loc>/tag/gomoku.html</loc>
 <lastmod>2014-07-07T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/renju.html</loc>
+<loc>/tag/renju.html</loc>
 <lastmod>2014-07-07T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/xi-tong.html</loc>
+<loc>/tag/xi-tong.html</loc>
 <lastmod>2013-12-10T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/scip.html</loc>
+<loc>/tag/scip.html</loc>
 <lastmod>2014-07-29T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/system.html</loc>
+<loc>/tag/system.html</loc>
 <lastmod>2013-12-10T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/yi-xin.html</loc>
+<loc>/tag/yi-xin.html</loc>
 <lastmod>2013-03-25T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/quine.html</loc>
+<loc>/tag/quine.html</loc>
 <lastmod>2014-08-01T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/gmotor.html</loc>
+<loc>/tag/gmotor.html</loc>
 <lastmod>2011-03-30T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/cc.html</loc>
+<loc>/tag/cc.html</loc>
 <lastmod>2014-08-01T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/lp.html</loc>
+<loc>/tag/lp.html</loc>
 <lastmod>2014-07-29T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/kang-nai-er.html</loc>
+<loc>/tag/kang-nai-er.html</loc>
 <lastmod>2014-08-04T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/multi-thread.html</loc>
+<loc>/tag/multi-thread.html</loc>
 <lastmod>2014-09-07T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/wo.html</loc>
+<loc>/tag/wo.html</loc>
 <lastmod>2014-09-28T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/piskvork.html</loc>
+<loc>/tag/piskvork.html</loc>
 <lastmod>2011-03-30T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/yixin.html</loc>
+<loc>/tag/yixin.html</loc>
 <lastmod>2014-09-07T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/preprocessing.html</loc>
+<loc>/tag/preprocessing.html</loc>
 <lastmod>2014-08-01T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/translation.html</loc>
+<loc>/tag/translation.html</loc>
 <lastmod>2013-12-10T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/bug.html</loc>
+<loc>/tag/bug.html</loc>
 <lastmod>2011-03-30T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/resource.html</loc>
+<loc>/tag/resource.html</loc>
 <lastmod>2014-07-07T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/fan-yi.html</loc>
+<loc>/tag/fan-yi.html</loc>
 <lastmod>2013-12-10T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/game.html</loc>
+<loc>/tag/game.html</loc>
 <lastmod>2011-11-17T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/rock-scissors-paper.html</loc>
+<loc>/tag/rock-scissors-paper.html</loc>
 <lastmod>2011-11-17T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/ilp.html</loc>
+<loc>/tag/ilp.html</loc>
 <lastmod>2014-07-29T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/tag/pulp.html</loc>
+<loc>/tag/pulp.html</loc>
 <lastmod>2014-07-29T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/author/kai-sun.html</loc>
+<loc>/author/kai-sun.html</loc>
 <lastmod>2014-09-07T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.aiexp.info/author/sun-kai.html</loc>
+<loc>/author/sun-kai.html</loc>
 <lastmod>2014-09-28T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
