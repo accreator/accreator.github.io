@@ -403,7 +403,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Goro&lt;/strong&gt; by Victor Barykin, Russia. It is a commercial software for gomoku, the winner of the 6th, the 7th, the 10th, and the 11th Gomocup (2005, 2006, 2009, 2010). It took part in both the first and the second AI vs. Human tournament, playing against one of the best Czech gomoku players in 2006 and 2011. Goro was ranked the 7th in the 15th Gomocup (2014). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Hector for Gomoku&lt;/strong&gt; by Csaba Jergler, Hungary. It is a general game playing search core module (Hector) along with a compile time connected game specific gomoku module. It took part in Gomocup from 2008 to 2010 and ranked the 9th in the 11th Gomocup (2010). It has been excluded from Gomocup since 2011 because the old version of Hector stopped working and the author did not send the new version to Gomocup. It is not published, so there is no download available.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hector for Gomoku&lt;/strong&gt; by Csaba Jergler, Hungary. It is a general game playing search core module (Hector) along with a compile time connected game specific gomoku module. It took part in Gomocup from 2008 to 2010 and was ranked the 9th in the 11th Gomocup (2010). It has been excluded from Gomocup since 2011 because the old version of Hector stopped working and the author did not send the new version to Gomocup. It is not published, so there is no download available.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Hewer&lt;/strong&gt; by Tomas Kubes, Czech Republic. Hewer was ranked the 3rd in the 15th Gomocup (2014). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
@@ -418,7 +418,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Pacifist&lt;/strong&gt; by Shuai Han, China. Winner of gomoku AI competition on &lt;a href="http://botzone.org/"&gt;Botzone&lt;/a&gt; hosted by AI LAB, Peking University in Decemeber 2010. It is not published, so there is no download available.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Pela&lt;/strong&gt; by Petr Lastovicka, Czech Republic. It is the strongest open-source gomoku engine. Pela ranked the 8th in the 15th Gomocup (2014). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pela&lt;/strong&gt; by Petr Lastovicka, Czech Republic. It is the strongest open-source gomoku engine. Pela was ranked the 8th in the 15th Gomocup (2014). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Pisq&lt;/strong&gt; by Martin Petricek, Czech Republic. It is the winner of the 1st and the 2nd Gomocup (2000, 2001). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
