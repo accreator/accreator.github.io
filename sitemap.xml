@@ -5,63 +5,63 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2014-12-28T17:52:59-00:00</lastmod>
+<lastmod>2014-12-28T18:02:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2014-12-28T17:52:59-00:00</lastmod>
+<lastmod>2014-12-28T18:02:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2014-12-28T17:52:59-00:00</lastmod>
+<lastmod>2014-12-28T18:02:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2014-12-28T17:52:59-00:00</lastmod>
+<lastmod>2014-12-28T18:02:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2014-12-28T17:52:59-00:00</lastmod>
+<lastmod>2014-12-28T18:02:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin.html</loc>
-<lastmod>2014-12-28T17:52:59-00:00</lastmod>
+<lastmod>2014-12-28T18:02:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-cn.html</loc>
-<lastmod>2014-12-28T17:52:59-00:00</lastmod>
+<lastmod>2014-12-28T18:02:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs.html</loc>
-<lastmod>2014-12-28T17:52:59-00:00</lastmod>
+<lastmod>2014-12-28T18:02:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs-cn.html</loc>
-<lastmod>2014-12-28T17:52:59-00:00</lastmod>
+<lastmod>2014-12-28T18:02:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -221,6 +221,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/hui-yi.html</loc>
+<lastmod>2014-12-24T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/system.html</loc>
 <lastmod>2013-12-10T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
@@ -319,15 +326,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/hui-yi-slt.html</loc>
-<lastmod>2014-12-24T00:00:00+00:09</lastmod>
+<loc>/tag/resource.html</loc>
+<lastmod>2014-07-07T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/resource.html</loc>
-<lastmod>2014-07-07T00:00:00+00:09</lastmod>
+<loc>/tag/slt.html</loc>
+<lastmod>2014-12-24T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
