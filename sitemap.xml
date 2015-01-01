@@ -5,63 +5,70 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2014-12-28T18:10:41-00:00</lastmod>
+<lastmod>2015-01-02T03:01:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2014-12-28T18:10:41-00:00</lastmod>
+<lastmod>2015-01-02T03:01:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2014-12-28T18:10:41-00:00</lastmod>
+<lastmod>2015-01-02T03:01:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2014-12-28T18:10:41-00:00</lastmod>
+<lastmod>2015-01-02T03:01:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2014-12-28T18:10:41-00:00</lastmod>
+<lastmod>2015-01-02T03:01:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin.html</loc>
-<lastmod>2014-12-28T18:10:41-00:00</lastmod>
+<lastmod>2015-01-02T03:01:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-cn.html</loc>
-<lastmod>2014-12-28T18:10:41-00:00</lastmod>
+<lastmod>2015-01-02T03:01:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs.html</loc>
-<lastmod>2014-12-28T18:10:41-00:00</lastmod>
+<lastmod>2015-01-02T03:01:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs-cn.html</loc>
-<lastmod>2014-12-28T18:10:41-00:00</lastmod>
+<lastmod>2015-01-02T03:01:50-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/pn-search-and-db-search.html</loc>
+<lastmod>2015-01-02T00:00:00+01:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -173,7 +180,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/zhong-wen-bo-ke.html</loc>
-<lastmod>2014-12-24T00:00:00+00:09</lastmod>
+<lastmod>2015-01-02T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -188,6 +195,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/tag/ai.html</loc>
 <lastmod>2011-11-17T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/db-search.html</loc>
+<lastmod>2015-01-02T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/wu-zi-qi.html</loc>
+<lastmod>2015-01-02T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -354,6 +375,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/pn-search.html</loc>
+<lastmod>2015-01-02T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/rock-scissors-paper.html</loc>
 <lastmod>2011-11-17T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
@@ -363,6 +391,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/tag/ilp.html</loc>
 <lastmod>2014-07-29T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/ren-ji-dui-yi.html</loc>
+<lastmod>2015-01-02T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -383,7 +418,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/sun-kai.html</loc>
-<lastmod>2014-12-24T00:00:00+00:09</lastmod>
+<lastmod>2015-01-02T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>

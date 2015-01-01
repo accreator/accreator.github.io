@@ -1,5 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-12-24T00:00:00+01:00</updated><entry><title>SLT2014参会小结</title><link href="/SLT2014.html" rel="alternate"></link><updated>2014-12-24T00:00:00+01:00</updated><author><name>孙锴</name></author><id>tag:,2014-12-24:SLT2014.html</id><summary type="html">&lt;h3&gt;全世界最美的地方之一&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2015-01-02T00:00:00+01:00</updated><entry><title>Pn-search &amp; Db-search 总结</title><link href="/pn-search-and-db-search.html" rel="alternate"></link><updated>2015-01-02T00:00:00+01:00</updated><author><name>孙锴</name></author><id>tag:,2015-01-02:pn-search-and-db-search.html</id><summary type="html">&lt;p&gt;对于五子棋引擎的设计者，Allis的“Searching for Solutions in Games and Artificial Intelligence”一文是很值得阅读的。这篇文章介绍了终结原始规则下的无禁手五子棋的两个核心技术——Proof-number Search (Pn-search)和Dependency-based Search (Db-search)。然而原文为了表达上的细致和严谨，写得比较长，读起来比较费时间。因最近在为Yixin增加独立的算杀模块，翻阅了一下曾经的阅读笔记，感觉这份笔记无论对于初次阅读者、还是文献回顾者都是有一定帮助的，所以决定分享一下这份总结。由于Allis的这篇文章有不止一个版本，为了引用的准确，总结中以&lt;a href="/files/allis-thesis.pdf"&gt;&lt;strong&gt;这个版本&lt;/strong&gt;&lt;/a&gt;为准。&lt;/p&gt;
+&lt;p&gt;对于这篇论文的阅读（和讲解），不建议按照顺序阅读，而建议先看&lt;strong&gt;例子&lt;/strong&gt;。以下是总结原文。&lt;/p&gt;
+&lt;h3&gt;Pn-search&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;例子：23页下~25页上&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;伪代码：25~28页&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;优化：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;已经solved的子树在update后即可被删除。(29页)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Pn^2-search：思想为建立两层树，上层是N个节点的树，对于树的每个叶子，对应一个即时建立即时删除的N个节点的树，可以在对效率影响不大的前提下减少空间。（空间是pn-search的1/2次幂。(30页)&lt;/li&gt;
+&lt;li&gt;Update的过程中，遇到的第一个proof和disproof number都未改变的节点停止更新，并且下一轮的迭代从这个节点开始。(32页)&lt;/li&gt;
+&lt;li&gt;当一个节点被建立时，其proof和disproof number的初始化可以通过知识给定，比如若可以计算到该节点的儿子数（或约数），则可以令其proof number为1，disproof number为儿子数（或约数）。(34页)实际上还可以做其它方面的初始化设定，比如37页上半部分的例子。37页下~38页上给出了另一个例子，是对于gomoku的，可以用层数(ply)的一半来初始化（实际上是1+d/2取下整(148页)）。论文中提到对于pn-search初始化问题仍缺乏合适的理解。(39页上)&lt;/li&gt;
+&lt;li&gt;置换表用于解决实际是DAG而非Tree中的pn-search问题，一种practical的做法是将DAG看做树，standard的做法是利用置换表解决该问题，论文提到经验上二者效果差不多。(40页)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Db-search&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;例子：85页下~88页上&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;伪代码：88页~90页&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Solving gomoku&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Db-search部分优化：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;global defensive:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;a) 在对方第i步棋后，目标是占有进攻方形成threat aj的区域，或我方应有的reply dj，使得j&amp;gt;=i。
+
+b) 在检查中，不再做攻方的global defensive检查。
+
+c) 只检查更高的威胁。
+
+(137页)
+
+对于138页中28 squares的解释：1是7，源于_ _ _ X X _ _是7格区域，其它解释相似。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果在一次db-search中已经找到的potential winning threat sequences超过了T（也就是说明前T次都被找到了global sefensive），则终止。Gomoku中经验值为T=10。(140页)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;如果防守方有category为c1的威胁，则攻击方的威胁c2必须小于c1。此优化在检查global defensive时需关掉（显然）。(140下~141上)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只有在fT2,g7不可用时才使用fT3,g6。(141页)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pn-search部分优化：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;置换表，注意还要检查8个同构形。(143下~144上)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;限制黑棋（进攻方）的儿子数为10，排序标准是4分（可形成活三且有2个防点），3分（可形成活三有3个防点），2分（活二），1分（跳二）。(144)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;相关区域：为了使得一个threat sequence可以对付多个move（主要是战场外的着法），先make一个null move，然黑棋（进攻方）找到一个threat sequence，然后根据此sequence定义相关区域。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;a) 定义：一个点属于相关区域，当且仅当其满足以下至少一点：(1)是威胁序列中的点（在line内即可，类似_ _ _ X X _ _的7格区域所有空点都是）。(2)与威胁序列中的白棋和原有白棋可形成新的威胁的点。(146)
+
+b) 在相关区域被定义后，对于区域中的一个点s，如果s落子后通过db-search判断确实没有对应threat sequence，则将s加入儿子，否则，利用找到的threat-sequence可以按照上述方法得到另一个相关区域，而这个相关区域与原相关区域的交作为新的相关区域。(147)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于一个局面，在棋盘上的棋子大于等于9个的前提下，如果进攻方（黑棋），在白棋make一个null move后仍没有threat sequence，则将这个局面定义为白棋胜。(147)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Proof number和disproof number的初始化均采用1+d/2取下整。(148)&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="人机对弈"></category><category term="五子棋"></category><category term="Pn-search"></category><category term="Db-search"></category></entry><entry><title>SLT2014参会小结</title><link href="/SLT2014.html" rel="alternate"></link><updated>2014-12-24T00:00:00+01:00</updated><author><name>孙锴</name></author><id>tag:,2014-12-24:SLT2014.html</id><summary type="html">&lt;h3&gt;全世界最美的地方之一&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="Alt text" src="/images/slt20141.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;我同俞老师和陈露于12月6日至12日赴美参加了&lt;strong&gt;SLT&lt;/strong&gt; 2014 (2014 IEEE &lt;strong&gt;S&lt;/strong&gt;poken &lt;strong&gt;L&lt;/strong&gt;anguage &lt;strong&gt;T&lt;/strong&gt;echnology Workshop)，这是我和陈露第一次参加国际会议。今年&lt;strong&gt;SLT&lt;/strong&gt;将会议地点选在了横跨加利福尼亚州和内华达州的南太浩湖（&lt;strong&gt;S&lt;/strong&gt;outh &lt;strong&gt;L&lt;/strong&gt;ake &lt;strong&gt;T&lt;/strong&gt;ahoe），地点首字母与会议首字母相同的设定应该不是巧合。这座城的名字指示了它的位置——太浩湖的南岸。太浩湖是北美最大的高山湖泊、美国境内的第二大湖，曾被马克·吐温誉为“全世界最美的地方之一”。&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Alt text" src="/images/slt20143.jpg" /&gt;&lt;/p&gt;
@@ -18,7 +95,7 @@
 &lt;p&gt;&lt;img alt="Alt text" src="/images/slt20142.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Alt text" src="/images/slt20144.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Alt text" src="/images/slt20145.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;当然，我在会议里主要关注点在于对话方面，尤其是对话状态跟踪(Dialogue State Tracking)。除了在会前剑桥公布在网上的给予RNN的状态跟踪模型(题为Robust Dialog State Tracking Using Delexicalised Recurrent Neural Networks and Unsupervised Adaptation)外，在这个领域里来自IBM的一篇基于知识的规则模型(题为Knowledge-based Dialog State Tracking)是比较有趣的，它进一步地探索了基于规则的模型，并声称获得了迄今为止最好的结果。&lt;/p&gt;
+&lt;p&gt;我在会议里主要关注点在于对话方面，尤其是对话状态跟踪(Dialogue State Tracking)。除了在会前剑桥公布在网上的给予RNN的状态跟踪模型(题为Robust Dialog State Tracking Using Delexicalised Recurrent Neural Networks and Unsupervised Adaptation)外，在这个领域里来自IBM的一篇基于知识的规则模型(题为Knowledge-based Dialog State Tracking)是比较有趣的，它进一步地探索了基于规则的模型，并声称获得了迄今为止最好的结果。&lt;/p&gt;
 &lt;p&gt;最后列出其它几篇比较好/有意思的文章&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;PT2.202 Temporal Supervised Learning for Inferring a Dialog Policy from Example Conversations&lt;/li&gt;
@@ -322,7 +399,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;li&gt;&lt;a href="http://www.coin-or.org/"&gt;http://www.coin-or.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cplex.com/"&gt;http://www.cplex.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.gurobi.com/"&gt;http://www.gurobi.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2014-09-10)&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2015-01-02)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
@@ -349,6 +426,9 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;(In Chinese) &lt;a href="/files/introduction_to_xl.pdf"&gt;&lt;strong&gt;Introduction to XL&lt;/strong&gt;&lt;/a&gt; by Chengtao Chen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(In Chinese) &lt;a href="/pn-search-and-db-search.html"&gt;&lt;strong&gt;Summary of Pn-search and Db-search&lt;/strong&gt;&lt;/a&gt; by Kai Sun.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Competitive Open-source AIs&lt;/h2&gt;
