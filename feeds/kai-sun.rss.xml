@@ -209,7 +209,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;li&gt;&lt;a href="http://www.coin-or.org/"&gt;http://www.coin-or.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cplex.com/"&gt;http://www.cplex.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.gurobi.com/"&gt;http://www.gurobi.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kai Sun</dc:creator><pubDate>Tue, 29 Jul 2014 00:00:00 +0200</pubDate><guid>tag:,2014-07-29:calculating-all-feasible-solutions-of-ilp.html</guid><category>SCIP</category><category>PuLP</category><category>ILP</category><category>LP</category></item><item><title>Gomoku/Renju Resouces -- An Overview</title><link>/gomoku-renju-resources-an-overview.html</link><description>&lt;p&gt;(Last update: 2015-01-02)&lt;/p&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kai Sun</dc:creator><pubDate>Tue, 29 Jul 2014 00:00:00 +0200</pubDate><guid>tag:,2014-07-29:calculating-all-feasible-solutions-of-ilp.html</guid><category>SCIP</category><category>PuLP</category><category>ILP</category><category>LP</category></item><item><title>Gomoku/Renju Resouces -- An Overview</title><link>/gomoku-renju-resources-an-overview.html</link><description>&lt;p&gt;(Last update: 2015-04-25)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
@@ -280,16 +280,16 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;a href="https://github.com/accreator/Yixin-protocol"&gt;&lt;strong&gt;Yixin Protocol&lt;/strong&gt;&lt;/a&gt; by Kai Sun, China. The protocol is derived from Gomocup protocol. Compared with Gomocup protocol, Yixin protocol introduces more commands enabling &lt;a href="/pages/yixin.html"&gt;Yixin&lt;/a&gt; to have some new features such as renju rule support.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;(In Chinese) &lt;a href="/files/botzone_protocol.zip"&gt;&lt;strong&gt;Botzone Protocol&lt;/strong&gt;&lt;/a&gt; by AI LAB, Peking University. &lt;a href="http://botzone.org/"&gt;Botzone&lt;/a&gt; is an online platform for AI competitions. It used to support many games including gomoku. However, since it was updated in 2014, it seems that the platform have lost all its old data so that gomoku as well as many other games is no longer supported.&lt;/p&gt;
+&lt;p&gt;(In Chinese) &lt;a href="/files/botzone_protocol.zip"&gt;&lt;strong&gt;Botzone Protocol&lt;/strong&gt;&lt;/a&gt; by AI LAB, Peking University. &lt;a href="http://botzone.org/"&gt;Botzone&lt;/a&gt; is an online platform for AI competitions. Since it was updated in 2014 and lost all old data, the old protocol listed here is replaced by a new protocol, and the old one is no longer supported by Botzone's online platform. The old protocol can still be used in the offline AI testing program. &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;AI Competition and Online Platform&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://gomocup.org/"&gt;&lt;strong&gt;Gomocup&lt;/strong&gt;&lt;/a&gt; (2000 - Now) (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://gomocup.org/"&gt;&lt;strong&gt;Gomocup&lt;/strong&gt;&lt;/a&gt; (2000 - Present) (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://w-ai.org/"&gt;&lt;strong&gt;WAI&lt;/strong&gt;&lt;/a&gt; (2012 - Now)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://w-ai.org/"&gt;&lt;strong&gt;WAI&lt;/strong&gt;&lt;/a&gt; (2012 - 2014)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.grappa.univ-lille3.fr/icga/game.php?id=30"&gt;&lt;strong&gt;Computer Olympiad&lt;/strong&gt;&lt;/a&gt; (1989 - 1992)&lt;/p&gt;
@@ -301,7 +301,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Hungarian Computer Go-Moku Open Tournament&lt;/strong&gt; (2005 (&lt;a href="http://gomokuworld.com/articles/hungarian_computer_gomoku_tournament_2005"&gt;1st&lt;/a&gt;, &lt;a href="http://www.sze.hu/~gtakacs/tournament/index.html"&gt;2nd&lt;/a&gt;))&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://botzone.org/"&gt;&lt;strong&gt;Botzone&lt;/strong&gt;&lt;/a&gt; (2010 - 2013)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://botzone.org/"&gt;&lt;strong&gt;Botzone&lt;/strong&gt;&lt;/a&gt; (2010 - Present)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;AI vs. Human tournament&lt;/strong&gt; (&lt;a href="http://gomocup.org/results/"&gt;2006&lt;/a&gt;, 2011(&lt;a href="http://gomocup.org/results/"&gt;en&lt;/a&gt;,&lt;a href="http://www.piskvorky.cz/clanky/zajimavosti-ze-sveta-piskvorek-a-renju/ai-vs-clovek-2011-2/"&gt;cz&lt;/a&gt;))&lt;/p&gt;
