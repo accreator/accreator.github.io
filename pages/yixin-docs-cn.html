@@ -88,7 +88,7 @@
 </li>
 <li>
 <p><strong>问</strong>：如何获得第2，第3，…，第n优着法？</p>
-<p><strong>答</strong>：借助<code>block</code>命令。在已获得最优着法的基础上，将最优着法使用<code>block</code>命令让软件跳过，令软件重新计算，则可获得第2优着法。类似地，可以获得第3，…，第n优着法。</p>
+<p><strong>答</strong>：有两种方法。<strong>方法1.</strong> 借助<code>block</code>命令。在已获得最优着法的基础上，将最优着法使用<code>block</code>命令让软件跳过，令软件重新计算，则可获得第2优着法。类似地，可以获得第3，…，第n优着法。<strong>方法2.</strong> 使用<code>nbest m</code>命令，可以让引擎同时计算第1优，第2优，…，第m优着法。</p>
 </li>
 <li>
 <p><strong>问</strong>：如何获得正在计算中的最优路线以及评分？</p>
@@ -97,6 +97,10 @@
 <li>
 <p><strong>问</strong>：为什么设定了计算机执黑（白），并轮到计算机走棋了，但计算机既不计算，也不走棋？</p>
 <p><strong>答</strong>：请单击棋盘任意位置。</p>
+</li>
+<li>
+<p><strong>问</strong>：如何让引擎为swap-2、Tarannikov等规则计算平衡点？</p>
+<p><strong>答</strong>：可使用<code>balance</code>系列命令，包括<code>balance1</code>与<code>balance2</code>。</p>
 </li>
 <li>
 <p><strong>问</strong>：棋盘上不同颜色的点的代表的意义是什么？</p>
@@ -121,7 +125,7 @@
 </li>
 <li>
 <p><strong>问</strong>：哈希表是什么？</p>
-<p><strong>答</strong>：哈希表是用于提高引擎计算效率的表形结构，可以避免引擎计算中的重复劳动。</p>
+<p><strong>答</strong>：哈希表是用于提高引擎计算效率的表形结构，可以避免引擎计算中的冗余计算。</p>
 </li>
 <li>
 <p><strong>问</strong>：哈希表大小如何设定？</p>
