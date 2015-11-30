@@ -326,7 +326,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Blackstone&lt;/strong&gt; by Victor Barykin, Russia. It is a commercial software for renju. It is the winner in tournament of the 2nd and the 3rd Renju Computer World Championship (1998, 2000), and the winner in solving problems of the 2nd Renju Computer World Championship (1998).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Carbon&lt;/strong&gt; by Michał Czardybon, Poland. It is one of the strongest open-source gomoku engine. Its original version can be downloaded at &lt;a href="http://mczard.republika.pl/gomoku.en.html"&gt;Michał Czardybon's Homepage&lt;/a&gt;, and its modified version which supports Gomocup protocol can be obtained from &lt;a href="https://github.com/gomoku/Carbon-Gomoku"&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Carbon&lt;/strong&gt; by Michał Czardybon, Poland. It is one of the strongest open-source gomoku software. Its original version can be downloaded at &lt;a href="http://mczard.republika.pl/gomoku.en.html"&gt;Michał Czardybon's Homepage&lt;/a&gt;, and its modified version which supports Gomocup protocol can be obtained from &lt;a href="https://github.com/gomoku/Carbon-Gomoku"&gt;Github&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Fiver&lt;/strong&gt; by Meng Liu, China. A famous classic gomoku engine. It can be downloaded at &lt;a href="http://nosalex.narod.ru/f.zip"&gt;Nosovsky Japanese Games Home Page&lt;/a&gt;.&lt;/p&gt;
