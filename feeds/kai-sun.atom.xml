@@ -213,7 +213,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;li&gt;&lt;a href="http://www.coin-or.org/"&gt;http://www.coin-or.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cplex.com/"&gt;http://www.cplex.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.gurobi.com/"&gt;http://www.gurobi.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2015-11-29)&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2015-12-4)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
@@ -251,7 +251,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;a href="http://sourceforge.net/projects/piskvork/"&gt;&lt;strong&gt;Pela&lt;/strong&gt; (with piskvork)&lt;/a&gt; by Petr Lastovicka, Czech Republic. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Carbon Gomoku (with its documents)&lt;/strong&gt; (&lt;a href="http://mczard.republika.pl/gomoku.en.html"&gt;Original version&lt;/a&gt;, or &lt;a href="https://github.com/gomoku/Carbon-Gomoku"&gt;Modified version&lt;/a&gt; which supports Gomocup protocol) by Michał Czardybon, Poland. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Carbon Gomoku (with its documents in Polish)&lt;/strong&gt; (&lt;a href="http://mczard.republika.pl/gomoku.en.html"&gt;Original version&lt;/a&gt;, or &lt;a href="https://github.com/gomoku/Carbon-Gomoku"&gt;Modified version&lt;/a&gt; which supports Gomocup protocol) by Michał Czardybon, Poland. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Niren (XL)&lt;/strong&gt; (&lt;a href="/files/niren_source.zip"&gt;Original version&lt;/a&gt;, or &lt;a href="https://github.com/accreator/xl-engine"&gt;Modified version&lt;/a&gt; which supports Gomocup protocol) by Chengtao Chen, China.&lt;/p&gt;
@@ -326,7 +326,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Blackstone&lt;/strong&gt; by Victor Barykin, Russia. It is a commercial software for renju. It is the winner in tournament of the 2nd and the 3rd Renju Computer World Championship (1998, 2000), and the winner in solving problems of the 2nd Renju Computer World Championship (1998).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Carbon&lt;/strong&gt; by Michał Czardybon, Poland. It is one of the strongest open-source gomoku software. Its original version can be downloaded at &lt;a href="http://mczard.republika.pl/gomoku.en.html"&gt;Michał Czardybon's Homepage&lt;/a&gt;, and its modified version which supports Gomocup protocol can be obtained from &lt;a href="https://github.com/gomoku/Carbon-Gomoku"&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Carbon&lt;/strong&gt; by Michał Czardybon, Poland. It is the strongest open-source gomoku software. Its original version can be downloaded at &lt;a href="http://mczard.republika.pl/gomoku.en.html"&gt;Michał Czardybon's Homepage&lt;/a&gt;, and its modified version which supports Gomocup protocol can be obtained from &lt;a href="https://github.com/gomoku/Carbon-Gomoku"&gt;Github&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Fiver&lt;/strong&gt; by Meng Liu, China. A famous classic gomoku engine. It can be downloaded at &lt;a href="http://nosalex.narod.ru/f.zip"&gt;Nosovsky Japanese Games Home Page&lt;/a&gt;.&lt;/p&gt;
@@ -350,7 +350,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Pacifist&lt;/strong&gt; by Shuai Han, China. Winner of gomoku AI competition on &lt;a href="http://botzone.org/"&gt;Botzone&lt;/a&gt; hosted by AI LAB, Peking University in Decemeber 2010. It is not published, so there is no download available.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Pela&lt;/strong&gt; by Petr Lastovicka, Czech Republic. It is one of the strongest open-source gomoku engine. It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pela&lt;/strong&gt; by Petr Lastovicka, Czech Republic. It is one of the most famous strong open-source gomoku engine. It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Pisq&lt;/strong&gt; by Martin Petricek, Czech Republic. It is the winner of the 1st and the 2nd Gomocup (2000, 2001). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
