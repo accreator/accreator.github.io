@@ -213,7 +213,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;li&gt;&lt;a href="http://www.coin-or.org/"&gt;http://www.coin-or.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cplex.com/"&gt;http://www.cplex.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.gurobi.com/"&gt;http://www.gurobi.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kai Sun</dc:creator><pubDate>Tue, 29 Jul 2014 00:00:00 +0200</pubDate><guid>tag:,2014-07-29:calculating-all-feasible-solutions-of-ilp.html</guid><category>SCIP</category><category>PuLP</category><category>ILP</category><category>LP</category></item><item><title>Gomoku/Renju Resouces -- An Overview</title><link>/gomoku-renju-resources-an-overview.html</link><description>&lt;p&gt;(Last update: 2015-12-9)&lt;/p&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kai Sun</dc:creator><pubDate>Tue, 29 Jul 2014 00:00:00 +0200</pubDate><guid>tag:,2014-07-29:calculating-all-feasible-solutions-of-ilp.html</guid><category>SCIP</category><category>PuLP</category><category>ILP</category><category>LP</category></item><item><title>Gomoku/Renju Resouces -- An Overview</title><link>/gomoku-renju-resources-an-overview.html</link><description>&lt;p&gt;(Last update: 2016-1-3)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
@@ -272,7 +272,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;h2&gt;Open-source GUIs&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://sourceforge.net/projects/piskvork/"&gt;&lt;strong&gt;Piskvork&lt;/strong&gt;&lt;/a&gt; by Petr Lastovicka, Czech Republic. It is a GUI that supports Gomocup protocol. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://sourceforge.net/projects/piskvork/"&gt;&lt;strong&gt;Piskvork&lt;/strong&gt;&lt;/a&gt; by Petr Lastovicka, Czech Republic. It is a GUI that supports Gomocup protocol. &lt;a href="https://github.com/wind23/piskvork_renju"&gt;A modified version&lt;/a&gt; supporting renju rule is developed by Tianyi Hao.  (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.renju.se/renlib/"&gt;&lt;strong&gt;Renlib&lt;/strong&gt;&lt;/a&gt; by Frank Arkbo, Sweden. Renlib is one of the best programs which can help you to build a library of renju openings, analysis and played games. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
@@ -326,7 +326,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Blackstone&lt;/strong&gt; by Victor Barykin, Russia. It is a commercial software for renju. It is the winner in tournament of the 2nd and the 3rd Renju Computer World Championship (1998, 2000), and the winner in solving problems of the 2nd Renju Computer World Championship (1998).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Carbon&lt;/strong&gt; by Michał Czardybon, Poland. It is the strongest open-source gomoku software. Its original version can be downloaded at &lt;a href="http://mczard.republika.pl/gomoku.en.html"&gt;Michał Czardybon's Homepage&lt;/a&gt;, and its modified version which supports Gomocup protocol can be obtained from &lt;a href="https://github.com/gomoku/Carbon-Gomoku"&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Carbon&lt;/strong&gt; by Michał Czardybon, Poland. It is the strongest open-source gomoku software. Its original version can be downloaded at &lt;a href="http://mczard.republika.pl/gomoku.en.html"&gt;Michał Czardybon's Homepage&lt;/a&gt;, and its modified version by Petr Lastovicka which supports Gomocup protocol can be obtained from &lt;a href="https://github.com/gomoku/Carbon-Gomoku"&gt;Github&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Fiver&lt;/strong&gt; by Meng Liu, China. A famous classic gomoku engine. It can be downloaded at &lt;a href="http://nosalex.narod.ru/f.zip"&gt;Nosovsky Japanese Games Home Page&lt;/a&gt;.&lt;/p&gt;
@@ -350,7 +350,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Pacifist&lt;/strong&gt; by Shuai Han, China. Winner of gomoku AI competition on &lt;a href="http://botzone.org/"&gt;Botzone&lt;/a&gt; hosted by AI LAB, Peking University in Decemeber 2010. It is not published, so there is no download available.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Pela&lt;/strong&gt; by Petr Lastovicka, Czech Republic. Pela was the winner of the &lt;a href="http://www.lupa.cz/clanky/piskvorky-o-100-tisic-korun/"&gt;Microsoft gomoku tournament&lt;/a&gt;. It was once the most strong open-source gomoku engines before Carbon was ported to support Gomocup protocol. It is one of the best known strong open-source gomoku engines. It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pela&lt;/strong&gt; by Petr Lastovicka, Czech Republic. Pela was the winner of the &lt;a href="http://www.lupa.cz/clanky/piskvorky-o-100-tisic-korun/"&gt;Microsoft gomoku tournament&lt;/a&gt;. It was once the strongest open-source gomoku engines before Carbon was ported to support Gomocup protocol. It is one of the best known strong open-source gomoku engines. It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Pisq&lt;/strong&gt; by Martin Petricek, Czech Republic. It is the winner of the 1st and the 2nd Gomocup (2000, 2001). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
@@ -412,7 +412,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Yamaguchi_opening_rule"&gt;&lt;strong&gt;Yamaguchi opening rule&lt;/strong&gt;&lt;/a&gt; is an opening rule for renju developed by Japanese player Yusui Yamaguchi.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Swap after 1st move&lt;/strong&gt; is an opening rule for gomoku. The rule is as follows. (1) The first player puts 1 black stone anywhere on the board; (2) The second player has 2 options: a. stay with white; b. swap.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Swap after first move&lt;/strong&gt; is an opening rule for gomoku. The rule is as follows. (1) The first player puts 1 black stone anywhere on the board; (2) The second player has 2 options: a. stay with white; b. swap.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Pente"&gt;&lt;strong&gt;Pente&lt;/strong&gt;&lt;/a&gt; is a strategy board game for two or more players similar to gomoku/renju.&lt;/p&gt;
