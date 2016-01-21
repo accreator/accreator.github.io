@@ -88,6 +88,14 @@
 <p><strong>答</strong>：使用<code>block</code>命令。例如，如果让软件忽略<code>i7</code>点的计算，则输入<code>block i7</code>。</p>
 </li>
 <li>
+<p><strong>问</strong>：如何让软件跳过某个（或某些）路线的计算？</p>
+<p><strong>答</strong>：使用<code>blockpath</code>命令。例如，如果让软件忽略路线<code>h8h7h9h6</code>的计算，则可输入<code>blockpath h8h7h9h6</code>。需要注意的是，引擎会同时忽略到达相同局面的其它路线，例如，执行<code>blockpath h8h7h9h6</code>后，引擎会同时忽略<code>h9h6h8h7</code>的计算。</p>
+</li>
+<li>
+<p><strong>问</strong>：如何让软件对于某个（或某些）路线，只计算某个着法？</p>
+<p><strong>答</strong>：使用<code>blockpath except</code>命令。例如，如果让软件对于路线<code>h8h7h9h6</code>只计算<code>h5</code>，则可输入<code>blockpath except h8h7h9h6h5</code>。需要注意的是，引擎会对到达相同局面的其它路线做同样的处理，例如，执行<code>blockpath except h8h7h9h6h5</code>后，对于路线<code>h9h6h8h7</code>，引擎也会只计算<code>h5</code>。</p>
+</li>
+<li>
 <p><strong>问</strong>：如何获得第2，第3，…，第n优着法？</p>
 <p><strong>答</strong>：有两种方法。<strong>方法1.</strong> 借助<code>block</code>命令。在已获得最优着法的基础上，将最优着法使用<code>block</code>命令让软件跳过，令软件重新计算，则可获得第2优着法。类似地，可以获得第3，…，第n优着法。<strong>方法2.</strong> 使用<code>nbest m</code>命令，可以让引擎同时计算第1优，第2优，…，第m优着法。</p>
 </li>
@@ -100,7 +108,7 @@
 <p><strong>答</strong>：请单击棋盘任意位置。</p>
 </li>
 <li>
-<p><strong>问</strong>：如何让引擎为swap-2、Tarannikov等规则计算平衡点？</p>
+<p><strong>问</strong>：如何让引擎为Swap-2、Tarannikov等规则计算平衡点？</p>
 <p><strong>答</strong>：可使用<code>balance</code>系列命令，包括<code>balance1</code>与<code>balance2</code>。</p>
 </li>
 <li>
@@ -122,7 +130,7 @@
 </li>
 <li>
 <p><strong>问</strong>：在不同配置的计算机上，棋力是否有区别？</p>
-<p><strong>答</strong>：除自定义等级外，段位对应的棋力与计算机配置无关。对于同一个段位，在更优配置的计算机上所需的计算时间更少。</p>
+<p><strong>答</strong>：对于同一段位，<code>n+1</code>线程的棋力略低于<code>n</code>线程。在线程数固定的前提下，除自定义等级外，段位对应的棋力与计算机配置无关；对于同一个段位，在更优配置的计算机上所需的计算时间更少。</p>
 </li>
 <li>
 <p><strong>问</strong>：哈希表是什么？</p>
@@ -134,11 +142,27 @@
 </li>
 <li>
 <p><strong>问</strong>：如何设定线程数？</p>
-<p><strong>答</strong>：借助多线程，弈心可以充分利用多处理器或多核心处理器的计算能力。线程数的设定以处理器支持的线程数上限为宜。</p>
+<p><strong>答</strong>：借助多线程，弈心可以充分利用多处理器或多核心处理器的计算能力。线程数的设定不宜超过处理器支持的线程数上限。</p>
 </li>
 <li>
 <p><strong>问</strong>：什么是分裂深度？</p>
 <p><strong>答</strong>：当采用多线程计算时，分裂深度定义了将计算任务分配给多个线程的最小深度。这个参数会影响引擎的分析速率，可以根据具体的计算机硬件进行调整以提升引擎的表现。</p>
+</li>
+<li>
+<p><strong>问</strong>：什么是后台思考？</p>
+<p><strong>答</strong>：后台思考可以令引擎利用对手思考的时间进行计算。</p>
+</li>
+<li>
+<p><strong>问</strong>：可否保存当前的未完成的计算状态，在日后恢复并继续计算？</p>
+<p><strong>答</strong>：可以借助<code>hash dump</code>与<code>hash load</code>命令部分实现这个要求。执行<code>hash dump</code>+文件名，可以将当前计算状态的哈希表存入以指定文件名命名的文件里。日后执行<code>hash load</code>+文件名，可以将指定文件名内的哈希表重新载入引擎。</p>
+</li>
+<li>
+<p><strong>问</strong>：<code>search from</code>命令有什么用？</p>
+<p><strong>答</strong>：在默认设置下，引擎会从深度1开始计算。执行<code>search from</code>+深度，可以令引擎跳过浅层计算，直接从指定深度开始计算。特别地，此命令可配合<code>hash load</code>命令使用：若<code>hash load</code>读入的哈希表是在计算深度为<code>n</code>时保存的，则可以通过执行<code>search from n</code>，更快地恢复并继续计算。</p>
+</li>
+<li>
+<p><strong>问</strong>：为什么某些命令执行无效？</p>
+<p><strong>答</strong>：两种可能性。<strong>1.</strong> 命令语法错误。请参考帮助（执行<code>help</code>）解决。<strong>2.</strong> 引擎或界面不支持。可考虑升级到最新版。</p>
 </li>
 <li>
 <p><strong>问</strong>：软件的中文名是“弈心”还是“奕心”?</p>
@@ -154,7 +178,11 @@
 </li>
 <li>
 <p><strong>问</strong>：弈心开源吗？</p>
-<p><strong>答</strong>：目前，弈心引擎尚不开源；弈心界面程序Yixin-Board开源（Simplified BSD License）。</p>
+<p><strong>答</strong>：目前，弈心引擎不开源；弈心界面程序Yixin-Board开源（Simplified BSD License）。</p>
+</li>
+<li>
+<p><strong>问</strong>：简单介绍一下弈心用到的技术？</p>
+<p><strong>答</strong>：弈心引擎核心部分采用了Principal Variation Search。弈心没有采用独立的算杀搜索，因此没有使用被诸多高水平引擎所使用的Proof-number Search以及Threat Space Search（又名Dependency-based Search）。</p>
 </li>
 <li>
 <p><strong>问</strong>：安全软件报告弈心是病毒？</p>
