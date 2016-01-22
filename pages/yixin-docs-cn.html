@@ -161,6 +161,10 @@
 <p><strong>答</strong>：在默认设置下，引擎会从深度1开始计算。执行<code>search from</code>+深度，可以令引擎跳过浅层计算，直接从指定深度开始计算。特别地，此命令可配合<code>hash load</code>命令使用：若<code>hash load</code>读入的哈希表是在计算深度为<code>n</code>时保存的，则可以通过执行<code>search from n</code>，更快地恢复并继续计算。</p>
 </li>
 <li>
+<p><strong>问</strong>：引擎设置文件里<code>info_three_def</code>是什么？</p>
+<p><strong>答</strong>：禁手规则在对活三的定义上并不明确，详情可见<a href="/pages/wiki-three-def-cn.html">这个链接</a>。<code>info_three_def</code>设为<code>0</code>表示采用上述链接中的定义1，<code>1</code>表示采用定义2。</p>
+</li>
+<li>
 <p><strong>问</strong>：为什么某些命令执行无效？</p>
 <p><strong>答</strong>：两种可能性。<strong>1.</strong> 命令语法错误。请参考帮助（执行<code>help</code>）解决。<strong>2.</strong> 引擎或界面不支持。可考虑升级到最新版。</p>
 </li>
