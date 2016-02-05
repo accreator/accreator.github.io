@@ -88,6 +88,14 @@
 <p><strong>A</strong>: Use the command <code>block</code>. For example, type <code>block i7</code> if you would like to skip the move <code>i7</code> during its analysis.</p>
 </li>
 <li>
+<p><strong>Q</strong>: How to enable Yixin to skip some paths during its analysis?</p>
+<p><strong>A</strong>: Use the command <code>blockpath</code>. For example, type <code>blockpath h8h7h9h6</code> if you would like to skip the path <code>h8h7h9h6</code> during its analysis. Note that Yixin will simultaneously skip the other paths which can attain the same position. For example, Yixin will also skip the path <code>h9h6h8h7</code> after the execution of <code>blockpath h8h7h9h6</code>.  </p>
+</li>
+<li>
+<p><strong>Q</strong>: How to enable Yixin to only analyse a certain move for some paths during its analysis?</p>
+<p><strong>A</strong>: Use the command <code>blockpath except</code>. For example, type <code>blockpath h8h7h9h6h5</code> if you would like to analyse the move <code>h5</code> only for the path <code>h8h7h9h6</code> during its analysis. Note that Yixin will simultaneously do the same for the other paths which can attain the same position. For example, Yixin will also only analyse the move <code>h5</code> for the path <code>h9h6h8h7</code> after the execution of <code>blockpath except h8h7h9h6h5</code>.</p>
+</li>
+<li>
 <p><strong>Q</strong>: How to get the 2nd, 3rd, ..., n-th best moves?</p>
 <p><strong>A</strong>: There are two ways. <strong>Way 1-</strong> Use the command <code>block</code>. After Yixin has got the best move, use <code>block</code> to let Yixin skip the best move and let Yixin analyze again, then the move reported by Yixin will be the 2nd best move. The 3rd, ..., n-th best moves can be got following similar steps. <strong>Way 2-</strong> Use the command <code>nbest</code>. By using <code>nbest m</code>, Yixin can analyze and output the 1st, 2nd, ..., m-th best moves simultaneously.</p>
 </li>
@@ -122,7 +130,7 @@
 </li>
 <li>
 <p><strong>Q</strong>: On different computers with different hardwares, does Yixin have different performance?</p>
-<p><strong>A</strong>: The strength of Yixin does not change in any levels other than custom level. Yixin will spend less time on computers with faster hardwares.</p>
+<p><strong>A</strong>: When the number of threads is fixed, the strength of Yixin does not change in any levels other than the custom level. Yixin will spend less time on computers with faster hardwares. For any levels other than the custom level, the strength of Yixin with <code>n</code> threads is a little stronger than that with <code>n+1</code> threads when the level is fixed.</p>
 </li>
 <li>
 <p><strong>Q</strong>: What does <strong>number of threads</strong> mean? How to set it?</p>
@@ -146,7 +154,7 @@
 </li>
 <li>
 <p><strong>Q</strong>: Is Yixin open-source?</p>
-<p><strong>A</strong>: Currently, the engine of Yixin is not open-source. However, the GUI of Yixin is open-source under Simplified BSD License.</p>
+<p><strong>A</strong>: Currently, the engine of Yixin is not open-source; the GUI of Yixin is open-source under Simplified BSD License.</p>
 </li>
 <li>
 <p><strong>Q</strong>: My security software reports Yixin unsafe?</p>
