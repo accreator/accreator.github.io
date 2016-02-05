@@ -145,6 +145,22 @@
 <p><strong>A</strong>: Hash table is a structure used by Yixin to store its analysis results. The so-called <strong>hash size</strong> defines the amount of hash table memory used by Yixin. For infinite analysis or long time control matches you should use as large hash as possible (but not exceeds the free memory of your computer). For shorter games, for example 2 to 10 minute games, it's better to use the default hash size.</p>
 </li>
 <li>
+<p><strong>Q</strong>: What is <strong>pondering</strong>?</p>
+<p><strong>A</strong>: Pondering is a technique that can use the opponent's move time to consider likely opponent moves and thus gain pre-processing advantage when it is our turn to move.</p>
+</li>
+<li>
+<p><strong>Q</strong>: Can I save current analyzing status and resume the analysis in the future?</p>
+<p><strong>A</strong>: That can be partly achieved by using <code>hash dump</code> and <code>hash load</code>. You can save the hash table to a file of a given name by <code>hash dump</code> + filename. And in the future you can load the hash table to the memory by <code>hash load</code> + filename to continue the analysis.</p>
+</li>
+<li>
+<p><strong>Q</strong>: What is <code>info_three_def</code> in the configuration file?</p>
+<p><strong>A</strong>: The rule of renju is not clear in terms of the definition of three, whose detail can be found at <a href="/pages/wiki-three-def.html">this page</a>. Defintion 1 in that page will be used when setting <code>info_three_def</code> to <code>0</code>; definition 2 in that page will be used when setting <code>info_three_def</code> to <code>1</code>. </p>
+</li>
+<li>
+<p><strong>Q</strong>: Can you briefly describe the techniques used in Yixin?</p>
+<p><strong>A</strong>: Yixin uses Principal Variation Search. No independent VCT engines are implemented in Yixin, so Yixin does not use Proof-number Search and Threat Space Search (also known as Dependency-based Search)  which are used in many other strong engines.</p>
+</li>
+<li>
 <p><strong>Q</strong>: What is the name of Yixin in Chinese?</p>
 <p><strong>A</strong>: 弈心.</p>
 </li>
