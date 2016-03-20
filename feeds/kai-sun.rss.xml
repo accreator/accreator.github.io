@@ -213,7 +213,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;li&gt;&lt;a href="http://www.coin-or.org/"&gt;http://www.coin-or.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cplex.com/"&gt;http://www.cplex.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.gurobi.com/"&gt;http://www.gurobi.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kai Sun</dc:creator><pubDate>Tue, 29 Jul 2014 00:00:00 +0200</pubDate><guid>tag:,2014-07-29:calculating-all-feasible-solutions-of-ilp.html</guid><category>SCIP</category><category>PuLP</category><category>ILP</category><category>LP</category></item><item><title>Gomoku/Renju Resouces -- An Overview</title><link>/gomoku-renju-resources-an-overview.html</link><description>&lt;p&gt;(Last update: 2016-1-3)&lt;/p&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kai Sun</dc:creator><pubDate>Tue, 29 Jul 2014 00:00:00 +0200</pubDate><guid>tag:,2014-07-29:calculating-all-feasible-solutions-of-ilp.html</guid><category>SCIP</category><category>PuLP</category><category>ILP</category><category>LP</category></item><item><title>Gomoku/Renju Resouces -- An Overview</title><link>/gomoku-renju-resources-an-overview.html</link><description>&lt;p&gt;(Last update: 2016-3-20)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
@@ -255,6 +255,9 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Niren (XL)&lt;/strong&gt; (&lt;a href="/files/niren_source.zip"&gt;Original version&lt;/a&gt;, or &lt;a href="https://github.com/accreator/xl-engine"&gt;Modified version&lt;/a&gt; which supports Gomocup protocol) by Chengtao Chen, China.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/ChisBread/Chis"&gt;&lt;strong&gt;Chis&lt;/strong&gt;&lt;/a&gt; by Peiming Zheng, China.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Stahlfaust (with its documents)&lt;/strong&gt; (&lt;a href="http://www.nowozin.net/sebastian/tu-berlin-2006/stahlfaust/"&gt;Original version&lt;/a&gt;, or &lt;a href="https://github.com/gomoku/Stahlfaust---Gomoku-AI-player"&gt;Modified version&lt;/a&gt; which supports Gomocup protocol) by Marco Kunze and Sebastian Nowozin, Germany.&lt;/p&gt;
