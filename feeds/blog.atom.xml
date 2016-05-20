@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2014-09-07T00:00:00+02:00</updated><entry><title>Towards Deep Yixin</title><link href="/towards-deep-yixin.html" rel="alternate"></link><updated>2014-09-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-09-07:towards-deep-yixin.html</id><summary type="html">&lt;p&gt;Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T00:00:00+02:00</updated><entry><title>Epifanov Dmitry versus Yixin</title><link href="/ai-vs-human-renju.html" rel="alternate"></link><updated>2016-05-19T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2016-05-19:ai-vs-human-renju.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2016-5-19)&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;This page will be maintained in May 2016 to keep track of the 8-game match between Yixin and Epifanov Dmitry. Technical analysis will be added later when all 8 games are finished. &lt;/p&gt;
+&lt;h2&gt;Match Settings&lt;/h2&gt;
+&lt;p&gt;The match was proposed by Epifanov Dmitry in March 2016, and scheduled to be finished in May 2016. Below are the match settings:&lt;/p&gt;
+&lt;p&gt;The settings proposed by Epifanov Dmitry:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Number of Round: 8&lt;/li&gt;
+&lt;li&gt;Rule: Soosorv-8&lt;/li&gt;
+&lt;li&gt;Computer: i7-4600U (2 Cores, 4 Threads, 2.1/3.3Ghz), 8GB RAM, Windows 7 (64 bit)&lt;/li&gt;
+&lt;li&gt;Time Control: 120 min/game + 30 sec/move&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The settings proposed by Kai Sun:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yixin's thinking details are not shown.&lt;/li&gt;
+&lt;li&gt;Except for testing games (to help the human player get familiar with the basic functions of the software) and 8 formal games, the human player is not allowed to use the match version for analysis before the end of the whole match.&lt;/li&gt;
+&lt;li&gt;Different versions of Yixin can be used in different rounds, i.e. Yixin can be updated between two rounds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The livestream is broadcast using the same computer where Yixin runs, which takes 3-4% CPU on average.&lt;/li&gt;
+&lt;li&gt;The schedule is decided by the human player, including the time for each game and the rounds in which the human player will open the game (i.e., be the tentative black).&lt;/li&gt;
+&lt;li&gt;The speed of the computer was influenced due to unexpected unknown reasons in round 1 and round 3. In particular, the speed reported by Yixin in round 1 and round 3 was around 1300 and 400 respectively. In comparison, normally the speed on i7-4600U is around 1600 in the opening stage. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Game Records&lt;/h2&gt;
+&lt;h3&gt;Round 1 (May 11):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;White&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: -, + &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;:  F9&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: white wins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;h8i9f6g9f9f8h10h7i10g10g7g5j9j11e6g11g8f7d6c6k8l7j7j8l9m10f5g4k9k7k10l11b9c8d9e9d8d10i11g12g13h12i13m9e5d4f4c7c9e7m8e12i12i14j13h13f11e11n7o6d7d5e10d12f12f10c13b12c11a12
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_1.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Round 2 (May 14):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;White&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: +, + &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;:  I7, J11, I10, H11, F6, I9&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: white wins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;h8g8g9h9j11f9f8h10e10i7e9f7e6g7e8e7h7e11d8c7d7c8d6d5g11h12c6f6i12k10i11h11h13i13g12f11d10d9i8g6g5k8k9h5j10i9i4l8c10f10g4h3h4j4m9l9l6l11l10j7i6m10n11k12e4f4n9m8j8o8
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_2.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Round 3 (May 17):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;White&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: -, + &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;:  H9, I6, I7, I10, J6&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: white wins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;h8i9j8i8j6i7i6h9k6h6j9i10i11j7g10f5g8h7g7g6e4f6f4h5h4e6d6g4g9g11l6m6h3g5e5j5i5g2
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_3.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Round 4 (May 19):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;White&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: -, - &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;:  I9, F10, G9, G8, I11&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: draw&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;h8h9h10j9i11g9i9j10j11i8g10h11k10i12k11k8i10j12k12k13j6k7k5i7j7j5h6g6f5e5h4h5i4j4d9e10d8d7e9c9g3f6e4f2f3f4f12g11c7b6d11c10d10d12c11b12f11f13e11b11k14l11d4d5h3i3j14l14l13m14e6l6m5l8m8l9l10b13b10k4l5l3n5o5m2m3m9m7k3n7o7n8m11n11m10m12c4c12k9n10n9n12d13b14b15e14a12c5b5d3d15h7i6g13k6l4n3m4n4n2e7i2a11a10n13e8g5g2h2g14h13d14f14a14c14j15l1o10k15o15a7a4g12b2f1h15a5e1f9f10c2a8i5f7j13e15o11m1g15i1h1a1a3o1o4a15g7c15i15f15b1l15m15n15j2h14i14n14o14a13c13e13i13m13o13h12n1l12k1o12j1a9g1b9d1o9b8c8o2g8c1j8l2o8k2b7e2l7d2a6a2c6o3m6j3n6c3o6b3b4g4d6e3f8
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_4.png" /&gt;&lt;/p&gt;</summary><category term="AI"></category><category term="yixin"></category><category term="renju"></category><category term=""></category></entry><entry><title>Towards Deep Yixin</title><link href="/towards-deep-yixin.html" rel="alternate"></link><updated>2014-09-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-09-07:towards-deep-yixin.html</id><summary type="html">&lt;p&gt;Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.&lt;/p&gt;
 &lt;p&gt;I tested the Deep Yixin (0.4.28) on a 4-core i7 with 21 balanced openings, and the result is as follows:&lt;/p&gt;
 &lt;p&gt;300s/1000s&lt;/p&gt;
 &lt;table&gt;
