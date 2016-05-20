@@ -74,7 +74,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_4.png" /&gt;&lt;/p&gt;</summary><category term="AI"></category><category term="yixin"></category><category term="renju"></category><category term=""></category></entry><entry><title>QTRC 2016（第三场）中的人机对弈</title><link href="/ai-vs-human-3rd-qtrc2016.html" rel="alternate"></link><updated>2016-05-09T00:00:00+02:00</updated><author><name>孙锴</name></author><id>tag:,2016-05-09:ai-vs-human-3rd-qtrc2016.html</id><summary type="html">&lt;h3&gt;赛前准备&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_4.png" /&gt;&lt;/p&gt;</summary><category term="AI"></category><category term="yixin"></category><category term="renju"></category></entry><entry><title>QTRC 2016（第三场）中的人机对弈</title><link href="/ai-vs-human-3rd-qtrc2016.html" rel="alternate"></link><updated>2016-05-09T00:00:00+02:00</updated><author><name>孙锴</name></author><id>tag:,2016-05-09:ai-vs-human-3rd-qtrc2016.html</id><summary type="html">&lt;h3&gt;赛前准备&lt;/h3&gt;
 &lt;p&gt;我原以为和Epifanov Dmitry的约战会是Yixin与人类棋手的第一次比赛，然而5月6日下午我收到了Alexander Bogatirev（下文称他为Alex）的一封邮件，告诉我他们打算在5月7日-9日在圣彼得堡举办俄锦标资格赛的中组织一场Yixin与冠军棋手的比赛。虽然这个比赛通知来得突然，比赛细则（什么时候比，规则是什么，时间设定机制是什么，具体时限是多少，硬件配置是什么）还不清楚，且准备时间上很紧，但这类人对机器的比赛是我很感兴趣的事情，于是还是决定参加一下，并连夜准备了一下程序。次日在facebook上联系到了Alex，问清了比赛时间（莫斯科标准时间9日16:00)、规则（Swap-2）、硬件配置。不过，那时比赛组织方并没确定将采用怎样的时间设定机制以及时限，这为比赛后续埋下了大坑。&lt;/p&gt;
 &lt;p&gt;由于Alex也是该资格赛的参赛者，他在比赛现场简单检查了一下我发过去的程序后就去比赛了。由于该叮嘱的细节我都在此前给Alex的邮件上详细列出来了，并且程序在我的两台机器上表现都没问题，同时在5月9日前我又没收到Alex的关于程序的后续消息，我乐观地以为比赛会顺利进行。&lt;/p&gt;
 &lt;p&gt;比赛时间对应于东部时间的早晨9点，为了应对可能的我未预料到的问题，8日我睡得比较早，9日很早就起床了。事后看这是一个正确的决定，早晨5点多我收到了Alex的消息，告诉我程序在时间控制上有问题，总是超时。看了他发给我的设置截图，我意识到沟通上存在问题：&lt;/p&gt;
