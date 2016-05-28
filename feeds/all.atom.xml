@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T00:00:00+02:00</updated><entry><title>Epifanov Dmitry versus Yixin</title><link href="/ai-vs-human-renju.html" rel="alternate"></link><updated>2016-05-19T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2016-05-19:ai-vs-human-renju.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2016-5-25)&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;This page will be maintained in May 2016 to keep track of the 8-game match between Yixin and Epifanov Dmitry. Technical analysis will be added later when all 8 games are finished. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T00:00:00+02:00</updated><entry><title>Epifanov Dmitry versus Yixin</title><link href="/ai-vs-human-renju.html" rel="alternate"></link><updated>2016-05-19T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2016-05-19:ai-vs-human-renju.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2016-5-28)&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;The technical analysis of the games will be added next week.&lt;/p&gt;
 &lt;h2&gt;Match Settings&lt;/h2&gt;
 &lt;p&gt;The match was proposed by Epifanov Dmitry in March 2016, and scheduled to be finished in May 2016. Below are the match settings:&lt;/p&gt;
 &lt;p&gt;The settings proposed by Epifanov Dmitry:&lt;/p&gt;
@@ -19,7 +19,17 @@
 &lt;p&gt;Other issues:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The livestream is broadcast using the same computer where Yixin runs, which takes 3-4% CPU on average.&lt;/li&gt;
-&lt;li&gt;The schedule is decided by the human player, including the time for each game and the rounds in which the human player will open the game (i.e., be the tentative black).&lt;/li&gt;
+&lt;li&gt;The schedule is decided by the human player, including the time for each game and the rounds in which the human player will open the game (i.e., be the tentative black).&lt;ul&gt;
+&lt;li&gt;Round 1  E - Y  (May 11)&lt;/li&gt;
+&lt;li&gt;Round 2  Y - E  (May 14)&lt;/li&gt;
+&lt;li&gt;Round 3  E - Y  (May 17)&lt;/li&gt;
+&lt;li&gt;Round 4  Y - E  (May 19)&lt;/li&gt;
+&lt;li&gt;Round 5  Y - E  (May 22)&lt;/li&gt;
+&lt;li&gt;Round 6  E - Y  (May 23)&lt;/li&gt;
+&lt;li&gt;Round 7  Y - E  (May 25)&lt;/li&gt;
+&lt;li&gt;Round 8  E - Y  (May 27)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;The speed of the computer was influenced due to unexpected unknown reasons in round 1 and round 3. In particular, the speed reported by Yixin in round 1 and round 3 was around 1300 and 400 respectively. In comparison, normally the speed on i7-4600U is around 1600 in the opening stage. &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Game Records&lt;/h2&gt;
@@ -105,7 +115,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;White&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: -, - &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: +, + &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: K8, I7, F9, J8, I9, I11, I8&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: Black wins&lt;/li&gt;
 &lt;/ul&gt;
@@ -113,7 +123,20 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_7.png" /&gt;&lt;/p&gt;</summary><category term="AI"></category><category term="yixin"></category><category term="renju"></category></entry><entry><title>QTRC 2016（第三场）中的人机对弈</title><link href="/ai-vs-human-3rd-qtrc2016.html" rel="alternate"></link><updated>2016-05-09T00:00:00+02:00</updated><author><name>孙锴</name></author><id>tag:,2016-05-09:ai-vs-human-3rd-qtrc2016.html</id><summary type="html">&lt;h3&gt;赛前准备&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_7.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Round 8 (May 27):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;White&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: -, + &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: J9, H9, J8, J7, F8, G8&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: Draw&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;h8i9i7g9f8g8h9h7g10f11j8h6h11f9e10h10k8j9i6l8k5i8k10l9k9k11h5g6f5g5g7g4j6l4l10m11g3i3h4i5e5d4f4d6e6f6d5c5c8d10c9d7e8e7c10c7b7d9d8b8e12d11e11e9d12c12i11f12j10f13f10e13g11f15f14m10c4b3j11m12m13k14e3f3g2i1h3i4i2j2l13k12k13j13l11l5j4j7l6m6m4l12
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_8.png" /&gt;&lt;/p&gt;</summary><category term="AI"></category><category term="yixin"></category><category term="renju"></category></entry><entry><title>QTRC 2016（第三场）中的人机对弈</title><link href="/ai-vs-human-3rd-qtrc2016.html" rel="alternate"></link><updated>2016-05-09T00:00:00+02:00</updated><author><name>孙锴</name></author><id>tag:,2016-05-09:ai-vs-human-3rd-qtrc2016.html</id><summary type="html">&lt;h3&gt;赛前准备&lt;/h3&gt;
 &lt;p&gt;我原以为和Epifanov Dmitry的约战会是Yixin与人类棋手的第一次比赛，然而5月6日下午我收到了Alexander Bogatirev（下文称他为Alex）的一封邮件，告诉我他们打算在5月7日-9日在圣彼得堡举办俄锦标资格赛的中组织一场Yixin与冠军棋手的比赛。虽然这个比赛通知来得突然，比赛细则（什么时候比，规则是什么，时间设定机制是什么，具体时限是多少，硬件配置是什么）还不清楚，且准备时间上很紧，但这类人对机器的比赛是我很感兴趣的事情，于是还是决定参加一下，并连夜准备了一下程序。次日在facebook上联系到了Alex，问清了比赛时间（莫斯科标准时间9日16:00)、规则（Swap-2）、硬件配置。不过，那时比赛组织方并没确定将采用怎样的时间设定机制以及时限，这为比赛后续埋下了大坑。&lt;/p&gt;
 &lt;p&gt;由于Alex也是该资格赛的参赛者，他在比赛现场简单检查了一下我发过去的程序后就去比赛了。由于该叮嘱的细节我都在此前给Alex的邮件上详细列出来了，并且程序在我的两台机器上表现都没问题，同时在5月9日前我又没收到Alex的关于程序的后续消息，我乐观地以为比赛会顺利进行。&lt;/p&gt;
 &lt;p&gt;比赛时间对应于东部时间的早晨9点，为了应对可能的我未预料到的问题，8日我睡得比较早，9日很早就起床了。事后看这是一个正确的决定，早晨5点多我收到了Alex的消息，告诉我程序在时间控制上有问题，总是超时。看了他发给我的设置截图，我意识到沟通上存在问题：&lt;/p&gt;

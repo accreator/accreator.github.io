@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI EXP</title><link>/</link><description></description><atom:link href="/feeds%5Ckai-sun.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 19 May 2016 00:00:00 +0200</lastBuildDate><item><title>Epifanov Dmitry versus Yixin</title><link>/ai-vs-human-renju.html</link><description>&lt;p&gt;&lt;strong&gt;(Last update: 2016-5-25)&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;This page will be maintained in May 2016 to keep track of the 8-game match between Yixin and Epifanov Dmitry. Technical analysis will be added later when all 8 games are finished. &lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI EXP</title><link>/</link><description></description><atom:link href="/feeds%5Ckai-sun.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 19 May 2016 00:00:00 +0200</lastBuildDate><item><title>Epifanov Dmitry versus Yixin</title><link>/ai-vs-human-renju.html</link><description>&lt;p&gt;&lt;strong&gt;(Last update: 2016-5-28)&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;The technical analysis of the games will be added next week.&lt;/p&gt;
 &lt;h2&gt;Match Settings&lt;/h2&gt;
 &lt;p&gt;The match was proposed by Epifanov Dmitry in March 2016, and scheduled to be finished in May 2016. Below are the match settings:&lt;/p&gt;
 &lt;p&gt;The settings proposed by Epifanov Dmitry:&lt;/p&gt;
@@ -19,7 +19,17 @@
 &lt;p&gt;Other issues:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The livestream is broadcast using the same computer where Yixin runs, which takes 3-4% CPU on average.&lt;/li&gt;
-&lt;li&gt;The schedule is decided by the human player, including the time for each game and the rounds in which the human player will open the game (i.e., be the tentative black).&lt;/li&gt;
+&lt;li&gt;The schedule is decided by the human player, including the time for each game and the rounds in which the human player will open the game (i.e., be the tentative black).&lt;ul&gt;
+&lt;li&gt;Round 1  E - Y  (May 11)&lt;/li&gt;
+&lt;li&gt;Round 2  Y - E  (May 14)&lt;/li&gt;
+&lt;li&gt;Round 3  E - Y  (May 17)&lt;/li&gt;
+&lt;li&gt;Round 4  Y - E  (May 19)&lt;/li&gt;
+&lt;li&gt;Round 5  Y - E  (May 22)&lt;/li&gt;
+&lt;li&gt;Round 6  E - Y  (May 23)&lt;/li&gt;
+&lt;li&gt;Round 7  Y - E  (May 25)&lt;/li&gt;
+&lt;li&gt;Round 8  E - Y  (May 27)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;The speed of the computer was influenced due to unexpected unknown reasons in round 1 and round 3. In particular, the speed reported by Yixin in round 1 and round 3 was around 1300 and 400 respectively. In comparison, normally the speed on i7-4600U is around 1600 in the opening stage. &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Game Records&lt;/h2&gt;
@@ -105,7 +115,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;White&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: -, - &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: +, + &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: K8, I7, F9, J8, I9, I11, I8&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: Black wins&lt;/li&gt;
 &lt;/ul&gt;
@@ -113,7 +123,20 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_7.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kai Sun</dc:creator><pubDate>Thu, 19 May 2016 00:00:00 +0200</pubDate><guid>tag:,2016-05-19:ai-vs-human-renju.html</guid><category>AI</category><category>yixin</category><category>renju</category></item><item><title>Towards Deep Yixin</title><link>/towards-deep-yixin.html</link><description>&lt;p&gt;Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_7.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Round 8 (May 27):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;White&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: -, + &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: J9, H9, J8, J7, F8, G8&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: Draw&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;h8i9i7g9f8g8h9h7g10f11j8h6h11f9e10h10k8j9i6l8k5i8k10l9k9k11h5g6f5g5g7g4j6l4l10m11g3i3h4i5e5d4f4d6e6f6d5c5c8d10c9d7e8e7c10c7b7d9d8b8e12d11e11e9d12c12i11f12j10f13f10e13g11f15f14m10c4b3j11m12m13k14e3f3g2i1h3i4i2j2l13k12k13j13l11l5j4j7l6m6m4l12
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_8.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kai Sun</dc:creator><pubDate>Thu, 19 May 2016 00:00:00 +0200</pubDate><guid>tag:,2016-05-19:ai-vs-human-renju.html</guid><category>AI</category><category>yixin</category><category>renju</category></item><item><title>Towards Deep Yixin</title><link>/towards-deep-yixin.html</link><description>&lt;p&gt;Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.&lt;/p&gt;
 &lt;p&gt;I tested the Deep Yixin (0.4.28) on a 4-core i7 with 21 balanced openings, and the result is as follows:&lt;/p&gt;
 &lt;p&gt;300s/1000s&lt;/p&gt;
 &lt;table&gt;
