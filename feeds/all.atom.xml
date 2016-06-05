@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T00:00:00+02:00</updated><entry><title>Epifanov Dmitry versus Yixin</title><link href="/ai-vs-human-renju.html" rel="alternate"></link><updated>2016-05-19T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2016-05-19:ai-vs-human-renju.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2016-5-28)&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;The technical analysis of the games will be added next week.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T00:00:00+02:00</updated><entry><title>Epifanov Dmitry versus Yixin</title><link href="/ai-vs-human-renju.html" rel="alternate"></link><updated>2016-05-19T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2016-05-19:ai-vs-human-renju.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2016-6-5)&lt;/strong&gt; &lt;/p&gt;
 &lt;h2&gt;Match Settings&lt;/h2&gt;
 &lt;p&gt;The match was proposed by Epifanov Dmitry in March 2016, and scheduled to be finished in May 2016. Below are the match settings:&lt;/p&gt;
 &lt;p&gt;The settings proposed by Epifanov Dmitry:&lt;/p&gt;
@@ -32,7 +31,7 @@
 &lt;/li&gt;
 &lt;li&gt;The speed of the computer was influenced due to unexpected unknown reasons in round 1 and round 3. In particular, the speed reported by Yixin in round 1 and round 3 was around 1300 and 400 respectively. In comparison, normally the speed on i7-4600U is around 1600 in the opening stage. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Game Records&lt;/h2&gt;
+&lt;h2&gt;Game Records and Analysis&lt;/h2&gt;
 &lt;h3&gt;Round 1 (May 11):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -46,6 +45,10 @@
 
 
 &lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;This is the first game between Yixin and Epifanov Dmitry (I will call him Epifanov for short in the following analysis).  Before the game, I spent around 1 month's spare time working on the necessary new features for the match. Of all the new features, the most time-consuming one is the support for Soosorv-8. However, because I had very limited knowledge about both Gomoku and Renju, the opening book preparation was inefficient and (later on) proved to be not very effective.  Limited resources further added to the difficulties.  In particular, most of the published databases in .lib format were of low quality due to false positive sure win / loss marks, and I could hardly make high quality database from scratch with the current tools either because a large portions of the false postives were caused by Renjusolver as well as fundamental weaknesses of the .lib format.  Therefore, to make the opening book, Finally I made a decision to enable Yixin to support making databases in a brand new format, and made the whole opening book with Yixin.  To save my preparation time, I only prepared all 4th moves for D4, and for most of the other opening patterns, I only prepared one 4th move.  And the opening strategy is, if Yixin is assgined the tentative Black, Yixin will always play D4; otherwise, Yixin will always make the 4th move and let the human decide whether to swap or not. (After the 2nd game, I prepared all 4th moves for another two opening patterns.) Despite that this stragety helps save the preparation time, at the same time it makes Yixin be at disadvantage when the human is assigned the tentative Black.&lt;/p&gt;
+&lt;p&gt;Yixin was out the opening book after the 7th move so almost all the moves played by Yixin were come up during the game, though Epifanov said Yixin played well during the opening stage. The minimum search depth reported by Yixin before the 27th move was around 15, dropped to around 12 after that. It is interesting that the normalized evaluation&lt;sup&gt;1&lt;/sup&gt; dropping to below 0 almost at the same time. (The normalized evaluation is shown in the below figure.  Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 61) is not included.) After the 27th move, there was little chance for Yixin to win, but still much chance to draw.  However, the version used in this game was found to have several bugs for forbidden moves evaluation (most of the bugs were found after the 2th game, except for one which was found during the 8th game), which partly contributed to the loss of Yixin.&lt;/p&gt;
+&lt;p&gt;After the game, I made some small modifications to Yixin's time management thanks to Epifanov's suggestion (However, I did not have the time to make great modifications due to time limitaion).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval1.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;Round 2 (May 14):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -59,6 +62,10 @@
 
 
 &lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;In the second game, Yixin was assigned as the tentative Black, however, Yixin was again out the opening book early -- it was out the book after the 9th move.  In comparison, it seems that Epifanov made moves quickly until the 28th move.  So it was very likely that "fortunately" Yixin again played well during the opening stage and unfortunately Epifanov knew the opening pretty well.  The game went on smoothly for both Yixin and Epifanov, and Epifanov offered draw after making the 52th move.  However, Yixin rejected the offer.  I once thought it was because Yixin believed the position was much better for Black than for White, but later on I realized it was because the offer draw was made when Yixin was thinking, and the version used in that game did not accept draw offer if it was thinking.  The rejection was a bad idea for Yixin because it made a very strange 55th move which led to its loss.    &lt;/p&gt;
+&lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 65) is not included.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;After the game, I prepared all 4th moves for another two opening patterns since it seems that Epifanov knew D4 very well. Additionally, I found several serious bugs for forbidden moves evaluation which were the key reason for this loss.  They were fixed in the versions used in later games.  &lt;/p&gt;
 &lt;h3&gt;Round 3 (May 17):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -72,6 +79,10 @@
 
 
 &lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Probably because Epifanov guessed Yixin's opening strategy, Epifanov opened I3 in the 3rd game. According to the comment from Epifanov after the game, almost all the 4th moves are quite unbalanced so Yixin should swap after the 3rd move and choose the color itself, as opposed to making the 4th move itself. &lt;/p&gt;
+&lt;p&gt;Yixin was out the opening book after the 7th move, and unluckily this time it did not find the correct path -- the 9th was already a loss in theory. &lt;/p&gt;
+&lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 21) is not included.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval3.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;Round 4 (May 19):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -85,6 +96,10 @@
 
 
 &lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;I once thought Epifanov would swap after the 3th move, however, he made the 4th. Because of the randomness I added to the opening stage, instead of offering the best 5th move near the center, Yixin offered the symmetric one. Although this 5th is not better than the one near the center, it seems that Epifanov was not as familiar with this 5th as the 5th of D4 in the 2nd game.  Yixin was out the opening book after the 11th move. The minimum depth reported by Yixin was around 14 before the 37th move, around 12 between the 39th move and 67th move, and around 10 after the 69 move.  Similar to the 2nd game, the game went on smoothly, but Epifanov did not offer draw until the 80th move.  However, his offers (he made several offers afer the 8th move) were rejected several times for the same reason as the 2nd game -- the version used in this game did not accept draw offer if Yixin was thinking.      Thanks to the bug fixes of the forbidden move evaluation, Yixin did not make any stupid mistake, and the long game was finally ended by Yixin accepting the draw offer after the 224th move.&lt;/p&gt;
+&lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 171) is not included.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;After the game, the draw offer was modified to enable Yixin to accept draw no matter whether the engine is thinking or not, and the condition for accepting the offer was made much loose. &lt;/p&gt;
 &lt;h3&gt;Round 5 (May 22):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
@@ -98,6 +113,9 @@
 
 
 &lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_5.png" /&gt;&lt;/p&gt;
+&lt;p&gt;It was the first time for Yixin to play White. Yixin was out the opening book after the 12th move. Yixin soon obtained a big advantage and got its first win in the match.&lt;/p&gt;
+&lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 30) is not included.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval5.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;Round 6 (May 23):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
@@ -111,6 +129,9 @@
 
 
 &lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_6.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Yixin was out the opening book after the 6th move, but actually the book was already incorrect from the 5th move, and unluckily after the game Epifanov told me that he had played the 4th a couple of times and analyzed a lot.  The correct number of alternatives should be 6 rather than 5, and an analysis done by my friends showed that the 5th played in the game was already a sure win for Black.&lt;/p&gt;
+&lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 10) is not included.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval6.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;Round 7 (May 25):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -124,6 +145,9 @@
 
 
 &lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_7.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Yixin opened D1 again and this time Epifanov chose to swap after the 3rd move.  Yixin made the 4th and offered 7 alternatives.  All alternatives except for K8 were common.  As for K8, although it was not common, it was kept because Yixin gave it a reasonably good evaluation score.  After thinking for a long time, Epifanov selected K8 as the 5th move.  In theory, the decision was the best because from the current analysis of Yixin, K8 was the most balanced one among the 7 alternatives. However, in practice, K8 was a bad decision because it was hard to give the correct defence moves in limited time.  Yixin was out the opening book after the 13th move, but the result that the 13th move was a sure win came from the thinking during the game (In the opening book, the postion was only marked that Black had medium advantage).  After the game, the 5th move played in the game was proved to be a sure win for the Black.&lt;/p&gt;
+&lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 11) is not included.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval7.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;Round 8 (May 27):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -136,7 +160,16 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_8.png" /&gt;&lt;/p&gt;</summary><category term="AI"></category><category term="yixin"></category><category term="renju"></category></entry><entry><title>QTRC 2016（第三场）中的人机对弈</title><link href="/ai-vs-human-3rd-qtrc2016.html" rel="alternate"></link><updated>2016-05-09T00:00:00+02:00</updated><author><name>孙锴</name></author><id>tag:,2016-05-09:ai-vs-human-3rd-qtrc2016.html</id><summary type="html">&lt;h3&gt;赛前准备&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_8.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Yixin was out the opening book after the 11th move.  The final game went on pretty smoothly.  During the game, I noticed another bug for forbidden moves evaluation but luckily it did make Yixin lose because the bug was not as serious as the previous bugs and Epifanov seemed to be very cautious during the game so that he did not attack much and he did not have much time left after the middle game. &lt;/p&gt;
+&lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; is not included.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval8.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Footnotes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Different from the raw score output by Yixin, here a simple normalization is done to make a score of 0 correspond to balanced positions.&lt;/li&gt;
+&lt;li&gt;Here, the &lt;em&gt;opening&lt;/em&gt; means the first 3 Black moves and 2 White moves, which were played based totally on the opening database (as opposed to being analyzed by the engine).&lt;/li&gt;
+&lt;li&gt;Here, the &lt;em&gt;endgame&lt;/em&gt; means either the positions which were proved by Yixin to be a sure win / loss during the game, or the situations when there is no possibility to make five for both sides, i.e. a sure draw.&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="AI"></category><category term="yixin"></category><category term="renju"></category></entry><entry><title>QTRC 2016（第三场）中的人机对弈</title><link href="/ai-vs-human-3rd-qtrc2016.html" rel="alternate"></link><updated>2016-05-09T00:00:00+02:00</updated><author><name>孙锴</name></author><id>tag:,2016-05-09:ai-vs-human-3rd-qtrc2016.html</id><summary type="html">&lt;h3&gt;赛前准备&lt;/h3&gt;
 &lt;p&gt;我原以为和Epifanov Dmitry的约战会是Yixin与人类棋手的第一次比赛，然而5月6日下午我收到了Alexander Bogatirev（下文称他为Alex）的一封邮件，告诉我他们打算在5月7日-9日在圣彼得堡举办俄锦标资格赛的中组织一场Yixin与冠军棋手的比赛。虽然这个比赛通知来得突然，比赛细则（什么时候比，规则是什么，时间设定机制是什么，具体时限是多少，硬件配置是什么）还不清楚，且准备时间上很紧，但这类人对机器的比赛是我很感兴趣的事情，于是还是决定参加一下，并连夜准备了一下程序。次日在facebook上联系到了Alex，问清了比赛时间（莫斯科标准时间9日16:00)、规则（Swap-2）、硬件配置。不过，那时比赛组织方并没确定将采用怎样的时间设定机制以及时限，这为比赛后续埋下了大坑。&lt;/p&gt;
 &lt;p&gt;由于Alex也是该资格赛的参赛者，他在比赛现场简单检查了一下我发过去的程序后就去比赛了。由于该叮嘱的细节我都在此前给Alex的邮件上详细列出来了，并且程序在我的两台机器上表现都没问题，同时在5月9日前我又没收到Alex的关于程序的后续消息，我乐观地以为比赛会顺利进行。&lt;/p&gt;
 &lt;p&gt;比赛时间对应于东部时间的早晨9点，为了应对可能的我未预料到的问题，8日我睡得比较早，9日很早就起床了。事后看这是一个正确的决定，早晨5点多我收到了Alex的消息，告诉我程序在时间控制上有问题，总是超时。看了他发给我的设置截图，我意识到沟通上存在问题：&lt;/p&gt;
