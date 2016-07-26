@@ -591,7 +591,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;li&gt;&lt;a href="http://www.coin-or.org/"&gt;http://www.coin-or.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cplex.com/"&gt;http://www.cplex.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.gurobi.com/"&gt;http://www.gurobi.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2016-5-10)&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2016-7-26)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
@@ -638,6 +638,9 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;a href="https://github.com/ChisBread/Chis"&gt;&lt;strong&gt;Chis&lt;/strong&gt;&lt;/a&gt; by Peiming Zheng, China.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/jinjiebang/wine"&gt;&lt;strong&gt;Wine&lt;/strong&gt;&lt;/a&gt; by Jinjie Wang, China.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Stahlfaust (with its documents)&lt;/strong&gt; (&lt;a href="http://www.nowozin.net/sebastian/tu-berlin-2006/stahlfaust/"&gt;Original version&lt;/a&gt;, or &lt;a href="https://github.com/gomoku/Stahlfaust---Gomoku-AI-player"&gt;Modified version&lt;/a&gt; which supports Gomocup protocol) by Marco Kunze and Sebastian Nowozin, Germany.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -647,7 +650,10 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;a href="http://aean.net/kalscope/"&gt;&lt;strong&gt;KalScope&lt;/strong&gt;&lt;/a&gt; by Aean, China.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.softos.org/?p=156"&gt;&lt;strong&gt;Qingyue Renju&lt;/strong&gt;&lt;/a&gt; by Cong Zhang, China.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/files/qingyue_source.zip"&gt;&lt;strong&gt;Qingyue Renju&lt;/strong&gt;&lt;/a&gt; by Cong Zhang, China.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.petricek.net/pisq_src.zip"&gt;&lt;strong&gt;Pisq&lt;/strong&gt;&lt;/a&gt; by Martin Petricek, Czech Republic.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Open-source GUIs&lt;/h2&gt;
@@ -680,9 +686,6 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;a href="http://gomocup.org/"&gt;&lt;strong&gt;Gomocup&lt;/strong&gt;&lt;/a&gt; (2000 - Present) (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://w-ai.org/"&gt;&lt;strong&gt;WAI&lt;/strong&gt;&lt;/a&gt; (2012 - 2014)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.grappa.univ-lille3.fr/icga/game.php?id=30"&gt;&lt;strong&gt;Computer Olympiad&lt;/strong&gt;&lt;/a&gt; (1989 - 1992)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -695,7 +698,13 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;a href="http://botzone.org/"&gt;&lt;strong&gt;Botzone&lt;/strong&gt;&lt;/a&gt; (2010 - Present)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;AI vs. Human tournament&lt;/strong&gt; (&lt;a href="http://gomocup.org/results/ai-human-2006"&gt;2006&lt;/a&gt;, 2011(&lt;a href="http://gomocup.org/results/ai-human-2011/"&gt;en&lt;/a&gt;,&lt;a href="http://www.piskvorky.cz/clanky/zajimavosti-ze-sveta-piskvorek-a-renju/ai-vs-clovek-2011-2/"&gt;cz&lt;/a&gt;))&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AI vs. Human Tournament&lt;/strong&gt; (&lt;a href="http://gomocup.org/results/ai-human-2006"&gt;2006&lt;/a&gt;, 2011(&lt;a href="http://gomocup.org/results/ai-human-2011/"&gt;en&lt;/a&gt;,&lt;a href="http://www.piskvorky.cz/clanky/zajimavosti-ze-sveta-piskvorek-a-renju/ai-vs-clovek-2011-2/"&gt;cz&lt;/a&gt;))&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Yixin vs. Human Player&lt;/strong&gt; (&lt;a href="/ai-vs-human-renju.html"&gt;match with Epifanov Dmitry, 2016&lt;/a&gt;, &lt;a href="/ai-vs-human-3rd-qtrc2016.html"&gt;match with Alexander Bogatirev, 2016&lt;/a&gt;) &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://w-ai.org/"&gt;&lt;strong&gt;WAI&lt;/strong&gt;&lt;/a&gt; (2012 - 2014, the website is down)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Famous, Competitive, and Interesting AI List&lt;/h2&gt;
