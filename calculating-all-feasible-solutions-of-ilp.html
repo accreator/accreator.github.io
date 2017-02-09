@@ -86,48 +86,48 @@ tags: <a href="/tag/scip.html">SCIP</a> <a href="/tag/pulp.html">PuLP</a> <a hre
 <p>Integer linear programming (ILP) is a method to achieve the best outcome in a mathematical model whose requirements are represented by linear relationships and unknown variables are required to be integers. Integer linear programming can be applied to various fields of study and has proved useful in diverse types of problems. In contrast to linear programming, which can be solved efficiently in the worst case, integer linear programming problems are in many practical situations NP-hard. Therefore, solving integer linear programming is not easy. Moreover, despite the fact that there are many professional solvers which can solve integer linear programming efficiently in most cases, most of them can only give one optimal solution even if many solutions exist. However, more than one solution, or even all solutions are needed in some applications.</p>
 <p>In this article, PuLP and SCIP (Solving Constraint Integer Programs) are combined together to solve that general problem, that is, given an integer linear programming problem, calculate all feasible solutions efficiently if the number of feasible solutions is not infinite. Specifically, first, PuLP is used to generate the integer programming model file; then the model file is passed to SCIP and all feasible solutions of the model are calculated with SCIP.</p>
 <p>PuLP is an LP modeler written in python. PuLP can generate MPS or LP files and call GLPK, COIN CLP/CBC, CPLEX, and GUROBI to solve linear problems. SCIP is currently one of the fastest non-commercial solvers for mixed integer programming (MIP) and mixed integer nonlinear programming (MINLP). It is also a framework for constraint integer programming (CIP) and branch-cut-and-price. It allows for total control of the solution process and the access of detailed information down to the guts of the solver.</p>
-<p><img alt="Alt text" src="/images/scip_fig1.png" /></p>
+<p><img alt="Alt text" src="/images/scip_fig1.png"></p>
 <p>The remainder of the article is organized as follows. In section 2, a sample problem is described which is used to illustrate the steps in the other sections. Section 3 shows how to generate the model file. Section 4 shows how to calculating all feasible solutions of a given model file.</p>
 <h2>2. Sample Problem</h2>
 <h4>Problem description:</h4>
 <p>Kai Sun would like to buy 100 chickens with 100 LTC. A rooster, a hen and a chick costs 3 LTC, 2LTC and 0.5LTC respectively. How many roosters, hens and chicks should Kai buy? If there are many solutions, output all of them. </p>
 <p>Convert the problem to ILP: </p>
 <h4>Variables:</h4>
-<div class="highlight"><pre>Integer x, y, z, d
+<div class="highlight"><pre><span></span>Integer x, y, z, d
 </pre></div>
 
 
 <h4>Constraints:</h4>
-<div class="highlight"><pre>x+y+z = 100 
+<div class="highlight"><pre><span></span>x+y+z = 100 
 3x+2y+0.5z = 100 
 0 &lt;= x, y, z, d
 </pre></div>
 
 
 <h4>Objective function:</h4>
-<div class="highlight"><pre>Minimize d
+<div class="highlight"><pre><span></span>Minimize d
 </pre></div>
 
 
 <p>Here we use a dummy variable <code>d</code> because for this problem, there are no objective function need to be optimized.</p>
 <h2>3. Model File Generation</h2>
 <p>With PuLP, it is easy to express the ILP and generate ".lp" file, which can be further read by SCIP. </p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">pulp</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="n">prob</span> <span class="o">=</span> <span class="n">LpProblem</span><span class="p">(</span><span class="s">&quot;chicken&quot;</span><span class="p">,</span> <span class="n">LpMinimize</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">LpVariable</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">LpInteger</span><span class="p">)</span> <span class="c"># 0 is the lower bound;</span>
-                                  <span class="c"># &quot;None&quot; means no upper bound;</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">LpVariable</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">LpInteger</span><span class="p">)</span>
-<span class="n">z</span> <span class="o">=</span> <span class="n">LpVariable</span><span class="p">(</span><span class="s">&quot;z&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">LpInteger</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pulp</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">prob</span> <span class="o">=</span> <span class="n">LpProblem</span><span class="p">(</span><span class="s2">&quot;chicken&quot;</span><span class="p">,</span> <span class="n">LpMinimize</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">LpVariable</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">LpInteger</span><span class="p">)</span> <span class="c1"># 0 is the lower bound;</span>
+                                  <span class="c1"># &quot;None&quot; means no upper bound;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">LpVariable</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">LpInteger</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">LpVariable</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">LpInteger</span><span class="p">)</span>
 
-<span class="n">prob</span> <span class="o">+=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span> <span class="o">==</span> <span class="mi">100</span><span class="p">,</span> <span class="s">&quot;constraint 1&quot;</span>
-<span class="n">prob</span> <span class="o">+=</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="n">z</span><span class="o">*</span><span class="mf">0.5</span> <span class="o">==</span> <span class="mi">100</span><span class="p">,</span> <span class="s">&quot;constraint 2&quot;</span>
+<span class="n">prob</span> <span class="o">+=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span> <span class="o">==</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;constraint 1&quot;</span>
+<span class="n">prob</span> <span class="o">+=</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="n">z</span><span class="o">*</span><span class="mf">0.5</span> <span class="o">==</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;constraint 2&quot;</span>
 
-<span class="n">prob</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s">&quot;problem.lp&quot;</span><span class="p">)</span>
+<span class="n">prob</span><span class="o">.</span><span class="n">writeLP</span><span class="p">(</span><span class="s2">&quot;problem.lp&quot;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>In this example, model file "problem.lp" is generated, and the contents of "problem.lp" are shown below:</p>
-<div class="highlight"><pre>\* chicken *\
+<div class="highlight"><pre><span></span>\* chicken *\
 Minimize
 OBJ: __dummy
 Subject To
@@ -151,14 +151,14 @@ End
 <ol>
 <li>
 <p>Read model file using <code>read</code> command.</p>
-<div class="highlight"><pre>SCIP&gt; read problem.lp
+<div class="highlight"><pre><span></span>SCIP&gt; read problem.lp
 </pre></div>
 
 
 </li>
 <li>
 <p>Set the parameters which are required for collecting all feasible solutions.</p>
-<div class="highlight"><pre>SCIP&gt; set emphasis counter
+<div class="highlight"><pre><span></span>SCIP&gt; set emphasis counter
 SCIP&gt; set constraints countsols collect TRUE
 </pre></div>
 
@@ -166,21 +166,21 @@ SCIP&gt; set constraints countsols collect TRUE
 </li>
 <li>
 <p>Calculating all feasible solutions using <code>count</code> command.</p>
-<div class="highlight"><pre>SCIP&gt; count
+<div class="highlight"><pre><span></span>SCIP&gt; count
 </pre></div>
 
 
 </li>
 <li>
 <p>Write all feasible solutions to a file.</p>
-<div class="highlight"><pre>SCIP&gt; write allsolutions chicken_sol.txt
+<div class="highlight"><pre><span></span>SCIP&gt; write allsolutions chicken_sol.txt
 </pre></div>
 
 
 </li>
 </ol>
 <p>Finally, file "chicken_sol" contains all feasible solutions of the sample problem:</p>
-<div class="highlight"><pre>#, z, y, x, objval
+<div class="highlight"><pre><span></span>#, z, y, x, objval
 1(1), 80, 0, 20, 0
 2(2), 68, 30, 2, 0
 3(3), 70, 25, 5, 0

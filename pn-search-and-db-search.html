@@ -103,7 +103,7 @@ tags: <a href="/tag/ren-ji-dui-yi.html">人机对弈</a> <a href="/tag/wu-zi-qi.
 <ol>
 <li>
 <p>global defensive:</p>
-<div class="highlight"><pre>a) 在对方第i步棋后，目标是占有进攻方形成threat aj的区域，或我方应有的reply dj，使得j&gt;=i。
+<div class="highlight"><pre><span></span>a) 在对方第i步棋后，目标是占有进攻方形成threat aj的区域，或我方应有的reply dj，使得j&gt;=i。
 b) 在检查中，不再做攻方的global defensive检查。
 c) 只检查更高的威胁。
 (137页)
@@ -124,7 +124,7 @@ c) 只检查更高的威胁。
 <li>限制黑棋（进攻方）的儿子数为10，排序标准是4分（可形成活三且有2个防点），3分（可形成活三有3个防点），2分（活二），1分（跳二）。(144)</li>
 <li>
 <p>相关区域：为了使得一个threat sequence可以对付多个move（主要是战场外的着法），先make一个null move，然黑棋（进攻方）找到一个threat sequence，然后根据此sequence定义相关区域。</p>
-<div class="highlight"><pre>a) 定义：一个点属于相关区域，当且仅当其满足以下至少一点：(1)是威胁序列中的点（在line内即可，类似_ _ _ X X _ _的7格区域所有空点都是）。(2)与威胁序列中的白棋和原有白棋可形成新的威胁的点。(146)
+<div class="highlight"><pre><span></span>a) 定义：一个点属于相关区域，当且仅当其满足以下至少一点：(1)是威胁序列中的点（在line内即可，类似_ _ _ X X _ _的7格区域所有空点都是）。(2)与威胁序列中的白棋和原有白棋可形成新的威胁的点。(146)
 b) 在相关区域被定义后，对于区域中的一个点s，如果s落子后通过db-search判断确实没有对应threat sequence，则将s加入儿子，否则，利用找到的threat-sequence可以按照上述方法得到另一个相关区域，而这个相关区域与原相关区域的交作为新的相关区域。(147)
 </pre></div>
 

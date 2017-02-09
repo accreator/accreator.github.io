@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T00:00:00+02:00</updated><entry><title>Epifanov Dmitry versus Yixin</title><link href="/ai-vs-human-renju.html" rel="alternate"></link><updated>2016-05-19T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2016-05-19:ai-vs-human-renju.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2016-6-5)&lt;/strong&gt; &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP - Blog</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2016-05-19T00:00:00+02:00</updated><entry><title>Epifanov Dmitry versus Yixin</title><link href="/ai-vs-human-renju.html" rel="alternate"></link><published>2016-05-19T00:00:00+02:00</published><updated>2016-05-19T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2016-05-19:/ai-vs-human-renju.html</id><summary type="html">&lt;p&gt;This article is a summary of the 8-game match between Yixin and Epifanov Dmitry. The final result of Yixin is 2 win, 2 draw, and 4 loss.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2016-6-5)&lt;/strong&gt; &lt;/p&gt;
 &lt;h2&gt;Match Settings&lt;/h2&gt;
 &lt;p&gt;The match was proposed by Epifanov Dmitry in March 2016, and scheduled to be finished in May 2016. Below are the match settings:&lt;/p&gt;
 &lt;p&gt;The settings proposed by Epifanov Dmitry:&lt;/p&gt;
@@ -40,15 +40,15 @@
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: F9&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: White wins&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;h8i9f6g9f9f8h10h7i10g10g7g5j9j11e6g11g8f7d6c6k8l7j7j8l9m10f5g4k9k7k10l11b9c8d9e9d8d10i11g12g13h12i13m9e5d4f4c7c9e7m8e12i12i14j13h13f11e11n7o6d7d5e10d12f12f10c13b12c11a12
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;h8i9f6g9f9f8h10h7i10g10g7g5j9j11e6g11g8f7d6c6k8l7j7j8l9m10f5g4k9k7k10l11b9c8d9e9d8d10i11g12g13h12i13m9e5d4f4c7c9e7m8e12i12i14j13h13f11e11n7o6d7d5e10d12f12f10c13b12c11a12
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;This is the first game between Yixin and Epifanov Dmitry (I will call him Epifanov for short in the following analysis).  Before the game, I spent around 1 month's spare time working on the necessary new features for the match. Of all the new features, the most time-consuming one is the support for Soosorv-8. However, because I had very limited knowledge about both Gomoku and Renju, the opening book preparation was inefficient and (later on) proved to be not very effective.  Limited resources further added to the difficulties.  In particular, most of the published databases in .lib format were of low quality due to false positive sure win / loss marks, and I could hardly make high quality database from scratch with the current tools because a large portions of the false postives were caused by Renjusolver and the .lib format has fundamental weaknesses.  Therefore, to make the opening book, finally I made a decision to enable Yixin to support making databases in a brand new format, and made the whole opening book with Yixin.  To save my preparation time, I only prepared all 4th moves for D4, and for most of the other opening patterns, I only prepared one 4th move.  And the opening strategy is, if Yixin is assgined the tentative Black, Yixin will always play D4; otherwise, Yixin will always make the 4th move and let the human decide whether to swap or not. (After the 2nd game, I prepared all 4th moves for another two opening patterns.) Despite that this strategy helped save the preparation time, at the same time it made Yixin be at disadvantage when the human was assigned the tentative Black.&lt;/p&gt;
 &lt;p&gt;Yixin was out the opening book after the 7th move so almost all the moves played by Yixin were come up during the game, though Epifanov said Yixin played well during the opening stage. The minimum search depth reported by Yixin before the 27th move was around 15, and dropped to around 12 after that. It was interesting that the normalized evaluation&lt;sup&gt;1&lt;/sup&gt; dropped to below 0 almost at the same time. (The normalized evaluation is shown in the below figure.  Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 61) is not included.) After the 27th move, there was little chance for Yixin to win, but still much chance to draw.  However, the version used in this game was found to have several bugs for forbidden moves evaluation (most of the bugs were found after the 2th game, except for one which was found during the 8th game), which partly contributed to the loss of Yixin.&lt;/p&gt;
 &lt;p&gt;After the game, I made some small modifications to Yixin's time management thanks to Epifanov's suggestion (However, I did not have the time to make great modifications due to time limitaion).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval1.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Round 2 (May 14):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -57,14 +57,14 @@
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: I7, J11, I10, H11, F6, I9&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: White wins&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;h8g8g9h9j11f9f8h10e10i7e9f7e6g7e8e7h7e11d8c7d7c8d6d5g11h12c6f6i12k10i11h11h13i13g12f11d10d9i8g6g5k8k9h5j10i9i4l8c10f10g4h3h4j4m9l9l6l11l10j7i6m10n11k12e4f4n9m8j8o8
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;h8g8g9h9j11f9f8h10e10i7e9f7e6g7e8e7h7e11d8c7d7c8d6d5g11h12c6f6i12k10i11h11h13i13g12f11d10d9i8g6g5k8k9h5j10i9i4l8c10f10g4h3h4j4m9l9l6l11l10j7i6m10n11k12e4f4n9m8j8o8
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;In the second game, Yixin was assigned as the tentative Black, however, Yixin was again out the opening book early -- it was out the book after the 9th move.  In comparison, it seems that Epifanov made moves quickly until the 28th move.  So it was very likely that "fortunately" Yixin again played well during the opening stage and unfortunately Epifanov knew the opening pretty well.  The game went on smoothly for both Yixin and Epifanov, and Epifanov offered draw after making the 52th move.  However, Yixin rejected the offer.  I once thought it was because Yixin believed the position was much better for Black than for White, but later on I realized it was because the offer draw was made when Yixin was thinking, and the version used in that game did not accept draw offer if it was thinking.  The rejection was a bad idea for Yixin because it made a very strange 55th move which led to its loss.    &lt;/p&gt;
 &lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 65) is not included.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval2.png"&gt;&lt;/p&gt;
 &lt;p&gt;After the game, I prepared all 4th moves for another two opening patterns since it seems that Epifanov knew D4 very well. Additionally, I found several serious bugs for forbidden moves evaluation which were the key reason for this loss.  They were fixed in the versions used in later games.  &lt;/p&gt;
 &lt;h3&gt;Round 3 (May 17):&lt;/h3&gt;
 &lt;ul&gt;
@@ -74,15 +74,15 @@
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: H9, I6, I7, I10, J6&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: White wins&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;h8i9j8i8j6i7i6h9k6h6j9i10i11j7g10f5g8h7g7g6e4f6f4h5h4e6d6g4g9g11l6m6h3g5e5j5i5g2
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;h8i9j8i8j6i7i6h9k6h6j9i10i11j7g10f5g8h7g7g6e4f6f4h5h4e6d6g4g9g11l6m6h3g5e5j5i5g2
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_3.png"&gt;&lt;/p&gt;
 &lt;p&gt;Probably because Epifanov guessed Yixin's opening strategy, Epifanov opened I3 in the 3rd game. According to the comment from Epifanov after the game, almost all the 4th moves are quite unbalanced so Yixin should swap after the 3rd move and choose the color itself, as opposed to making the 4th move itself. &lt;/p&gt;
 &lt;p&gt;Yixin was out the opening book after the 7th move, and unluckily this time it did not find the correct path -- the 9th was already a loss in theory. &lt;/p&gt;
 &lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 21) is not included.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval3.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Round 4 (May 19):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -91,14 +91,14 @@
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: I9, F10, G9, G8, I11&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: Draw&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;h8h9h10j9i11g9i9j10j11i8g10h11k10i12k11k8i10j12k12k13j6k7k5i7j7j5h6g6f5e5h4h5i4j4d9e10d8d7e9c9g3f6e4f2f3f4f12g11c7b6d11c10d10d12c11b12f11f13e11b11k14l11d4d5h3i3j14l14l13m14e6l6m5l8m8l9l10b13b10k4l5l3n5o5m2m3m9m7k3n7o7n8m11n11m10m12c4c12k9n10n9n12d13b14b15e14a12c5b5d3d15h7i6g13k6l4n3m4n4n2e7i2a11a10n13e8g5g2h2g14h13d14f14a14c14j15l1o10k15o15a7a4g12b2f1h15a5e1f9f10c2a8i5f7j13e15o11m1g15i1h1a1a3o1o4a15g7c15i15f15b1l15m15n15j2h14i14n14o14a13c13e13i13m13o13h12n1l12k1o12j1a9g1b9d1o9b8c8o2g8c1j8l2o8k2b7e2l7d2a6a2c6o3m6j3n6c3o6b3b4g4d6e3f8
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;h8h9h10j9i11g9i9j10j11i8g10h11k10i12k11k8i10j12k12k13j6k7k5i7j7j5h6g6f5e5h4h5i4j4d9e10d8d7e9c9g3f6e4f2f3f4f12g11c7b6d11c10d10d12c11b12f11f13e11b11k14l11d4d5h3i3j14l14l13m14e6l6m5l8m8l9l10b13b10k4l5l3n5o5m2m3m9m7k3n7o7n8m11n11m10m12c4c12k9n10n9n12d13b14b15e14a12c5b5d3d15h7i6g13k6l4n3m4n4n2e7i2a11a10n13e8g5g2h2g14h13d14f14a14c14j15l1o10k15o15a7a4g12b2f1h15a5e1f9f10c2a8i5f7j13e15o11m1g15i1h1a1a3o1o4a15g7c15i15f15b1l15m15n15j2h14i14n14o14a13c13e13i13m13o13h12n1l12k1o12j1a9g1b9d1o9b8c8o2g8c1j8l2o8k2b7e2l7d2a6a2c6o3m6j3n6c3o6b3b4g4d6e3f8
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_4.png"&gt;&lt;/p&gt;
 &lt;p&gt;I once thought Epifanov would swap after the 3th move, however, he made the 4th. Because of the randomness I added to the opening stage, instead of offering the best 5th move near the center, Yixin offered the symmetric one. Although this 5th is not better than the one near the center, it seems that Epifanov was not as familiar with this 5th as the 5th of D4 in the 2nd game.  Yixin was out the opening book after the 11th move. The minimum depth reported by Yixin was around 14 before the 37th move, around 12 between the 39th move and 67th move, and around 10 after the 69 move.  Similar to the 2nd game, the game went on smoothly, but Epifanov did not offer draw until the 80th move.  However, his offers (he made several offers afer the 80th move) were rejected several times for the same reason as the 2nd game -- the version used in this game did not accept draw offer if Yixin was thinking.      Thanks to the bug fixes of the forbidden move evaluation, Yixin did not make any stupid mistake, and the long game was finally ended by Yixin accepting the draw offer after the 224th move.&lt;/p&gt;
 &lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 171) is not included.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval4.png"&gt;&lt;/p&gt;
 &lt;p&gt;After the game, the draw offer was modified to enable Yixin to accept draw no matter whether the engine is thinking or not, and the condition for accepting the offer was made much loose. &lt;/p&gt;
 &lt;h3&gt;Round 5 (May 22):&lt;/h3&gt;
 &lt;ul&gt;
@@ -108,14 +108,14 @@
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: G9, F8, G8, I9, G7, I7&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: White wins&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;h8h9h10j9g7i8g9g10j7i9f8e7h7i7i11j12i6h6k9g8j10l8f11i10f7k8h11m8j8g11l7m10m12m9
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;h8h9h10j9g7i8g9g10j7i9f8e7h7i7i11j12i6h6k9g8j10l8f11i10f7k8h11m8j8g11l7m10m12m9
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_5.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_5.png"&gt;&lt;/p&gt;
 &lt;p&gt;It was the first time for Yixin to play White. Yixin was out the opening book after the 12th move. Yixin soon obtained a big advantage and got its first win in the match.&lt;/p&gt;
 &lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 30) is not included.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval5.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval5.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Round 6 (May 23):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Epifanov Dmitry&lt;/li&gt;
@@ -124,14 +124,14 @@
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: G9, I9, J9, J8, J10&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: Black wins&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;h8h9j7f9j9g8j10j8i10h7i6i9k10l10l11m12m10g9e9l9j13k12h11g12g10h10i12k14j11j12i11k11i13i14h13g14k13g13l13
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;h8h9j7f9j9g8j10j8i10h7i6i9k10l10l11m12m10g9e9l9j13k12h11g12g10h10i12k14j11j12i11k11i13i14h13g14k13g13l13
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_6.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_6.png"&gt;&lt;/p&gt;
 &lt;p&gt;Yixin was out the opening book after the 6th move, but actually the book was already incorrect from the 5th move, and unluckily after the game Epifanov told me that he had played the 4th a couple of times and analyzed a lot.  The correct number of alternatives should be 6 rather than 5, and an analysis done by my friends showed that the 5th played in the game was already a sure win for Black.&lt;/p&gt;
 &lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 10) is not included.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval6.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval6.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Round 7 (May 25):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -140,14 +140,14 @@
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: K8, I7, F9, J8, I9, I11, I8&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: Black wins&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;h8h9h10f10k8j8k10k9i10l10i7j7j9h11i5i8g10j10l7m6k5j6j5l5k6i4k4k7h6m11n12j4h5g5h7h4i6l3g8
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;h8h9h10f10k8j8k10k9i10l10i7j7j9h11i5i8g10j10l7m6k5j6j5l5k6i4k4k7h6m11n12j4h5g5h7h4i6l3g8
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_7.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_7.png"&gt;&lt;/p&gt;
 &lt;p&gt;Yixin opened D1 again and this time Epifanov chose to swap after the 3rd move.  Yixin made the 4th and offered 7 alternatives.  All alternatives except for K8 were common.  As for K8, although it was not common, it was kept because Yixin gave it a reasonably good evaluation score.  After thinking for a long time, Epifanov selected K8 as the 5th move.  In theory, the decision was the best because from the current analysis of Yixin, K8 was the most balanced one among the 7 alternatives. However, in practice, K8 was a bad decision because it was hard to give the correct defence moves in limited time.  Yixin was out the opening book after the 13th move, but the result that the 13th move was a sure win came from the thinking during the game (In the opening book, the postion was only marked that Black had medium advantage).  After the game, the 5th move played in the game was proved to be a sure win for the Black.&lt;/p&gt;
 &lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; and endgame&lt;sup&gt;3&lt;/sup&gt; (moves after 11) is not included.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval7.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval7.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Round 8 (May 27):&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -156,20 +156,20 @@
 &lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: J9, H9, J8, J7, F8, G8&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: Draw&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;h8i9i7g9f8g8h9h7g10f11j8h6h11f9e10h10k8j9i6l8k5i8k10l9k9k11h5g6f5g5g7g4j6l4l10m11g3i3h4i5e5d4f4d6e6f6d5c5c8d10c9d7e8e7c10c7b7d9d8b8e12d11e11e9d12c12i11f12j10f13f10e13g11f15f14m10c4b3j11m12m13k14e3f3g2i1h3i4i2j2l13k12k13j13l11l5j4j7l6m6m4l12
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;h8i9i7g9f8g8h9h7g10f11j8h6h11f9e10h10k8j9i6l8k5i8k10l9k9k11h5g6f5g5g7g4j6l4l10m11g3i3h4i5e5d4f4d6e6f6d5c5c8d10c9d7e8e7c10c7b7d9d8b8e12d11e11e9d12c12i11f12j10f13f10e13g11f15f14m10c4b3j11m12m13k14e3f3g2i1h3i4i2j2l13k12k13j13l11l5j4j7l6m6m4l12
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_8.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_8.png"&gt;&lt;/p&gt;
 &lt;p&gt;Yixin was out the opening book after the 11th move.  The final game went on pretty smoothly.  During the game, I noticed another bug for forbidden moves evaluation but luckily it did not make Yixin lose because the bug was not as serious as the previous bugs and Epifanov seemed to be very cautious during the game so that he did not attack much and he did not have much time left after the middle game. &lt;/p&gt;
 &lt;p&gt;The normalized evaluation&lt;sup&gt;1&lt;/sup&gt; is shown as follows. Note that the opening&lt;sup&gt;2&lt;/sup&gt; is not included.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval8.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/epifanov_vs_yixin_eval8.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Footnotes:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Different from the raw score output by Yixin, here a simple normalization is done to make a score of 0 correspond to balanced positions.&lt;/li&gt;
 &lt;li&gt;Here, the &lt;em&gt;opening&lt;/em&gt; means the first 3 Black moves and 2 White moves, which were played based totally on the opening database (as opposed to being analyzed by the engine).&lt;/li&gt;
 &lt;li&gt;Here, the &lt;em&gt;endgame&lt;/em&gt; means either the positions which were proved by Yixin to be a sure win / loss during the game, or the situations when there is no possibility to make five for both sides, i.e. a sure draw.&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="AI"></category><category term="yixin"></category><category term="renju"></category></entry><entry><title>Towards Deep Yixin</title><link href="/towards-deep-yixin.html" rel="alternate"></link><updated>2014-09-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-09-07:towards-deep-yixin.html</id><summary type="html">&lt;p&gt;Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.&lt;/p&gt;
+&lt;/ol&gt;</content><category term="AI"></category><category term="yixin"></category><category term="renju"></category></entry><entry><title>Towards Deep Yixin</title><link href="/towards-deep-yixin.html" rel="alternate"></link><published>2014-09-07T00:00:00+02:00</published><updated>2014-09-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2014-09-07:/towards-deep-yixin.html</id><summary type="html">&lt;p&gt;Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently, I have been struggling with varieties of multi-threading bugs, trying to enable Yixin to take advantage of multi-core processors. Although there is still some space to improve the speedup, the result is good to some extent, because what I would like now is just making Deep Yixin run without bugs from synchronization. There is no doubt that the multi-threaded search will be improved in the future.&lt;/p&gt;
 &lt;p&gt;I tested the Deep Yixin (0.4.28) on a 4-core i7 with 21 balanced openings, and the result is as follows:&lt;/p&gt;
 &lt;p&gt;300s/1000s&lt;/p&gt;
 &lt;table&gt;
@@ -203,10 +203,10 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;(2015-11-26 Update)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The framework for SMP has been redesigned.  Rather than Windows API used in previous versions, the new framework is fully implemented with the thread library introduced by C++11.  Besides, I managed to make extra thread information maintenance cost little so that the speed of single-threaded search in the new framework is almost the same as the single-threaded version.&lt;/p&gt;
-&lt;p&gt;The preliminary result between 2 threads vs 1 thread is 25:11 (18 balanced openings carefully selected by a gomoku expert were used).  Both turbo boost and hyper-threading were turned on.  Time settings were 300s/1000s.  It is worth noting that the strength difference could be inflated quite a bit because of the test being self test.&lt;/p&gt;</summary><category term="yixin"></category><category term="multi-thread"></category></entry><entry><title>Implementing Elegant Quines in C with Preprocessing</title><link href="/implementing-elegant-quines-in-c-with-preprocessing.html" rel="alternate"></link><updated>2014-08-01T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-08-01:implementing-elegant-quines-in-c-with-preprocessing.html</id><summary type="html">&lt;h2&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;The preliminary result between 2 threads vs 1 thread is 25:11 (18 balanced openings carefully selected by a gomoku expert were used).  Both turbo boost and hyper-threading were turned on.  Time settings were 300s/1000s.  It is worth noting that the strength difference could be inflated quite a bit because of the test being self test.&lt;/p&gt;</content><category term="yixin"></category><category term="multi-thread"></category></entry><entry><title>Implementing Elegant Quines in C with Preprocessing</title><link href="/implementing-elegant-quines-in-c-with-preprocessing.html" rel="alternate"></link><published>2014-08-01T00:00:00+02:00</published><updated>2014-08-01T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2014-08-01:/implementing-elegant-quines-in-c-with-preprocessing.html</id><summary type="html">&lt;p&gt;A quine is a computer program which takes no input and produces a copy of its own source code as its only output. This article introduces an approach to implement elegant quine in C with preprocessing.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. Introduction&lt;/h2&gt;
 &lt;p&gt;The name "quine" was coined by Douglas Hofstadter, in his popular science book Gödel, Escher, Bach: An Eternal Golden Braid, in the honor of philosopher Willard Van Orman Quine (1908–2000), who made an extensive study of indirect self-reference, and in particular for the following paradox-producing expression, known as Quine's paradox:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;"Yields falsehood when preceded by its quotation" yields falsehood when preceded by its quotation.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Concretely, the term "quine" is referred to a computer program which takes no input and produces a copy of its own source code as its only output. First appeared in Paul Bratley and Jean Millo's article "Computer Recreations: Self-Reproducing Automata" in 1972, the idea of quine is fascinating due to its self-reproducing feature. For amusement, programmers sometimes attempt to develop the shortest possible quine in any given programming language. Moreover, problems based on the idea of quine are popular in various code golf, which is a type of recreational computer programming competition in which participants strive to achieve the shortest possible code that implements a certain algorithm.&lt;/p&gt;
@@ -216,43 +216,43 @@
 &lt;p&gt;The remainder of the article is organized as follows. In section 2, the preprocessing techniques used in this article are described. Section 3 shows how to implement quines.&lt;/p&gt;
 &lt;h2&gt;2. The C Preprocessing&lt;/h2&gt;
 &lt;p&gt;One of the major use of the preprocessor in C is to define macros, which is also used to implement quines in this article. A macro definition is usually of the following form:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define MACRO_NAME(arg1, arg2, ...) [code to expand to]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#define MACRO_NAME(arg1, arg2, ...) [code to expand to]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;For instance, a simple macro for multiplication might look like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define MULT(x, y) (x)*(y)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#define MULT(x, y) (x)*(y)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;After &lt;code&gt;MULT&lt;/code&gt; is defined, one can write &lt;code&gt;MULT(4, 2+3)&lt;/code&gt; and the preprocessor expands it to &lt;code&gt;(4)*(2+3)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Besides macro itself, the stringize or number-sign operator &lt;code&gt;#&lt;/code&gt; is also used in this article, which can convert a macro parameter into a string constant. For instance, with the following macro  &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define hello(a) printf(&amp;quot;Hello &amp;quot; #a)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#define hello(a) printf(&amp;quot;Hello &amp;quot; #a)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;One can write &lt;code&gt;hello(Kai)&lt;/code&gt; and the preprocessor expands it to &lt;code&gt;printf("Hello " "Kai")&lt;/code&gt;.  &lt;/p&gt;
 &lt;p&gt;Now, it is high time for us to define the &lt;em&gt;magic operator&lt;/em&gt; using macro and stringize operator:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define Q(x)char*s=#x;x&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#define Q(x)char*s=#x;x&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;It is easy to see how does the &lt;em&gt;magic operator&lt;/em&gt; work with an example, which will be given in the next section.&lt;/p&gt;
 &lt;h2&gt;3. Quine Implementation&lt;/h2&gt;
 &lt;p&gt;With the &lt;em&gt;magic operator&lt;/em&gt;, A simple quine can be implemented as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define Q(x)char*s=#x;x&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#define Q(x)char*s=#x;x&lt;/span&gt;
 &lt;span class="n"&gt;Q&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;&lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#define Q(x)char*s=#x;x&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Q(%s)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);})&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Now, let us analyse the above quine. After expanding the macro, the code becomes:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;main(){printf(&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;#define Q(x)char*s=#x;x&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Q(%s)&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;,s);}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;&lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#define Q(x)char*s=#x;x&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Q(%s)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;main(){printf(&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;#define Q(x)char*s=#x;x&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Q(%s)&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;,s);}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;&lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#define Q(x)char*s=#x;x&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Q(%s)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;It can be seen that the variable &lt;code&gt;s&lt;/code&gt; is a pointer pointing to the string of the code which is written as the parameter of macro &lt;code&gt;Q()&lt;/code&gt;, that is, &lt;code&gt;main(){printf("#define Q(x)char*s=#x;x\nQ(%s)",s);}&lt;/code&gt;, which is also the code after the definition of &lt;code&gt;s&lt;/code&gt; for actual execution. Therefore, with &lt;code&gt;s&lt;/code&gt;, in order to achieve self reproduceing, only &lt;code&gt;#define Q(x)char*s=#x;x&lt;/code&gt; and &lt;code&gt;Q()&lt;/code&gt; should be rewritten in &lt;code&gt;printf()&lt;/code&gt; for output; the string of the other code can just be represented by &lt;code&gt;s&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;In fact, the approach described above is a general way for quine implementation, which can be seen by considering the following framework:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define Q(x)char*s=#x;x&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#define Q(x)char*s=#x;x&lt;/span&gt;
 &lt;span class="n"&gt;Q&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#define Q(x)char*s=#x;x&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Q(%s)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -265,52 +265,52 @@
 &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Code_golf"&gt;http://en.wikipedia.org/wiki/Code_golf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cprogramming.com/tutorial/cpreprocessor.html"&gt;http://www.cprogramming.com/tutorial/cpreprocessor.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.tutorialspoint.com/cprogramming/c_preprocessors.htm"&gt;http://www.tutorialspoint.com/cprogramming/c_preprocessors.htm&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="Quine"></category><category term="C/C++"></category><category term="Preprocessing"></category></entry><entry><title>Calculating All Feasible Solutions of Integer Linear Programming with PuLP and SCIP</title><link href="/calculating-all-feasible-solutions-of-ilp.html" rel="alternate"></link><updated>2014-07-29T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-29:calculating-all-feasible-solutions-of-ilp.html</id><summary type="html">&lt;h2&gt;1. Introduction&lt;/h2&gt;
+&lt;/ol&gt;</content><category term="Quine"></category><category term="C/C++"></category><category term="Preprocessing"></category></entry><entry><title>Calculating All Feasible Solutions of Integer Linear Programming with PuLP and SCIP</title><link href="/calculating-all-feasible-solutions-of-ilp.html" rel="alternate"></link><published>2014-07-29T00:00:00+02:00</published><updated>2014-07-29T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2014-07-29:/calculating-all-feasible-solutions-of-ilp.html</id><summary type="html">&lt;p&gt;In this article, PuLP and SCIP are combined together to solve a general problem: given an integer linear programming problem, calculate all feasible solutions efficiently if the number of feasible solutions is not infinite.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. Introduction&lt;/h2&gt;
 &lt;p&gt;Integer linear programming (ILP) is a method to achieve the best outcome in a mathematical model whose requirements are represented by linear relationships and unknown variables are required to be integers. Integer linear programming can be applied to various fields of study and has proved useful in diverse types of problems. In contrast to linear programming, which can be solved efficiently in the worst case, integer linear programming problems are in many practical situations NP-hard. Therefore, solving integer linear programming is not easy. Moreover, despite the fact that there are many professional solvers which can solve integer linear programming efficiently in most cases, most of them can only give one optimal solution even if many solutions exist. However, more than one solution, or even all solutions are needed in some applications.&lt;/p&gt;
 &lt;p&gt;In this article, PuLP and SCIP (Solving Constraint Integer Programs) are combined together to solve that general problem, that is, given an integer linear programming problem, calculate all feasible solutions efficiently if the number of feasible solutions is not infinite. Specifically, first, PuLP is used to generate the integer programming model file; then the model file is passed to SCIP and all feasible solutions of the model are calculated with SCIP.&lt;/p&gt;
 &lt;p&gt;PuLP is an LP modeler written in python. PuLP can generate MPS or LP files and call GLPK, COIN CLP/CBC, CPLEX, and GUROBI to solve linear problems. SCIP is currently one of the fastest non-commercial solvers for mixed integer programming (MIP) and mixed integer nonlinear programming (MINLP). It is also a framework for constraint integer programming (CIP) and branch-cut-and-price. It allows for total control of the solution process and the access of detailed information down to the guts of the solver.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/scip_fig1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/scip_fig1.png"&gt;&lt;/p&gt;
 &lt;p&gt;The remainder of the article is organized as follows. In section 2, a sample problem is described which is used to illustrate the steps in the other sections. Section 3 shows how to generate the model file. Section 4 shows how to calculating all feasible solutions of a given model file.&lt;/p&gt;
 &lt;h2&gt;2. Sample Problem&lt;/h2&gt;
 &lt;h4&gt;Problem description:&lt;/h4&gt;
 &lt;p&gt;Kai Sun would like to buy 100 chickens with 100 LTC. A rooster, a hen and a chick costs 3 LTC, 2LTC and 0.5LTC respectively. How many roosters, hens and chicks should Kai buy? If there are many solutions, output all of them. &lt;/p&gt;
 &lt;p&gt;Convert the problem to ILP: &lt;/p&gt;
 &lt;h4&gt;Variables:&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Integer x, y, z, d
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Integer x, y, z, d
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h4&gt;Constraints:&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;x+y+z = 100 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;x+y+z = 100 
 3x+2y+0.5z = 100 
 0 &amp;lt;= x, y, z, d
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h4&gt;Objective function:&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Minimize d
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Minimize d
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Here we use a dummy variable &lt;code&gt;d&lt;/code&gt; because for this problem, there are no objective function need to be optimized.&lt;/p&gt;
 &lt;h2&gt;3. Model File Generation&lt;/h2&gt;
 &lt;p&gt;With PuLP, it is easy to express the ILP and generate ".lp" file, which can be further read by SCIP. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pulp&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
-&lt;span class="n"&gt;prob&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpProblem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;chicken&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpMinimize&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpVariable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpInteger&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# 0 is the lower bound;&lt;/span&gt;
-                                  &lt;span class="c"&gt;# &amp;quot;None&amp;quot; means no upper bound;&lt;/span&gt;
-&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpVariable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpInteger&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpVariable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;z&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpInteger&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pulp&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="n"&gt;prob&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpProblem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;chicken&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpMinimize&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpVariable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpInteger&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 0 is the lower bound;&lt;/span&gt;
+                                  &lt;span class="c1"&gt;# &amp;quot;None&amp;quot; means no upper bound;&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpVariable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpInteger&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LpVariable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;z&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LpInteger&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="n"&gt;prob&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;constraint 1&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;prob&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;constraint 2&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;prob&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;constraint 1&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;prob&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;constraint 2&amp;quot;&lt;/span&gt;
 
-&lt;span class="n"&gt;prob&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;writeLP&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;problem.lp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;prob&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;writeLP&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;problem.lp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;In this example, model file "problem.lp" is generated, and the contents of "problem.lp" are shown below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;\* chicken *\
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\* chicken *\
 Minimize
 OBJ: __dummy
 Subject To
@@ -334,14 +334,14 @@ End
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Read model file using &lt;code&gt;read&lt;/code&gt; command.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;SCIP&amp;gt; read problem.lp
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SCIP&amp;gt; read problem.lp
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Set the parameters which are required for collecting all feasible solutions.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;SCIP&amp;gt; set emphasis counter
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SCIP&amp;gt; set emphasis counter
 SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -349,21 +349,21 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Calculating all feasible solutions using &lt;code&gt;count&lt;/code&gt; command.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;SCIP&amp;gt; count
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SCIP&amp;gt; count
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Write all feasible solutions to a file.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;SCIP&amp;gt; write allsolutions chicken_sol.txt
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SCIP&amp;gt; write allsolutions chicken_sol.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Finally, file "chicken_sol" contains all feasible solutions of the sample problem:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;#, z, y, x, objval
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#, z, y, x, objval
 1(1), 80, 0, 20, 0
 2(2), 68, 30, 2, 0
 3(3), 70, 25, 5, 0
@@ -383,7 +383,8 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;li&gt;&lt;a href="http://www.coin-or.org/"&gt;http://www.coin-or.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cplex.com/"&gt;http://www.cplex.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.gurobi.com/"&gt;http://www.gurobi.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-07:gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2016-7-26)&lt;/p&gt;
+&lt;/ol&gt;</content><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><published>2014-07-07T00:00:00+02:00</published><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2014-07-07:/gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2016-7-26)&lt;/p&gt;
+&lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links …&lt;/p&gt;</summary><content type="html">&lt;p&gt;(Last update: 2016-7-26)&lt;/p&gt;
 &lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
@@ -584,7 +585,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Prepared Balanced Opening&lt;/strong&gt; is the most popular opening rule in computer gomoku. It is used by both Hungarian Computer Go-Moku Open Tournament and Gomocup.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="/images/openings_gomocup14.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/openings_gomocup14.png"&gt;&lt;/p&gt;
 &lt;p&gt;(3 prepared balanced openings used in the 15th Gomocup (provided by Alexander Bogatirev, manager of Team Russia online, member of Gomoku Committee RIF, 2014))&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -635,10 +636,21 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;li&gt;
 &lt;p&gt;(In Estonian) &lt;a href="http://renju.ee/"&gt;&lt;strong&gt;Renju.ee&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="gomoku"></category><category term="renju"></category><category term="resource"></category></entry><entry><title>Moving my blog from GAE to Github Pages</title><link href="/moving-my-blog-to-github.html" rel="alternate"></link><updated>2014-07-01T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2014-07-01:moving-my-blog-to-github.html</id><summary type="html">&lt;p&gt;Due to the resource limitation of GAE for free users as well as maintainance of the blog system Micolog being stopped for a long time, I decide to move my blog from GAE to Github Pages.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="gomoku"></category><category term="renju"></category><category term="resource"></category></entry><entry><title>Moving my blog from GAE to Github Pages</title><link href="/moving-my-blog-to-github.html" rel="alternate"></link><published>2014-07-01T00:00:00+02:00</published><updated>2014-07-01T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2014-07-01:/moving-my-blog-to-github.html</id><summary type="html">&lt;p&gt;Due to the resource limitation of GAE for free users as well as maintainance of the blog system Micolog being stopped for a long time, I decide to move my blog from GAE to Github Pages.&lt;/p&gt;
+&lt;p&gt;Since Github only accepts static site with HTML, images CSS, JS, etc., a static …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Due to the resource limitation of GAE for free users as well as maintainance of the blog system Micolog being stopped for a long time, I decide to move my blog from GAE to Github Pages.&lt;/p&gt;
 &lt;p&gt;Since Github only accepts static site with HTML, images CSS, JS, etc., a static site generator is needed for me to make the work of site publishing easy. Fortunately, there are many tools to do this work such as Octopress and Pelican. I choose Pelican because I am more familiar with Python, though the whole process of generating the static site needs little knowledge about Python (I believe for users of Octopress, they also do not need to be familiar with Ruby :) ). As pelican supports writing posts in markdown, in the future, I will no longer struggle with formatted text.&lt;/p&gt;
-&lt;p&gt;Things went well during the migration, except that there was a little problem about date format of the theme bootstrap. The problem was easily solved with the help of &lt;a href="https://github.com/getpelican/pelican/issues/816"&gt;https://github.com/getpelican/pelican/issues/816&lt;/a&gt;.&lt;/p&gt;</summary><category term="pelican"></category></entry><entry><title>Paper translation: "All about Eve: Execute-Verify Replication for Multi-Core Servers"</title><link href="/paper-translation-all-about-eve.html" rel="alternate"></link><updated>2013-12-10T00:00:00+01:00</updated><author><name>Kai Sun</name></author><id>tag:,2013-12-10:paper-translation-all-about-eve.html</id><summary type="html">&lt;p&gt;Translating a paper is one of the homework of our computer system class. I was given the paper "All about Eve: Execute-Verify Replication for Multi-Core Servers", which takes several days for me to translate. Now I make it public and wish it can help some people's study.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/files/translation_all_about_eve.pdf"&gt;Download&lt;/a&gt;&lt;/p&gt;</summary><category term="translation"></category><category term="system"></category></entry><entry><title>Improvement of Yixin</title><link href="/improvement-of-yixin.html" rel="alternate"></link><updated>2013-09-14T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2013-09-14:improvement-of-yixin.html</id><summary type="html">&lt;ol&gt;
+&lt;p&gt;Things went well during the migration, except that there was a little problem about date format of the theme bootstrap. The problem was easily solved with the help of &lt;a href="https://github.com/getpelican/pelican/issues/816"&gt;https://github.com/getpelican/pelican/issues/816&lt;/a&gt;.&lt;/p&gt;</content><category term="pelican"></category></entry><entry><title>Paper translation: "All about Eve: Execute-Verify Replication for Multi-Core Servers"</title><link href="/paper-translation-all-about-eve.html" rel="alternate"></link><published>2013-12-10T00:00:00+01:00</published><updated>2013-12-10T00:00:00+01:00</updated><author><name>Kai Sun</name></author><id>tag:None,2013-12-10:/paper-translation-all-about-eve.html</id><summary type="html">&lt;p&gt;Translating a paper is one of the homework of our computer system class. I was given the paper "All about Eve: Execute-Verify Replication for Multi-Core Servers", which takes several days for me to translate. Now I make it public and wish it can help some people's study.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/files/translation_all_about_eve.pdf"&gt;Download&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Translating a paper is one of the homework of our computer system class. I was given the paper "All about Eve: Execute-Verify Replication for Multi-Core Servers", which takes several days for me to translate. Now I make it public and wish it can help some people's study.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/files/translation_all_about_eve.pdf"&gt;Download&lt;/a&gt;&lt;/p&gt;</content><category term="translation"></category><category term="system"></category></entry><entry><title>Improvement of Yixin</title><link href="/improvement-of-yixin.html" rel="alternate"></link><published>2013-09-14T00:00:00+02:00</published><updated>2013-09-14T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2013-09-14:/improvement-of-yixin.html</id><summary type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I spent some time trying optimizing Yixin's search and evaluation. The result is good.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I received two bug reports and both of them are about Yixin's rule and they all influence Yixin's strength. These bugs have been fixed now.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;update(2013.9.29):&lt;/p&gt;
+&lt;p&gt;The test result of Yixin 0.2 …&lt;/p&gt;</summary><content type="html">&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;I spent some time trying optimizing Yixin's search and evaluation. The result is good.&lt;/p&gt;
 &lt;/li&gt;
@@ -680,12 +692,26 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;td&gt;65&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</summary><category term="yixin"></category></entry><entry><title>A simple "Rock Scissors Paper" AI</title><link href="/a-simple-rock-scissors-paper-ai.html" rel="alternate"></link><updated>2011-11-17T00:00:00+01:00</updated><author><name>Kai Sun</name></author><id>tag:,2011-11-17:a-simple-rock-scissors-paper-ai.html</id><summary type="html">&lt;p&gt;The idea comes from the following page:&lt;/p&gt;
+&lt;/table&gt;</content><category term="yixin"></category></entry><entry><title>A simple "Rock Scissors Paper" AI</title><link href="/a-simple-rock-scissors-paper-ai.html" rel="alternate"></link><published>2011-11-17T00:00:00+01:00</published><updated>2011-11-17T00:00:00+01:00</updated><author><name>Kai Sun</name></author><id>tag:None,2011-11-17:/a-simple-rock-scissors-paper-ai.html</id><summary type="html">&lt;p&gt;The idea comes from the following page:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.nytimes.com/interactive/science/rock-paper-scissors.html"&gt;http://www.nytimes.com/interactive/science/rock-paper-scissors.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Just for fun.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&amp;lt;string.h&amp;gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#define MAXSEQ 4&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;rec&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MAXSEQ&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)][&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;MAXSEQ&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;LOSE&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;DRAW&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;WIN …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;The idea comes from the following page:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.nytimes.com/interactive/science/rock-paper-scissors.html"&gt;http://www.nytimes.com/interactive/science/rock-paper-scissors.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Just for fun.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
 &lt;span class="cp"&gt;#define MAXSEQ 4&lt;/span&gt;
 &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;rec&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MAXSEQ&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)][&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
 &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;MAXSEQ&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
@@ -772,10 +798,10 @@ SCIP&amp;gt; set constraints countsols collect TRUE
         &lt;span class="p"&gt;}&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="AI"></category><category term="rock scissors paper"></category><category term="game"></category></entry><entry><title>Bug &amp; Bug</title><link href="/bug-and-bug.html" rel="alternate"></link><updated>2011-03-30T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:,2011-03-30:bug-and-bug.html</id><summary type="html">&lt;p&gt;Although my old AI supports standard game, I know there exists some bugs while using that rule.And at the same time I got the new gmotor, I tested gmotor2011 yesterday and found that it performed better than Yixin with standard rule, so I tried to fix these bugs. The work was boring but didn't take a long time. It seems OK, but when I decided to test a game between Yixin and gmotor with Piskvork, Yixin still didn't perform well. I checked Yixin again and again, but no bug was found. So I started to suspect the Piskvork. The latter tests proved I was right. Piskvork8.4 has a bug: When you choose to start a TOURNAMENT with standard-game rule, the Piskvork will not send message"info_exact5=1" to AI. You may ask me why gmotor still obey that rule. After testing it I conclude that gmotor only knows the standard rule, that means it doesn't consider more than 5 stones as win even if you set the freestyle rule.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="AI"></category><category term="rock scissors paper"></category><category term="game"></category></entry><entry><title>Bug &amp; Bug</title><link href="/bug-and-bug.html" rel="alternate"></link><published>2011-03-30T00:00:00+02:00</published><updated>2011-03-30T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2011-03-30:/bug-and-bug.html</id><summary type="html">&lt;p&gt;Although my old AI supports standard game, I know there exists some bugs while using that rule.And at the same time I got the new gmotor, I tested gmotor2011 yesterday and found that it performed better than Yixin with standard rule, so I tried to fix these bugs. The …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Although my old AI supports standard game, I know there exists some bugs while using that rule.And at the same time I got the new gmotor, I tested gmotor2011 yesterday and found that it performed better than Yixin with standard rule, so I tried to fix these bugs. The work was boring but didn't take a long time. It seems OK, but when I decided to test a game between Yixin and gmotor with Piskvork, Yixin still didn't perform well. I checked Yixin again and again, but no bug was found. So I started to suspect the Piskvork. The latter tests proved I was right. Piskvork8.4 has a bug: When you choose to start a TOURNAMENT with standard-game rule, the Piskvork will not send message"info_exact5=1" to AI. You may ask me why gmotor still obey that rule. After testing it I conclude that gmotor only knows the standard rule, that means it doesn't consider more than 5 stones as win even if you set the freestyle rule.&lt;/p&gt;
 &lt;p&gt;You can easily find the bug using this opening: 0,0, -5,-5, 0,1, 5,5, 0,-1, -5,-6, 0,3, 5,6, 0,4&lt;/p&gt;
 &lt;p&gt;Or you can find the bug by writing such an AI function:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;brain_turn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;brain_turn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; 
 &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
   &lt;span class="n"&gt;pipeOut&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;MESSAGE %d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;info_exact5&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -789,4 +815,4 @@ SCIP&amp;gt; set constraints countsols collect TRUE
   &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;pipeOut&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;DEBUG %d coordinates didn&amp;#39;t hit an empty field&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
   &lt;span class="n"&gt;do_mymove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="bug"></category><category term="piskvork"></category><category term="gmotor"></category><category term="yixin"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</content><category term="bug"></category><category term="piskvork"></category><category term="gmotor"></category><category term="yixin"></category></entry></feed>

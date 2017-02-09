@@ -92,43 +92,43 @@ tags: <a href="/tag/quine.html">Quine</a> <a href="/tag/cc.html">C/C++</a> <a hr
 <p>The remainder of the article is organized as follows. In section 2, the preprocessing techniques used in this article are described. Section 3 shows how to implement quines.</p>
 <h2>2. The C Preprocessing</h2>
 <p>One of the major use of the preprocessor in C is to define macros, which is also used to implement quines in this article. A macro definition is usually of the following form:</p>
-<div class="highlight"><pre><span class="cp">#define MACRO_NAME(arg1, arg2, ...) [code to expand to]</span>
+<div class="highlight"><pre><span></span><span class="cp">#define MACRO_NAME(arg1, arg2, ...) [code to expand to]</span>
 </pre></div>
 
 
 <p>For instance, a simple macro for multiplication might look like this:</p>
-<div class="highlight"><pre><span class="cp">#define MULT(x, y) (x)*(y)</span>
+<div class="highlight"><pre><span></span><span class="cp">#define MULT(x, y) (x)*(y)</span>
 </pre></div>
 
 
 <p>After <code>MULT</code> is defined, one can write <code>MULT(4, 2+3)</code> and the preprocessor expands it to <code>(4)*(2+3)</code>.</p>
 <p>Besides macro itself, the stringize or number-sign operator <code>#</code> is also used in this article, which can convert a macro parameter into a string constant. For instance, with the following macro  </p>
-<div class="highlight"><pre><span class="cp">#define hello(a) printf(&quot;Hello &quot; #a)</span>
+<div class="highlight"><pre><span></span><span class="cp">#define hello(a) printf(&quot;Hello &quot; #a)</span>
 </pre></div>
 
 
 <p>One can write <code>hello(Kai)</code> and the preprocessor expands it to <code>printf("Hello " "Kai")</code>.  </p>
 <p>Now, it is high time for us to define the <em>magic operator</em> using macro and stringize operator:</p>
-<div class="highlight"><pre><span class="cp">#define Q(x)char*s=#x;x</span>
+<div class="highlight"><pre><span></span><span class="cp">#define Q(x)char*s=#x;x</span>
 </pre></div>
 
 
 <p>It is easy to see how does the <em>magic operator</em> work with an example, which will be given in the next section.</p>
 <h2>3. Quine Implementation</h2>
 <p>With the <em>magic operator</em>, A simple quine can be implemented as follows:</p>
-<div class="highlight"><pre><span class="cp">#define Q(x)char*s=#x;x</span>
+<div class="highlight"><pre><span></span><span class="cp">#define Q(x)char*s=#x;x</span>
 <span class="n">Q</span><span class="p">(</span><span class="n">main</span><span class="p">(){</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;#define Q(x)char*s=#x;x</span><span class="se">\n</span><span class="s">Q(%s)&quot;</span><span class="p">,</span><span class="n">s</span><span class="p">);})</span>
 </pre></div>
 
 
 <p>Now, let us analyse the above quine. After expanding the macro, the code becomes:</p>
-<div class="highlight"><pre><span class="kt">char</span><span class="o">*</span><span class="n">s</span><span class="o">=</span><span class="s">&quot;main(){printf(</span><span class="se">\&quot;</span><span class="s">#define Q(x)char*s=#x;x</span><span class="se">\n</span><span class="s">Q(%s)</span><span class="se">\&quot;</span><span class="s">,s);}&quot;</span><span class="p">;</span><span class="n">main</span><span class="p">(){</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;#define Q(x)char*s=#x;x</span><span class="se">\n</span><span class="s">Q(%s)&quot;</span><span class="p">,</span><span class="n">s</span><span class="p">);}</span>
+<div class="highlight"><pre><span></span><span class="kt">char</span><span class="o">*</span><span class="n">s</span><span class="o">=</span><span class="s">&quot;main(){printf(</span><span class="se">\&quot;</span><span class="s">#define Q(x)char*s=#x;x</span><span class="se">\n</span><span class="s">Q(%s)</span><span class="se">\&quot;</span><span class="s">,s);}&quot;</span><span class="p">;</span><span class="n">main</span><span class="p">(){</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;#define Q(x)char*s=#x;x</span><span class="se">\n</span><span class="s">Q(%s)&quot;</span><span class="p">,</span><span class="n">s</span><span class="p">);}</span>
 </pre></div>
 
 
 <p>It can be seen that the variable <code>s</code> is a pointer pointing to the string of the code which is written as the parameter of macro <code>Q()</code>, that is, <code>main(){printf("#define Q(x)char*s=#x;x\nQ(%s)",s);}</code>, which is also the code after the definition of <code>s</code> for actual execution. Therefore, with <code>s</code>, in order to achieve self reproduceing, only <code>#define Q(x)char*s=#x;x</code> and <code>Q()</code> should be rewritten in <code>printf()</code> for output; the string of the other code can just be represented by <code>s</code>.</p>
 <p>In fact, the approach described above is a general way for quine implementation, which can be seen by considering the following framework:</p>
-<div class="highlight"><pre><span class="cp">#define Q(x)char*s=#x;x</span>
+<div class="highlight"><pre><span></span><span class="cp">#define Q(x)char*s=#x;x</span>
 <span class="n">Q</span><span class="p">(</span> <span class="p">{</span><span class="n">A</span><span class="p">}</span> <span class="n">main</span><span class="p">(){</span> <span class="p">{</span><span class="n">B</span><span class="p">}</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;#define Q(x)char*s=#x;x</span><span class="se">\n</span><span class="s">Q(%s)&quot;</span><span class="p">,</span><span class="n">s</span><span class="p">);</span> <span class="p">{</span><span class="n">C</span><span class="p">}</span> <span class="p">}</span> <span class="p">{</span><span class="n">D</span><span class="p">}</span> <span class="p">)</span>
 </pre></div>
 

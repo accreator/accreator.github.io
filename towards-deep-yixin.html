@@ -116,7 +116,7 @@ tags: <a href="/tag/yixin.html">yixin</a> <a href="/tag/multi-thread.html">multi
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <p><strong>(2015-11-26 Update)</strong></p>
 <p>The framework for SMP has been redesigned.  Rather than Windows API used in previous versions, the new framework is fully implemented with the thread library introduced by C++11.  Besides, I managed to make extra thread information maintenance cost little so that the speed of single-threaded search in the new framework is almost the same as the single-threaded version.</p>
 <p>The preliminary result between 2 threads vs 1 thread is 25:11 (18 balanced openings carefully selected by a gomoku expert were used).  Both turbo boost and hyper-threading were turned on.  Time settings were 300s/1000s.  It is worth noting that the strength difference could be inflated quite a bit because of the test being self test.</p></div>

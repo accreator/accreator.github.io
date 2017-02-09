@@ -5,77 +5,84 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/wiki-three-def.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/wiki-three-def-cn.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-cn.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs-cn.html</loc>
-<lastmod>2016-10-20T23:28:15-00:00</lastmod>
+<lastmod>2017-02-09T04:12:43-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/aiexp.info的故事.html</loc>
+<lastmod>2017-02-09T00:00:00+01:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -208,7 +215,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/zhong-wen-bo-ke.html</loc>
-<lastmod>2016-05-09T00:00:00+00:09</lastmod>
+<lastmod>2017-02-09T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -256,13 +263,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/xi-tong.html</loc>
-<lastmod>2013-12-10T00:00:00+00:09</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>/tag/scip.html</loc>
 <lastmod>2014-07-29T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
@@ -272,6 +272,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/tag/hui-yi.html</loc>
 <lastmod>2014-12-24T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/translation.html</loc>
+<lastmod>2013-12-10T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -312,6 +319,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/gu-shi.html</loc>
+<lastmod>2017-02-09T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/lp.html</loc>
 <lastmod>2014-07-29T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
@@ -347,22 +361,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/game.html</loc>
-<lastmod>2011-11-17T00:00:00+00:09</lastmod>
+<loc>/tag/yixin.html</loc>
+<lastmod>2016-05-19T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/rock-scissors-paper.html</loc>
-<lastmod>2011-11-17T00:00:00+00:09</lastmod>
+<loc>/tag/preprocessing.html</loc>
+<lastmod>2014-08-01T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/translation.html</loc>
-<lastmod>2013-12-10T00:00:00+00:09</lastmod>
+<loc>/tag/yu-ming.html</loc>
+<lastmod>2017-02-09T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/pn-search.html</loc>
+<lastmod>2015-01-02T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/tou-ji.html</loc>
+<lastmod>2017-02-09T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -389,6 +417,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/rock-scissors-paper.html</loc>
+<lastmod>2011-11-17T00:00:00+00:09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/fan-yi.html</loc>
 <lastmod>2013-12-10T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
@@ -396,22 +431,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/yixin.html</loc>
-<lastmod>2016-05-19T00:00:00+00:09</lastmod>
+<loc>/tag/game.html</loc>
+<lastmod>2011-11-17T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/pn-search.html</loc>
-<lastmod>2015-01-02T00:00:00+00:09</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tag/preprocessing.html</loc>
-<lastmod>2014-08-01T00:00:00+00:09</lastmod>
+<loc>/tag/xi-tong.html</loc>
+<lastmod>2013-12-10T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -446,7 +474,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/sun-kai.html</loc>
-<lastmod>2016-05-09T00:00:00+00:09</lastmod>
+<lastmod>2017-02-09T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
