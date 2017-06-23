@@ -675,13 +675,13 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;li&gt;&lt;a href="http://www.coin-or.org/"&gt;http://www.coin-or.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cplex.com/"&gt;http://www.cplex.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.gurobi.com/"&gt;http://www.gurobi.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><published>2014-07-07T00:00:00+02:00</published><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2014-07-07:/gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2017-4-26)&lt;/p&gt;
-&lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links …&lt;/p&gt;</summary><content type="html">&lt;p&gt;(Last update: 2017-4-26)&lt;/p&gt;
-&lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summerize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
+&lt;/ol&gt;</content><category term="SCIP"></category><category term="PuLP"></category><category term="ILP"></category><category term="LP"></category></entry><entry><title>Gomoku/Renju Resouces -- An Overview</title><link href="/gomoku-renju-resources-an-overview.html" rel="alternate"></link><published>2014-07-07T00:00:00+02:00</published><updated>2014-07-07T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2014-07-07:/gomoku-renju-resources-an-overview.html</id><summary type="html">&lt;p&gt;(Last update: 2017-6-23)&lt;/p&gt;
+&lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summarize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links …&lt;/p&gt;</summary><content type="html">&lt;p&gt;(Last update: 2017-6-23)&lt;/p&gt;
+&lt;p&gt;I often recieve emails that ask for gomoku/renju resources, especially for AI design, so I write this article to summarize good resources I know. This page will be maintained and updated in the future. If you find any mistake in this page such as broken links, please contact me.&lt;/p&gt;
 &lt;h2&gt;Reading Materials for AI Design&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://fragrieu.free.fr/SearchingForSolutions.pdf"&gt;&lt;strong&gt;Searching for Solutions in Games and Artificial Intelligence&lt;/strong&gt;&lt;/a&gt; by Louis Victor Allis. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="/files/allis-thesis.pdf"&gt;&lt;strong&gt;Searching for Solutions in Games and Artificial Intelligence&lt;/strong&gt;&lt;/a&gt; by Louis Victor Allis. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://chessprogramming.wikispaces.com/"&gt;&lt;strong&gt;Chess Programming Wiki&lt;/strong&gt;&lt;/a&gt; is a website which provides good reference for every aspect of chess programming. Although it mainly talks about chess, some basic techniques and ideas of chess AI design are similiar to those of gomoku/renju.&lt;/p&gt;
@@ -693,7 +693,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;a href="http://gomocup.org/old/download.php?filename=GO-MOKU-AND-THREAT.ZIP"&gt;&lt;strong&gt;Go-Moku and Threat-Space Search&lt;/strong&gt;&lt;/a&gt; by Louis Victor Allis, Hendrik Jacob Herik, and M.P.H. Huntjens.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://vanilla47.com/PDFs/Gomoku%20Renju%20Pente/Go-Moku-Solved-by-New-Search-Techniques.pdf"&gt;&lt;strong&gt;Go-Moku Solved by New Search Techniques&lt;/strong&gt;&lt;/a&gt; by Louis Victor Allis, Hendrik Jacob Herik, and M.P.H. Huntjens.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/files/allis-paper-1.pdf"&gt;&lt;strong&gt;Go-Moku Solved by New Search Techniques&lt;/strong&gt;&lt;/a&gt; by Louis Victor Allis, Hendrik Jacob Herik, and M.P.H. Huntjens.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.sciencedirect.com/science/article/pii/0004370294900043"&gt;&lt;strong&gt;Proof-number Search&lt;/strong&gt;&lt;/a&gt; by Louis Victor Allis, Maarten van der Meulen, and H. Jaap Van Den Herik.&lt;/p&gt;
@@ -744,7 +744,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;h2&gt;Open-source GUIs&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://sourceforge.net/projects/piskvork/"&gt;&lt;strong&gt;Piskvork&lt;/strong&gt;&lt;/a&gt; by Petr Lastovicka, Czech Republic. It is a GUI that supports Gomocup protocol. &lt;a href="https://github.com/wind23/piskvork_renju"&gt;A modified version&lt;/a&gt; supporting renju rule is developed by Tianyi Hao.  (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://sourceforge.net/projects/piskvork/"&gt;&lt;strong&gt;Piskvork&lt;/strong&gt;&lt;/a&gt; by Petr Lastovicka, Czech Republic. It is a GUI that supports Gomocup protocol. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.renju.se/renlib/"&gt;&lt;strong&gt;Renlib&lt;/strong&gt;&lt;/a&gt; by Frank Arkbo, Sweden. Renlib is one of the best programs which can help you to build a library of renju openings, analysis and played games. (&lt;strong&gt;Recommend&lt;/strong&gt;)&lt;/p&gt;
@@ -786,7 +786,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;AI vs. Human Tournament&lt;/strong&gt; (&lt;a href="http://gomocup.org/results/ai-human-2006"&gt;2006&lt;/a&gt;, 2011(&lt;a href="http://gomocup.org/results/ai-human-2011/"&gt;en&lt;/a&gt;,&lt;a href="http://www.piskvorky.cz/clanky/zajimavosti-ze-sveta-piskvorek-a-renju/ai-vs-clovek-2011-2/"&gt;cz&lt;/a&gt;))&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Yixin vs. Human Player&lt;/strong&gt; (&lt;a href="/ai-vs-human-renju.html"&gt;match with Epifanov Dmitry, 2016&lt;/a&gt;, &lt;a href="/ai-vs-human-3rd-qtrc2016.html"&gt;match with Alexander Bogatirev, 2016&lt;/a&gt;) &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Yixin vs. Human Player&lt;/strong&gt; (&lt;a href="/ai-vs-human-3rd-qtrc2016.html"&gt;match with Alexander Bogatirev, 2016&lt;/a&gt;, &lt;a href="/ai-vs-human-renju.html"&gt;match with Epifanov Dmitry, 2016&lt;/a&gt;, &lt;a href="/ai-vs-human-gomoku.html"&gt;match with Nikonov Konstantin, 2017&lt;/a&gt;, &lt;a href="/ai-vs-human-gomoku.html"&gt;match with Makarov Pavel, 2017&lt;/a&gt;) &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://w-ai.org/"&gt;&lt;strong&gt;WAI&lt;/strong&gt;&lt;/a&gt; (2012 - 2014, the website is down)&lt;/p&gt;
@@ -804,7 +804,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Carbon&lt;/strong&gt; by Michał Czardybon, Poland. It is the strongest open-source gomoku software. Its original version can be downloaded at &lt;a href="http://mczard.republika.pl/gomoku.en.html"&gt;Michał Czardybon's Homepage&lt;/a&gt;, and its modified version by Petr Lastovicka which supports Gomocup protocol can be obtained from &lt;a href="https://github.com/gomoku/Carbon-Gomoku"&gt;Github&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Fiver&lt;/strong&gt; by Meng Liu, China. A famous classic gomoku engine. It can be downloaded at &lt;a href="http://nosalex.narod.ru/f.zip"&gt;Nosovsky Japanese Games Home Page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fiver&lt;/strong&gt; by Meng Liu, China. A famous classic gomoku engine. It can be downloaded &lt;a href="/files/fiver6_8_en.zip"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Goro&lt;/strong&gt; by Victor Barykin, Russia. It is a commercial software for gomoku, the winner of the 6th, the 7th, the 10th, and the 11th Gomocup (2005, 2006, 2009, 2010). It took part in both the first and the second AI vs. Human tournament, playing against one of the best Czech gomoku players in 2006 and 2011. Goro ranked the 3rd in the 18th Gomocup (2017). It can be downloaded at &lt;a href="http://gomocup.org/download/"&gt;Gomocup.org&lt;/a&gt;.&lt;/p&gt;
@@ -855,7 +855,7 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;p&gt;&lt;strong&gt;Vertex&lt;/strong&gt; by Artyom Shaposhnikov and Alexander Nosovsky, Russia. It is the winner of the 1st Renju Computer World Championship, 1991. There is no download available.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Victoria&lt;/strong&gt; by V. Allis and L Schoenmaker, Netherlands. It is the first program which is bound to win if it moves first for both freestyle and standard gomoku without modern opening rules. It is the winner of gomoku in the 4th Computer Olympiad. Victoria is not published, so there is no download available. Refer to &lt;a href="http://fragrieu.free.fr/SearchingForSolutions.pdf"&gt;Allis's thesis&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Victoria&lt;/strong&gt; by V. Allis and L Schoenmaker, Netherlands. It is the first program which is bound to win if it moves first for both freestyle and standard gomoku without modern opening rules. It is the winner of gomoku in the 4th Computer Olympiad. Victoria is not published, so there is no download available. Refer to &lt;a href="/files/allis-thesis.pdf"&gt;Allis's thesis&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="/pages/yixin.html"&gt;&lt;strong&gt;Yixin&lt;/strong&gt;&lt;/a&gt; by Kai Sun, China. It is a free software for both gomoku and renju. It is the winner of the 13th, 14th, 15th, 16th, 17th and 18th Gomocup (2012, 2013, 2014, 2015, 2016, 2017).&lt;/p&gt;
@@ -863,6 +863,9 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;/ul&gt;
 &lt;h2&gt;Other Useful Software&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://renjubase.narod.ru/"&gt;&lt;strong&gt;RenjuBase&lt;/strong&gt;&lt;/a&gt; by Vladimir Filinov, Russia. It is a free software that can read various database formats of gomoku/renju and show statistics. &lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;RenArtist&lt;/strong&gt; by Yusuke Okuno, Japan. It gives a good solution about making databases and publish them directly on the web.&lt;/p&gt;
 &lt;/li&gt;
@@ -885,6 +888,9 @@ SCIP&amp;gt; set constraints countsols collect TRUE
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Yamaguchi_opening_rule"&gt;&lt;strong&gt;Yamaguchi opening rule&lt;/strong&gt;&lt;/a&gt; is an opening rule for renju developed by Japanese player Yusui Yamaguchi.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Soos%C3%B5rv_opening_rule"&gt;&lt;strong&gt;Soosõrv opening rule&lt;/strong&gt;&lt;/a&gt; is an opening rule for renju developed by Estonian player Ants Soosõrv.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Swap after first move&lt;/strong&gt; is an opening rule for gomoku. The rule is as follows. (1) The first player puts 1 black stone anywhere on the board; (2) The second player has 2 options: a. stay with white; b. swap.&lt;/p&gt;
