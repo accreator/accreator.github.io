@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-07-16T00:00:00+02:00</updated><entry><title>Lin Shu-Hsuan versus Yixin</title><link href="/ai-vs-human-renju-2.html" rel="alternate"></link><published>2017-07-16T00:00:00+02:00</published><updated>2017-07-16T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2017-07-16:/ai-vs-human-renju-2.html</id><summary type="html">&lt;p&gt;This article is a summary of the 4-game match between Yixin and Lin Shu-Hsuan.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2017-7-16)&lt;/strong&gt; &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-07-16T00:00:00+02:00</updated><entry><title>Lin Shu-Hsuan versus Yixin</title><link href="/ai-vs-human-renju-2.html" rel="alternate"></link><published>2017-07-16T00:00:00+02:00</published><updated>2017-07-16T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2017-07-16:/ai-vs-human-renju-2.html</id><summary type="html">&lt;p&gt;This article is a summary of the 4-game match between Yixin and Lin Shu-Hsuan.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2017-7-22)&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;This page will be maintained in July 2017 to keep track of the 4-game match between Yixin and Lin Shu-Hsuan. More detailed information such as technical analysis will be added later when all 4 games are finished. &lt;/p&gt;
 &lt;h2&gt;Match Settings&lt;/h2&gt;
 &lt;ul&gt;
@@ -34,7 +34,20 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/lin_vs_yixin_2.png"&gt;&lt;/p&gt;</content><category term="AI"></category><category term="yixin"></category><category term="renju"></category></entry><entry><title>Yixin in the Final of the Russian Championship 2017</title><link href="/ai-vs-human-gomoku.html" rel="alternate"></link><published>2017-06-14T00:00:00+02:00</published><updated>2017-06-14T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2017-06-14:/ai-vs-human-gomoku.html</id><summary type="html">&lt;p&gt;This article is a summary of 3 games between Yixin and Nikonov Konstantin, and 1 game between Yixin and Makarov Pavel. The final result of Yixin is 4 win.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/lin_vs_yixin_2.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Round 3 (July 22):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Lin Shu-Hsuan&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;White&lt;/strong&gt;: Yixin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swap&lt;/strong&gt;: -, + &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alternatives&lt;/strong&gt;: J7, I7, I6, G10&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result&lt;/strong&gt;: White wins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;h8h9h6i8g10i10i7j11k12g9i9j8j10k11i11h7h12g13i12j12f9f7g8h11g6f6l10g12f13k8j9l8m8k6k7g5f5h4i3j7l5j5i4i6h5k4
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Alt text" src="/images/lin_vs_yixin_3.png"&gt;&lt;/p&gt;</content><category term="AI"></category><category term="yixin"></category><category term="renju"></category></entry><entry><title>Yixin in the Final of the Russian Championship 2017</title><link href="/ai-vs-human-gomoku.html" rel="alternate"></link><published>2017-06-14T00:00:00+02:00</published><updated>2017-06-14T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2017-06-14:/ai-vs-human-gomoku.html</id><summary type="html">&lt;p&gt;This article is a summary of 3 games between Yixin and Nikonov Konstantin, and 1 game between Yixin and Makarov Pavel. The final result of Yixin is 4 win.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;Recently there was a discussion about the concept of positional play on VK. To shed light on whether positional play is effective or not, people organized a 2-game match on the Internet between Yixin which looks like a tactical player and Denis Osipov who is believed to be one of the best positional players. The result of the match is Yixin won 2 games. After that, people organized another game between Yixin and Gergo Toth, and Gergo won the game. (&lt;a href="https://vk.com/topic-19499145_35466971"&gt;link to the discussion of the 3 games&lt;/a&gt;) &lt;/p&gt;
 &lt;p&gt;I was informed of the result by friends after each match. Although I didn't care about the discussion about different playing styles, I did care about the result of the games. However, the result didn't make a lot of sense to me because of the slow hardware, weak version and the not-so-balanced opening rule (it's not a real Swap-2). Specifically, the speed reported by Yixin on their computer was only 300-400; the version used in the game is a 2-year old one which has serious bugs for the standard rule. In my opinion, Yixin would have much better performance if they could either use the 2017 Demo or contact me to have a formal match against the latest full version. Actually, I don't believe human players could outperform the latest full version running on a powerful computer. &lt;/p&gt;
 &lt;p&gt;On June 8th, Alexander Bogatirev told me that he was in the organization committee of the Final of the Russian Championship, and he proposed to organize a better AI-vs-human match during the event. I thought it's a good idea, so I accepted the proposal and promised to offer a powerful computer to run Yixin remotely.&lt;/p&gt;
