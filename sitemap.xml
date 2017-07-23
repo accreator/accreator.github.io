@@ -5,77 +5,84 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/wiki-three-def.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/wiki-three-def-cn.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-cn.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs-cn.html</loc>
-<lastmod>2017-07-22T19:52:28-00:00</lastmod>
+<lastmod>2017-07-23T02:50:42-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/ai-vs-human-gomoku-2.html</loc>
+<lastmod>2017-07-23T00:00:00+02:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -222,7 +229,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/blog.html</loc>
-<lastmod>2017-07-16T00:00:00+00:09</lastmod>
+<lastmod>2017-07-23T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -243,7 +250,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/ai.html</loc>
-<lastmod>2017-07-16T00:00:00+00:09</lastmod>
+<lastmod>2017-07-23T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -264,7 +271,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/gomoku.html</loc>
-<lastmod>2017-06-14T00:00:00+00:09</lastmod>
+<lastmod>2017-07-23T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -376,7 +383,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/yixin.html</loc>
-<lastmod>2017-07-16T00:00:00+00:09</lastmod>
+<lastmod>2017-07-23T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -481,7 +488,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/kai-sun.html</loc>
-<lastmod>2017-07-16T00:00:00+00:09</lastmod>
+<lastmod>2017-07-23T00:00:00+00:09</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
