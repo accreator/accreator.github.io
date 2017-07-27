@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP - Blog</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2017-07-23T00:00:00+02:00</updated><entry><title>Rudolf Dupszki versus Yixin</title><link href="/ai-vs-human-gomoku-2.html" rel="alternate"></link><published>2017-07-23T00:00:00+02:00</published><updated>2017-07-23T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2017-07-23:/ai-vs-human-gomoku-2.html</id><summary type="html">&lt;p&gt;This article is a summary of the 2-game match between Yixin and Rudolf Dupszki in Gomoku World Championship 2017. The final result of Yixin is 2 win.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2017-7-23)&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;More detailed information such as technical analysis will be added before August 6th.&lt;/strong&gt; &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AI EXP - Blog</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2017-07-23T00:00:00+02:00</updated><entry><title>Rudolf Dupszki versus Yixin</title><link href="/ai-vs-human-gomoku-2.html" rel="alternate"></link><published>2017-07-23T00:00:00+02:00</published><updated>2017-07-23T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2017-07-23:/ai-vs-human-gomoku-2.html</id><summary type="html">&lt;p&gt;This article is a summary of the 2-game match between Yixin and Rudolf Dupszki in Gomoku World Championship 2017. The final result of Yixin is 2 win.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2017-7-27)&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;More detailed information will be added before August 6th.&lt;/strong&gt; &lt;/p&gt;
 &lt;h2&gt;Match Settings&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Number of Round: 2&lt;/li&gt;
@@ -8,7 +8,7 @@
 &lt;li&gt;Computer: Amazon EC2 m4.16xlarge&lt;/li&gt;
 &lt;li&gt;Time Control: 120 min/game + 30 sec/move&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Game Records&lt;/h2&gt;
+&lt;h2&gt;Game Records and Analysis&lt;/h2&gt;
 &lt;h3&gt;Round 1:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Rudolf Dupszki&lt;/li&gt;
@@ -21,6 +21,7 @@
 
 
 &lt;p&gt;&lt;img alt="Alt text" src="/images/rudolf_vs_yixin_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/rudolf_vs_yixin_eval1.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Round 2:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Black&lt;/strong&gt;: Yixin&lt;/li&gt;
@@ -32,7 +33,11 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Alt text" src="/images/rudolf_vs_yixin_2.png"&gt;&lt;/p&gt;</content><category term="AI"></category><category term="yixin"></category><category term="gomoku"></category></entry><entry><title>Lin Shu-Hsuan versus Yixin</title><link href="/ai-vs-human-renju-2.html" rel="alternate"></link><published>2017-07-16T00:00:00+02:00</published><updated>2017-07-16T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2017-07-16:/ai-vs-human-renju-2.html</id><summary type="html">&lt;p&gt;This article is a summary of the 4-game match between Yixin and Lin Shu-Hsuan. The final result of Yixin is 3 win and 1 loss.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2017-7-23)&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/rudolf_vs_yixin_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/images/rudolf_vs_yixin_eval2.png"&gt;&lt;/p&gt;
+&lt;h2&gt;Other Information&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.facebook.com/notes/gomokuworld/rudolf-dupszki-vs-yixin-2017/857225044431377/"&gt;Report by Vladimir Nipoti&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://vk.com/topic-19499145_35662455"&gt;Discussion on VK&lt;/a&gt;&lt;/p&gt;</content><category term="AI"></category><category term="yixin"></category><category term="gomoku"></category></entry><entry><title>Lin Shu-Hsuan versus Yixin</title><link href="/ai-vs-human-renju-2.html" rel="alternate"></link><published>2017-07-16T00:00:00+02:00</published><updated>2017-07-16T00:00:00+02:00</updated><author><name>Kai Sun</name></author><id>tag:None,2017-07-16:/ai-vs-human-renju-2.html</id><summary type="html">&lt;p&gt;This article is a summary of the 4-game match between Yixin and Lin Shu-Hsuan. The final result of Yixin is 3 win and 1 loss.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;(Last update: 2017-7-23)&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;More detailed information such as technical analysis will be added before August 6th.&lt;/strong&gt; &lt;/p&gt;
 &lt;h2&gt;Match Settings&lt;/h2&gt;
 &lt;ul&gt;
