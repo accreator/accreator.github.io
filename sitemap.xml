@@ -5,77 +5,77 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/wiki-three-def.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/wiki-three-def-cn.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-cn.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/pages/yixin-docs-cn.html</loc>
-<lastmod>2017-07-30T20:05:53-00:00</lastmod>
+<lastmod>2017-07-30T22:50:15-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
